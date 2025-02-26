@@ -8,7 +8,7 @@ const Layout = () => {
     <div>
       <Navbar />
 
-      <div style={{ flex: 1, padding: "1rem" }}>
+      <div>
         <Outlet />
       </div>
 
