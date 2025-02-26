@@ -2,12 +2,15 @@
 @plugin "daisyui";
 
 @theme {
+    /* color */
   --color-deep-purple: #482977;
   --color-brignt-blue:#00aeef;
   --color-bright-purple:#892890:
   --color-vibrant-pink:#ed1d7e;
+
+  /* fonts */
   --font-poppins:"Poppins";
-  --font-proxima:'Proxima Nova'
+  --font-proxima:'Proxima Nova';
 
 }
 
@@ -17,4 +20,16 @@
          url('/path-to-your-font/proxima-nova.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+  }
+
+  /* root */
+  /* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  } */
+
+  .container_lg{
+    width: 90%;
+    margin: 0 auto;
   }
