@@ -35,7 +35,7 @@ const Navbar = () => {
         {/* Contact Button */}
         <Link
           to="/contact"
-          className="hidden lg:inline-block bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+          className="hidden lg:inline-block bg-bright-purple  text-white px-4 py-2 rounded-md hover:bg-deep-purple"
         >
           Contact Us
         </Link>
@@ -75,7 +75,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="/contact"
-            className="block text-white bg-blue-500 py-2 text-center rounded-md hover:bg-blue-600 mt-2"
+            className="block text-white bg-bright-purple py-2 text-center rounded-md hover:bg-deep-purple mt-2"
             onClick={() => setIsOpen(false)}
           >
             Contact
