@@ -5,18 +5,13 @@ import Footer from "../components/Footer/Footer";
 
 const Layout = () => {
   return (
-    <div
-      style={{ minHeight: "100vh", display: "flex", flexDirection: "column" }}
-    >
-      {/* Navbar at the top */}
+    <div>
       <Navbar />
 
-      {/* Content in the middle (using Outlet to render child routes) */}
       <div style={{ flex: 1, padding: "1rem" }}>
         <Outlet />
       </div>
 
-      {/* Footer at the bottom */}
       <Footer />
     </div>
   );
