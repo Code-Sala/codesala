@@ -6,4 +6,15 @@
   --color-brignt-blue:#00aeef;
   --color-bright-purple:#892890:
   --color-vibrant-pink:#ed1d7e;
+  --font-poppins:"Poppins";
+  --font-proxima:'Proxima Nova'
+
 }
+
+@font-face {
+    font-family: 'Proxima Nova';
+    src: url('/path-to-your-font/proxima-nova.woff2') format('woff2'),
+         url('/path-to-your-font/proxima-nova.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
