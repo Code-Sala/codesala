@@ -1,24 +1,24 @@
-function App() {
+// src/App.js
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./Layout/Layout";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+
+const App = () => {
   return (
-    <div className="card bg-base-100 w-96 shadow-sm">
-      <figure>
-        <img
-          src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp"
-          alt="Shoes"
-        />
-      </figure>
-      <div className="card-body">
-        <h2 className="card-title">Card Title</h2>
-        <p>
-          A card component has a figure, a body part, and inside body there are
-          title and actions parts
-        </p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
-        </div>
-      </div>
-    </div>
+    <Router>
+      <Routes>
+        {/* Define the Layout route as a wrapper for the child routes */}
+        <Route path="/" element={<Layout />}>
+          {/* Nested Routes */}
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
+        </Route>
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
