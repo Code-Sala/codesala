@@ -1,0 +1,44 @@
+[
+  {
+    "img": "./src/assets/img/services/webdevelopment.png",
+    "title": "Web Development",
+    "description": "From custom websites to robust e-commerce platforms, we build scalable and secure web solutions tailored to your needs. Whether you're looking to create a new site or enhance an existing one, our development team ensures top-notch performance and functionality.",
+    "button": "More"
+  },
+  {
+    "img": "./src/assets/img/services/mobileApp.png",
+    "title": "Mobile App Development",
+    "description": "We develop dynamic mobile applications that deliver rich, interactive user experiences. Our mobile app solutions are designed for both iOS and Android platforms, ensuring your business reaches its audience wherever they are.",
+    "button": "More"
+  },
+  {
+    "img": "./src/assets/img/services/uiux.png",
+    "title": "UI/UX Design",
+    "description": "We design seamless, user-friendly interfaces that elevate the user experience. Our focus is on creating engaging, intuitive, and responsive designs that align with your brand identity and drive user satisfaction.",
+    "button": "More"
+  },
+  {
+    "img": "./src/assets/img/services/domainandhosting.png",
+    "title": "Domain & Hosting",
+    "description": "We provide reliable domain registration and hosting services to ensure that your online presence is fast, secure, and always available. With us, you can count on dependable performance and top-tier customer support..",
+    "button": "More"
+  },
+  {
+    "img": "./src/assets/img/services/software.png",
+    "title": "Software Integration",
+    "description": "We specialize in seamlessly integrating your software systems, ensuring they work together efficiently. Whether it’s connecting your CRM, ERP, or other business applications, our solutions streamline processes and optimize workflows.",
+    "link": "/webcomponent"
+  },
+  {
+    "img": "./src/assets/img/services/ai.png",
+    "title": "AI Solutions",
+    "description": "Harness the power of Artificial Intelligence to improve business efficiency. From predictive analytics to AI-driven automation, we help integrate AI technologies that can transform how your business operates and grows.",
+    "button": "More"
+  },
+  {
+    "img": "./src/assets/img/services/skill1.png",
+    "title": "Skill Rental",
+    "description": "Access highly skilled professionals on-demand through our skill rental service. Whether you need web developers, designers, or project managers, we connect you with experienced experts to help meet your project goals without the long-term commitment.",
+    "button": "More"
+  }
+]
