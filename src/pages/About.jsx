@@ -8,10 +8,13 @@ function About() {
   return (
 
     <>
+  
+
   <AboutHero/> 
   <AboutStory/>
   <AboutMission/>
   <AboutPartnering/>
+
   </>
   )
    }
