@@ -1,7 +1,7 @@
 function AboutMission() {
   return (
     <>
-     <div className="wrappers pt-20">
+     <div className="wrappers pt-20 container">
      <h1 className="text-bright-purple text-[36px] font-bold text-center">OUR MISSION</h1>
         <div className="ourmission flex pt-12 pb-12">
             <div className="left flex-1/2">

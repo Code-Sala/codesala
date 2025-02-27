@@ -1,7 +1,7 @@
 function AboutStory() {
   return (
     <>
-     <div className="wrapper pt-20">
+     <div className="wrapper pt-20 container">
      <h1 className="text-bright-purple text-[36px] font-bold text-center">OUR STORY</h1>
         <div className="ourstory container_lg flex pt-12 ">
             <div className="left flex-1/2">
