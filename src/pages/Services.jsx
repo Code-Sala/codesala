@@ -1,5 +1,11 @@
+import HeroSection from "../components/Services/HeroSection";
+
 function Services() {
-  return <div>Services</div>;
+  return (
+    <div>
+      <HeroSection />
+    </div>
+  );
 }
 
 export default Services;
