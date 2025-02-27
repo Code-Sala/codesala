@@ -40,16 +40,16 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="container min-h-[80vh] flex items-center justify-center px-4">
+    <div className="container min-h-[80vh] flex items-center justify-center px-4 container_lg ">
       <div className="max-w-2xl text-center space-y-6">
         <p className="text-gray-600 text-lg">CodeSala - Your digital partner</p>
         <h1 className="text-3xl sm:text-5xl font-bold leading-tight">
           At CodeSala, we specialize <br /> in{" "}
-          <span className="text-bright-purple">{currentService}</span> services
+          <span className="text-vibrant-pink">{currentService}</span> services
         </h1>
         <Link
           to="/contact"
-          className="inline-block bg-bright-purple text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-deep-purple mt-2"
+          className="inline-block bg-vibrant-pink text-white px-6 py-3 rounded-md text-lg font-medium hover:bg-deep-purple mt-2"
         >
           Let&apos;s start a project!
         </Link>
