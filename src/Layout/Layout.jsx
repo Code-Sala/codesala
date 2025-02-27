@@ -9,7 +9,7 @@ const Layout = () => {
     <div>
       <Navbar />
       <ParticleBackground />
-      <div>
+      <div className="pt-[5rem]">
         <Outlet />
       </div>
 
