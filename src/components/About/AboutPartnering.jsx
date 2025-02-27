@@ -1,7 +1,7 @@
 function AboutPartnering() {
   return (
     <>
-      <div className="wrappers pt-20">
+      <div className="wrappers pt-20 container">
       <h1 className="text-bright-purple text-[36px] font-bold text-center">Partnering with CodeSala  brings you:</h1>
        <div className="partnering  container_lg pt-12">
         <div className="cards flex gap-10 rounded-md">
