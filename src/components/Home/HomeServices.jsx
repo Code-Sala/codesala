@@ -32,7 +32,7 @@ const services = [
   },
 ];
 
-const GridCardService = () => {
+const HomeServices = () => {
   return (
     <div className="container flex flex-col items-center justify-center px-4 container_lg mx-auto pb-4 pt-8">
       <h1 className="text-3xl sm:text-5xl font-bold text-center mb-12">
@@ -69,4 +69,4 @@ const GridCardService = () => {
   );
 };
 
-export default GridCardService;
+export default HomeServices;
