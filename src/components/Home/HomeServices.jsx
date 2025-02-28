@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import {
   Code,
   Smartphone,
@@ -8,6 +8,7 @@ import {
   Plug,
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 const services = [
   {
@@ -41,41 +42,74 @@ const services = [
     title: "Skill Rental",
     description:
       "Hire expert professionals on-demand for your short-term or long-term projects.",
-    icon: Users, // Adjust the icon as needed
+    icon: Users,
     link: "/services/skill-rental",
   },
   {
     title: "Software Integration",
     description:
       "Seamlessly connect your software with third-party applications for better efficiency.",
-    icon: Plug, // Adjust the icon as needed
+    icon: Plug,
     link: "/services/software-integration",
   },
 ];
 
+// Parent container animation
+const containerVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.2,
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
+
+// Individual card animation
+const cardVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
+};
+
 const HomeServices = () => {
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { once: false, margin: "-100px" });
+
   return (
-    <div className="container flex flex-col items-center justify-center px-4 container_lg mx-auto pb-4 pt-8">
-      <h1 className="text-3xl sm:text-5xl font-bold text-center mb-12">
+    <motion.div
+      ref={sectionRef}
+      initial="hidden"
+      animate={isInView ? "visible" : "hidden"}
+      variants={containerVariants}
+      className="container flex flex-col items-center justify-center px-4 container_lg mx-auto pb-4 pt-8"
+    >
+      <motion.h1
+        variants={cardVariants}
+        className="text-3xl sm:text-5xl font-bold text-center mb-12 text-vibrant-pink"
+      >
         Explore Our Expertise
-      </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl ">
+      </motion.h1>
+      <motion.div
+        variants={containerVariants}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mn-4"
+      >
         {services.map((service, index) => {
           const Icon = service.icon;
           return (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.2, delay: 0.2 }}
+              variants={cardVariants}
               whileHover={{ scale: 1.03, rotate: 1 }}
-              className="relative bg-white py-8 px-2 rounded-xl shadow-xl border border-gray-200 flex flex-col items-center text-center hover:shadow-2xl transform transition-all"
+              className="relative bg-transparent py-8 px-4 rounded-xl shadow-xl flex flex-col items-center text-center hover:shadow-2xl transform transition-all"
             >
               <Icon className="w-16 h-16 text-vibrant-pink mb-4" />
-              <h2 className="text-xl font-semibold text-vibrant-pink">
+              <h2 className="text-xl font-semibold text-gray-700">
                 {service.title}
               </h2>
-              <p className="text-gray-600 mt-2">{service.description}</p>
+              <p className="text-gray-700 mt-2">{service.description}</p>
               <Link
                 to={service.link}
                 className="mt-4 inline-block px-4 py-2 bg-vibrant-pink text-white rounded-md hover:bg-bright-purple transition"
@@ -85,14 +119,16 @@ const HomeServices = () => {
             </motion.div>
           );
         })}
-      </div>
-      <Link
-        to="/services"
-        className="mt-8 inline-block px-4 py-2 bg-transparent border-2 border-vibrant-pink text-vibrant-pink rounded-md hover:bg-vibrant-pink hover:text-white transition"
-      >
-        More Services
-      </Link>
-    </div>
+      </motion.div>
+      <motion.div variants={cardVariants}>
+        <Link
+          to="/services"
+          className="mt-16 inline-block px-4 py-2 bg-transparent border-2 border-vibrant-pink text-vibrant-pink rounded-md hover:bg-vibrant-pink hover:text-white transition"
+        >
+          More Services
+        </Link>
+      </motion.div>
+    </motion.div>
   );
 };
 
