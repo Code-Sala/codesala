@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <footer className="footer bg-base-200 text-base-content py-12 relative">
+    <footer className="footer bg-base-200 text-base-content py-12 relative ">
       <div className="container_lg p-10 flex justify-between container mx-auto z-50">
         <aside>
           <svg

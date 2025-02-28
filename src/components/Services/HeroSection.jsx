@@ -1,5 +1,3 @@
-import React from "react";
-
 const HeroSection = () => {
   return (
     <div className="container bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] min-h-[50vh] flex-col items-center justify-center px-4 sm:px-8 text-center">
