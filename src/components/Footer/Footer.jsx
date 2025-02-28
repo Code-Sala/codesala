@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
 
+
     <motion.footer
       className="footer bg-base-200 text-base-content py-12 relative"
       initial={{ opacity: 0 }}
@@ -21,6 +22,7 @@ function Footer() {
         >
 
     <footer className="footer bg-base-200 text-base-content py-12 relative">
+
       <div className="container_lg p-10 flex justify-between container mx-auto z-50">
         <aside>
 
