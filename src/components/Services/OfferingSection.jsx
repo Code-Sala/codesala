@@ -1,7 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom"; // Import Link from React Router
-
-import { motion } from "framer-motion"; // Import Framer Motion
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import services from "../../Data/Services.json";
 
 const OfferingSection = () => {
@@ -57,15 +56,13 @@ const OfferingSection = () => {
               <p className="text-gray-600 mt-2">{service.description}</p>
 
               {/* Animated Button */}
-              <Link to="/webcomponents">
-                {" "}
-                {/* Link to WebComponents page */}
+              <Link to={service.link || service.button}>
                 <motion.button
                   className="text-[#F1529C] hover:text-[#482977] mt-4 font-semibold transition-all"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  {service.button || "Learn More"}
+                  {service.button ? "Get Started" : "Learn More"}
                 </motion.button>
               </Link>
             </motion.div>

@@ -1,7 +1,8 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // Added import
+import webImage from "../../assets/img/services/web.png"; // Added image import
 
-const WebComponents = () => {
+const MobileComponent = () => {
   return (
     <div>
       <motion.div
@@ -12,14 +13,14 @@ const WebComponents = () => {
       >
         <div className="container_lg">
           <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl leading-tight pt-10">
-            Web Development
+            Mobile App Development
           </h1>
           <p className="text-white font-semibold text-base sm:text-lg md:text-xl mt-6 px-2 sm:px-10">
-            We create fast, responsive, and scalable websites tailored to your
-            needs. Whether it's a sleek business site, an eCommerce platform, or
-            a dynamic web app, we use cutting-edge technologies to deliver
-            high-performance solutions. Let’s build a website that sets you
-            apart!
+            Transform your vision into powerful mobile experiences. We develop
+            native iOS/Android and cross-platform apps with intuitive design,
+            robust performance, and scalable architecture. From concept to
+            deployment, we deliver secure, user-centric solutions that elevate
+            your digital presence.
           </p>
         </div>
       </motion.div>
@@ -31,9 +32,9 @@ const WebComponents = () => {
           transition={{ duration: 1 }}
         >
           <img
-            src="src\assets\img\services\web.png"
+            src="src\assets\img\services\mobile.png"
             alt="Web Development"
-            className="pl-10 md:pl-20 w-full md:w-120 rounded-lg h-auto shadow-lg"
+            className="pl-10 md:pl-20 w-full md:w-140 rounded-lg h-100 shadow-lg"
           />
         </motion.div>
         <motion.div
@@ -50,22 +51,24 @@ const WebComponents = () => {
           </p>
           <ul className="space-y-2 text-gray-700">
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Cutting-Edge
-              Technology
+              <span className="text-red-500 mr-2">✔</span>Native &
+              cross-platform development
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> User-Centric Design
+              <span className="text-red-500 mr-2">✔</span> Focus on UX/UI and
+              performance
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> SEO & Performance
-              Optimized
+              <span className="text-red-500 mr-2">✔</span> End-to-end security
+              and scalability
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Reliable Support &
-              Maintenance
+              <span className="text-red-500 mr-2">✔</span> Industry-specific
+              solutions
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Transparent Process
+              <span className="text-red-500 mr-2">✔</span> Ongoing support and
+              updates
             </li>
           </ul>
           <motion.button
@@ -81,4 +84,4 @@ const WebComponents = () => {
   );
 };
 
-export default WebComponents;
+export default MobileComponent;
