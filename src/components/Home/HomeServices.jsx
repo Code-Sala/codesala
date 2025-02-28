@@ -123,7 +123,7 @@ const HomeServices = () => {
       <motion.div variants={cardVariants}>
         <Link
           to="/services"
-          className="mt-16 inline-block px-4 py-2 bg-transparent border-2 border-vibrant-pink text-vibrant-pink rounded-md hover:bg-vibrant-pink hover:text-white transition"
+          className="hidden lg:inline-block text-white px-4 py-2 rounded-md animated-gradient-btn mt-12"
         >
           More Services
         </Link>

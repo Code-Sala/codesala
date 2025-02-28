@@ -59,7 +59,7 @@ const Hero = () => {
       <div className="max-w-2xl text-center space-y-6">
         <motion.p
           variants={containerVariants}
-          className="text-gray-600 text-lg"
+          className="text-gray-700 text-lg"
         >
           CodeSala - Your digital partner
         </motion.p>

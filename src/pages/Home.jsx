@@ -7,7 +7,7 @@ import WhatWeDo from "../components/Home/WhatWeDo";
 const Home = () => {
   return (
     <div className="relative min-h-screen">
-      {/* <div className="absolute inset-0 bg-gradient-to-br from-deep-purple/70 to-vibrant-pink/70 opacity-80"></div> */}
+      <div className="absolute inset-0 bg-gradient-to-br from-deep-purple/70 to-vibrant-pink/70 opacity-80"></div>
 
       {/* <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
