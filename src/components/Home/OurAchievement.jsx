@@ -1,27 +1,27 @@
 import { useState } from "react";
+import { Trophy, Globe, Palette } from "lucide-react";
 
 const OurAchievement = () => {
   const [achievements] = useState([
     {
       title: "Web Development",
       description: "Earned for building 5+ websites.",
+      icon: <Trophy size={50} className="text-vibrant-pink" />,
     },
     {
       title: "Domain Hosting",
       description: "Successfully hosted 10+ domains.",
+      icon: <Globe size={50} className="text-vibrant-pink" />,
     },
     {
       title: "UI/UX Design",
       description: "Designed 10+ user-friendly interfaces.",
+      icon: <Palette size={50} className="text-vibrant-pink" />,
     },
-    // {
-    //   title: "App Development",
-    //   description: "Published 3+ mobile applications.",
-    // },
   ]);
 
   return (
-    <div className="container min-h-[50vh] mx-auto flex flex-col items-center justify-center px-4 contianer_lg">
+    <div className="container min-h-[50vh] mx-auto flex flex-col items-center justify-center px-4">
       <h1 className="text-3xl sm:text-5xl font-bold text-center mb-12">
         Our Achievements
       </h1>
@@ -29,12 +29,16 @@ const OurAchievement = () => {
         {achievements.map((achievement, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-lg p-6 border border-gray-200  hover:shadow-xl"
+            className="relative flex flex-col items-center p-6 bg-white backdrop-blur-lg rounded-xl shadow-lg hover:shadow-xl transition-transform hover:scale-105"
           >
-            <h2 className="text-xl font-semibold text-vibrant-pink">
+            <div className="absolute inset-0 rounded-xl border-2 border-transparent hover:border-vibrant-pink transition-all"></div>
+            {achievement.icon}
+            <h2 className="text-2xl font-semibold mt-3 text-vibrant-pink ">
               {achievement.title}
             </h2>
-            <p className="text-gray-600 mt-2">{achievement.description}</p>
+            <p className="text-gray-500 mt-2 text-center">
+              {achievement.description}
+            </p>
           </div>
         ))}
       </div>

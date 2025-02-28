@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { Code, Smartphone, PanelsTopLeft, Server } from "lucide-react";
+import {
+  Code,
+  Smartphone,
+  PanelsTopLeft,
+  Server,
+  Users,
+  Plug,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
@@ -29,6 +36,20 @@ const services = [
       "Secure and reliable domain registration and hosting services.",
     icon: Server,
     link: "/services/domain-hosting",
+  },
+  {
+    title: "Skill Rental",
+    description:
+      "Hire expert professionals on-demand for your short-term or long-term projects.",
+    icon: Users, // Adjust the icon as needed
+    link: "/services/skill-rental",
+  },
+  {
+    title: "Software Integration",
+    description:
+      "Seamlessly connect your software with third-party applications for better efficiency.",
+    icon: Plug, // Adjust the icon as needed
+    link: "/services/software-integration",
   },
 ];
 
@@ -65,6 +86,12 @@ const HomeServices = () => {
           );
         })}
       </div>
+      <Link
+        to="/services"
+        className="mt-8 inline-block px-4 py-2 bg-transparent border-2 border-vibrant-pink text-vibrant-pink rounded-md hover:bg-vibrant-pink hover:text-white transition"
+      >
+        More Services
+      </Link>
     </div>
   );
 };
