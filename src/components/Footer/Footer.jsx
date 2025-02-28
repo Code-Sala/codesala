@@ -1,8 +1,12 @@
+
 import { motion } from "framer-motion";
+
+
 import { Link } from "react-router-dom";
 
 function Footer() {
   return (
+
     <motion.footer
       className="footer bg-base-200 text-base-content py-12 relative"
       initial={{ opacity: 0 }}
@@ -15,6 +19,11 @@ function Footer() {
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
+
+    <footer className="footer bg-base-200 text-base-content py-12 relative">
+      <div className="container_lg p-10 flex justify-between container mx-auto z-50">
+        <aside>
+
           <svg
             width="50"
             height="50"
