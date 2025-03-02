@@ -63,14 +63,20 @@ const OurAchievement = () => {
       >
         Our Achievements
 <<<<<<< HEAD
+<<<<<<< HEAD
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl ">
 =======
+=======
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl ">
+>>>>>>> 5d649dc43138e2482c19736b4455b67482756f2d
       </motion.h1>
       <motion.div
         variants={containerVariants}
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-5xl"
       >
+<<<<<<< HEAD
 >>>>>>> origin
         {achievements.map((achievement, index) => (
           <motion.div
@@ -82,6 +88,16 @@ const OurAchievement = () => {
             whileHover={{ scale: 1.05 }}
             className="relative flex flex-col items-center p-6 bg-transparent backdrop-blur-lg rounded-xl shadow-lg hover:shadow-xl transition-transform"
 >>>>>>> origin
+=======
+        {achievements.map((achievement, index) => (
+          <motion.div
+            key={index}
+
+            className="relative flex flex-col items-center p-6 bg-white backdrop-blur-lg rounded-xl shadow-lg shadow-pink-500 hover:shadow-xl transition-transform hover:scale-105"
+            variants={cardVariants}
+            whileHover={{ scale: 1.05 }}
+            className="relative flex flex-col items-center p-6 bg-transparent backdrop-blur-lg rounded-xl shadow-lg hover:shadow-xl transition-transform"
+>>>>>>> 5d649dc43138e2482c19736b4455b67482756f2d
           >
             <div className="absolute inset-0 rounded-xl border-2 border-transparent hover:border-vibrant-pink transition-all"></div>
             {achievement.icon}
