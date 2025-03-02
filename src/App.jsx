@@ -9,10 +9,13 @@ import Services from "./pages/Services";
 import Blog from "./pages/Blog";
 import WebComponents from "./components/Services/WebComponents";
 import MobileComponent from "./components/Services/MobileComponent";
+
 import UiuxSection from "./components/Services/uiuxSection";
 import Domainsection from "./components/Services/Domainsection";
 import SoftwareComponent from "./components/Services/SoftwareComponent";
 import SkillComponent from "./components/Services/SkillComponent";
+
+import ParticleBackground from "./components/particles/ParticleBackground";
 
 const App = () => {
   return (
@@ -33,7 +36,7 @@ const App = () => {
           border: "3px solid #ED1D7E",
         }}
       />
-
+      <ParticleBackground />
       <Router>
         <Routes>
           {/* Define the Layout route as a wrapper for the child routes */}
