@@ -25,11 +25,11 @@ const OurAchievement = () => {
       <h1 className="text-3xl sm:text-5xl font-bold text-center mb-12">
         Our Achievements
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full max-w-5xl ">
         {achievements.map((achievement, index) => (
           <div
             key={index}
-            className="relative flex flex-col items-center p-6 bg-white backdrop-blur-lg rounded-xl shadow-lg hover:shadow-xl transition-transform hover:scale-105"
+            className="relative flex flex-col items-center p-6 bg-white backdrop-blur-lg rounded-xl shadow-lg shadow-pink-500 hover:shadow-xl transition-transform hover:scale-105"
           >
             <div className="absolute inset-0 rounded-xl border-2 border-transparent hover:border-vibrant-pink transition-all"></div>
             {achievement.icon}
