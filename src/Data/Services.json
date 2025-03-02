@@ -29,12 +29,7 @@
     "description": "We specialize in seamlessly integrating your software systems, ensuring they work together efficiently. Whether it’s connecting your CRM, ERP, or other business applications, our solutions streamline processes and optimize workflows.",
     "link": "/softwarecomponent"
   },
-  {
-    "img": "./src/assets/img/services/ai.png",
-    "title": "AI Solutions",
-    "description": "Harness the power of Artificial Intelligence to improve business efficiency. From predictive analytics to AI-driven automation, we help integrate AI technologies that can transform how your business operates and grows.",
-    "link": "/aicomponent"
-  },
+
   {
     "img": "./src/assets/img/services/skill1.png",
     "title": "Skill Rental",

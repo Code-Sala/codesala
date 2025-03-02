@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const WebComponents = () => {
+const UiuxSection = () => {
   return (
     <div>
       <div className="bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] min-h-[50vh] flex items-center justify-center px-4 sm:px-8">
@@ -17,7 +17,7 @@ const WebComponents = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Web Development
+            UI/UX Design
           </motion.h1>
           <motion.p
             className="text-white font-semibold text-base sm:text-lg md:text-xl mt-6 px-2 sm:px-10"
@@ -25,11 +25,11 @@ const WebComponents = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4, duration: 0.6 }}
           >
-            We create fast, responsive, and scalable websites tailored to your
-            needs. Whether it's a sleek business site, an eCommerce platform, or
-            a dynamic web app, we use cutting-edge technologies to deliver
-            high-performance solutions. Let’s build a website that sets you
-            apart!
+            We craft user-centric designs that enhance experiences and drive
+            engagement. From wireframes to stunning interfaces, our designs
+            prioritize usability, aesthetics, and seamless interactions. Elevate
+            your brand with a visually compelling and intuitive user experience!
+            🎨🚀
           </motion.p>
           <motion.div
             className="mt-8 flex justify-center"
@@ -39,7 +39,6 @@ const WebComponents = () => {
           ></motion.div>
         </motion.div>
       </div>
-
       <section className="flex flex-col md:flex-row items-center justify-between p-8">
         <motion.div
           className="relative w-full md:w-1/2"
@@ -48,9 +47,9 @@ const WebComponents = () => {
           transition={{ duration: 1 }}
         >
           <img
-            src="src\assets\img\services\web.png"
+            src="src\assets\img\services\uiux1.png"
             alt="Web Development"
-            className="pl-10 md:pl-20 w-full md:w-120 rounded-lg h-auto shadow-lg"
+            className="pl-10 md:pl-20 w-full md:w-[30rem] rounded-lg h-auto shadow-lg"
           />
         </motion.div>
         <motion.div
@@ -67,22 +66,21 @@ const WebComponents = () => {
           </p>
           <ul className="space-y-2 text-gray-700">
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Cutting-Edge
-              Technology
+              <span className="text-red-500 mr-2">✔</span> User-Centered Design
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> User-Centric Design
+              <span className="text-red-500 mr-2">✔</span> Innovative & Modern
+              Aesthetics
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> SEO & Performance
-              Optimized
+              <span className="text-red-500 mr-2">✔</span> Responsive &
+              Accessible
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Reliable Support &
-              Maintenance
+              <span className="text-red-500 mr-2">✔</span> Data-Driven Approach
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Transparent Process
+              <span className="text-red-500 mr-2">✔</span> Smooth User Flows
             </li>
           </ul>
           <motion.button
@@ -98,4 +96,4 @@ const WebComponents = () => {
   );
 };
 
-export default WebComponents;
+export default UiuxSection;
