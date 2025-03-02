@@ -1,4 +1,4 @@
-const TeamSection = () => {
+function OurTeam() {
   const teamMembers = [
     {
       name: "Siddhant Pandey",
@@ -52,9 +52,9 @@ const TeamSection = () => {
 
   return (
     <section className="bg-transparent dark:bg-gray-900">
-      <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
+      <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-6 lg:px-6">
         <div className="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-          <h1 className="text-3xl sm:text-5xl font-bold text-center mb-12 text-vibrant-pink dark:text-white">
+          <h1 className="text-3xl sm:text-5xl font-bold text-center mb-12 text-gray-800 dark:text-white">
             Our Team
           </h1>
           <p className="font-light text-gray-700 sm:text-xl dark:text-gray-400">
@@ -102,6 +102,6 @@ const TeamSection = () => {
       </div>
     </section>
   );
-};
+}
 
-export default TeamSection;
+export default OurTeam;

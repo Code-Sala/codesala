@@ -9,17 +9,16 @@ import Contact from "../components/Contact/Contact";
 
 function About() {
   return (
-
-   <>
-  <AboutHero/> 
-  <AboutStory/>
-  <AboutMission/>
-  <AboutPartnering/>
-  <AboutOurGoals/>
-  <AboutInterested/>
-  <Contact/>
-  </>
-  )
-   }
+    <>
+      <AboutHero />
+      <AboutStory />
+      <AboutMission />
+      <AboutPartnering />
+      <AboutOurGoals />
+      <AboutInterested />
+      <Contact />
+    </>
+  );
+}
 
 export default About;
