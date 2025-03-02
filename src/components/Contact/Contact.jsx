@@ -1,135 +1,114 @@
 import { motion } from "framer-motion";
-import {
-  Facebook,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-} from "lucide-react";
+import { Facebook, Linkedin, Mail, MapPin, Phone, X } from "lucide-react";
 
 export default function Contact() {
   return (
-    <>
-      <motion.div
-        className="wrapeers container pt-35 pb-25"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <div className="contact container_lg flex">
-          {/* Left section with map */}
-          <div className="left flex-1/2">
-            <motion.div
-              className="map"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
-            >
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.104650021768!2d85.29060207535811!3d27.714054976178673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18f2d306eb21%3A0xdae844496e6b4bd6!2sBhagwan%20Pau%20Taxi%20Stand!5e0!3m2!1sen!2snp!4v1740648053270!5m2!1sen!2snp"
-                width="300"
-                height="250"
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </motion.div>
-          </div>
+    <motion.div
+      className="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16 py-12"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
+      {/* Grid with 1 column on mobile, 3 columns on large screens */}
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+        {/* Map Section */}
+        <motion.div
+          className="w-full"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.104650021768!2d85.29060207535811!3d27.714054976178673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18f2d306eb21%3A0xdae844496e6b4bd6!2sBhagwan%20Pau%20Taxi%20Stand!5e0!3m2!1sen!2snp!4v1740648053270!5m2!1sen!2snp"
+            className="w-full h-48 sm:h-64 md:h-72 lg:h-full rounded-lg shadow-lg border"
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </motion.div>
 
-          {/* Middle section with contact details */}
-          <div className="mid flex-1/2 pl-20">
-            <motion.h1
-              className="pt-4 pl-10 pb-6 text-[30px] text-vibrant-pink font-semibold"
-              initial={{ y: -50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-            >
-              Contact
-            </motion.h1>
+        {/* Contact Information Section */}
+        <div className="flex flex-col space-y-6 lg:border-l lg:border-r lg:border-gray-200 lg:px-6">
+          <motion.h1
+            className="text-2xl md:text-3xl font-semibold text-[#ED1D7E] mb-6 text-center"
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            Contact Us
+          </motion.h1>
 
+          {/* Contact Details */}
+          <div className="flex flex-col space-y-6">
             <motion.div
-              className="icons flex"
+              className="flex items-center gap-3 justify-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              <MapPin
-                className="p-2 rounded-full border-3 border-vibrant-pink -mt-4 ml-10"
-                size={40}
-              />
-              <p className="-mt-2 pl-4">Bhawan Pau , Kathmandu</p>
+              <MapPin className="text-[#ED1D7E] w-8 h-8 flex-shrink-0" />
+              <p className="text-gray-700">Bhawan Pau, Kathmandu</p>
             </motion.div>
 
             <motion.div
-              className="icons flex mt-6"
+              className="flex items-center gap-3 justify-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >
-              <Mail
-                className="p-2 rounded-full border-3 border-vibrant-pink -mt-4 ml-10"
-                size={40}
-              />
-              <p className="-mt-2 pl-4">
-                <a href="mailto:codesalaofficial@gmail.com">
+              <Mail className="text-[#ED1D7E] w-8 h-8 flex-shrink-0" />
+              <p className="text-gray-700 break-words">
+                <a href="mailto:codesalaofficial@gmail.com" className="hover:underline">
                   codesalaofficial@gmail.com
                 </a>
               </p>
             </motion.div>
 
             <motion.div
-              className="icons flex mt-6"
+              className="flex items-center gap-3 justify-center"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <Phone
-                className="p-2 rounded-full border-3 border-vibrant-pink -mt-4 ml-10"
-                size={40}
-              />
-              <p className="-mt-2 pl-4">
-                <a href="tel:9769857456">+977 9769857456</a>
+              <Phone className="text-[#ED1D7E] w-8 h-8 flex-shrink-0" />
+              <p className="text-gray-700">
+                <a href="tel:9769857456" className="hover:underline">
+                  +977 9769857456
+                </a>
               </p>
             </motion.div>
           </div>
-
-          {/* Right section with social media */}
-          <div className="right flex-1/2">
-            <motion.h1
-              className="pt-4 pl-10 pb-6 text-[30px] text-vibrant-pink font-semibold text-center"
-              initial={{ y: -50, opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.8 }}
-            >
-              Follow Us
-            </motion.h1>
-
-            <motion.div
-              className="icons flex"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-            >
-              <Facebook
-                className="p-2 rounded-full border-3 border-vibrant-pink ml-58 mb-4"
-                size={40}
-              />
-            </motion.div>
-
-            <motion.div
-              className="icons flex mt-6"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 1 }}
-            >
-              <Linkedin
-                className="p-2 rounded-full border-3 border-vibrant-pink ml-58"
-                size={40}
-              />
-            </motion.div>
-          </div>
         </div>
-      </motion.div>
-    </>
+
+        {/* Follow Us Section */}
+        <div className="flex flex-col space-y-6">
+          <motion.h1
+            className="text-2xl md:text-3xl font-semibold text-[#ED1D7E] mb-6 text-center"
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            Follow Us
+          </motion.h1>
+
+          <motion.div
+            className="flex flex-row justify-center gap-6 pt-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Facebook className="text-[#ED1D7E] w-10 h-10 hover:scale-110 transition-transform" />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="text-[#ED1D7E] w-10 h-10 hover:scale-110 transition-transform" />
+            </a>
+            <a href="#" target="_blank" rel="noopener noreferrer">
+              <X className="text-[#ED1D7E] w-10 h-10 hover:scale-110 transition-transform" />
+            </a>
+          </motion.div>
+        </div>
+      </div>
+    </motion.div>
   );
 }

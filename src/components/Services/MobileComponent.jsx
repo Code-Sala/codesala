@@ -5,25 +5,41 @@ import webImage from "../../assets/img/services/web.png"; // Added image import
 const MobileComponent = () => {
   return (
     <div>
-      <motion.div
-        className="container bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] min-h-[40vh] flex flex-col items-center justify-center px-4 sm:px-8 text-center"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        <div className="container_lg">
-          <h1 className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl leading-tight pt-10">
+      <div className="bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] min-h-[50vh] flex items-center justify-center px-4 sm:px-8">
+        <motion.div
+          className="max-w-8xl text-center container_lg"
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.h1
+            className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl leading-tight"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.6 }}
+          >
             Mobile App Development
-          </h1>
-          <p className="text-white font-semibold text-base sm:text-lg md:text-xl mt-6 px-2 sm:px-10">
+          </motion.h1>
+          <motion.p
+            className="text-white font-semibold text-base sm:text-lg md:text-xl mt-6 px-2 sm:px-10"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4, duration: 0.6 }}
+          >
             Transform your vision into powerful mobile experiences. We develop
             native iOS/Android and cross-platform apps with intuitive design,
             robust performance, and scalable architecture. From concept to
             deployment, we deliver secure, user-centric solutions that elevate
             your digital presence.
-          </p>
-        </div>
-      </motion.div>
+          </motion.p>
+          <motion.div
+            className="mt-8 flex justify-center"
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.6, duration: 0.5 }}
+          ></motion.div>
+        </motion.div>
+      </div>
       <section className="flex flex-col md:flex-row items-center justify-between p-8">
         <motion.div
           className="relative w-full md:w-1/2"
