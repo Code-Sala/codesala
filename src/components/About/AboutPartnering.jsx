@@ -55,7 +55,7 @@ const TimelineService = () => {
   };
 
   return (
-    <div className="container mx-auto py-12 px-4 max-w-6xl pt-20">
+    <div className=" mx-auto py-12 px-4 max-w-6xl pt-20">
       <motion.h1
         className="text-3xl sm:text-5xl font-bold text-center mb-12 text-vibrant-pink"
         initial={{ opacity: 0, y: -20 }}

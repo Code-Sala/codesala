@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 function AboutInterested() {
   return (
     <motion.div
-      className="wrappers container bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] min-h-[40vh] flex items-center justify-center px-4 sm:px-8"
+      className="wrappers  bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] min-h-[40vh] flex items-center justify-center px-4 sm:px-8"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
