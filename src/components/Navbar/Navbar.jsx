@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "../../assets/img/logo/logo1.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +35,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 container_lg">
         {/* Logo */}
         <Link to="/" className="text-xl font-bold text-gray-800">
-          MyLogo
+          <img src={logo} alt="logo1" className="w-[9rem] h-6" />
         </Link>
 
         {/* Desktop Menu */}
@@ -59,7 +60,7 @@ const Navbar = () => {
         {/* Contact Button */}
         <Link
           to="/contact"
-          className="hidden lg:inline-block bg-vibrant-pink text-white px-4 py-2 rounded-md hover:bg-deep-purple"
+          className="hidden lg:inline-block text-white px-4 py-2 rounded-md animated-gradient-btn"
         >
           Contact Us
         </Link>

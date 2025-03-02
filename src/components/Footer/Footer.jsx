@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 function Footer() {
   return (
     <footer className="footer bg-base-200 text-base-content py-12 relative">
@@ -23,7 +22,6 @@ function Footer() {
             Providing reliable tech since 2024
           </p>
         </aside>
-
         <nav className="flex flex-col">
           <h6 className="footer-title">Services</h6>
           <Link to="/branding" className="link link-hover">
@@ -39,7 +37,6 @@ function Footer() {
             Skill Rent
           </Link>
         </nav>
-
         <nav className="flex flex-col">
           <h6 className="footer-title">Company</h6>
           <Link to="/about" className="link link-hover">
@@ -55,7 +52,6 @@ function Footer() {
             Services
           </Link>
         </nav>
-
         <nav className="flex flex-col">
           <h6 className="footer-title">Legal</h6>
           <Link to="/terms" className="link link-hover">
