@@ -68,7 +68,7 @@ const Hero = () => {
           className="text-3xl sm:text-5xl font-bold leading-tight"
         >
           At CodeSala, we specialize <br /> in{" "}
-          <span className="text-5xl font-bold bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent transition-all duration-1000 hover:bg-gradient-to-tl">
+          <span className="text-5xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent transition-all duration-1000 hover:bg-gradient-to-tl">
             {currentService}
           </span>{" "}
           services
