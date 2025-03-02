@@ -21,7 +21,7 @@ const App = () => {
         outerAlpha={0}
         hasBlendMode={true}
         innerStyle={{
-          backgroundColor: "#00AEEf",
+          backgroundColor: "purple",
         }}
         outerStyle={{
           // backgroundColor:'#ED1D7E',
