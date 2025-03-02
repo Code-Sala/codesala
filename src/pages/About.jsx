@@ -10,9 +10,7 @@ import Contact from "../components/Contact/Contact";
 function About() {
   return (
 
-    <>
-  
-
+   <>
   <AboutHero/> 
   <AboutStory/>
   <AboutMission/>
