@@ -4,9 +4,9 @@ import { motion, useInView } from "framer-motion";
 
 const services = [
   "ui/ux design",
-  "web development",
+  "software integration",
   "app development",
-  "domain hosting",
+  "web development",
 ];
 
 // Parent container animation
@@ -16,7 +16,7 @@ const containerVariants = {
 };
 
 const Hero = () => {
-  const [currentService, setCurrentService] = useState("");
+  const [currentService, setCurrentService] = useState("web development");
   const serviceIndexRef = useRef(0);
   const letterIndexRef = useRef(0);
   const timeoutRef = useRef(null);
