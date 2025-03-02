@@ -9,6 +9,12 @@ import Services from "./pages/Services";
 import Blog from "./pages/Blog";
 import WebComponents from "./components/Services/WebComponents";
 import MobileComponent from "./components/Services/MobileComponent";
+
+import UiuxSection from "./components/Services/uiuxSection";
+import Domainsection from "./components/Services/Domainsection";
+import SoftwareComponent from "./components/Services/SoftwareComponent";
+import SkillComponent from "./components/Services/SkillComponent";
+
 import ParticleBackground from "./components/particles/ParticleBackground";
 
 const App = () => {
@@ -43,6 +49,10 @@ const App = () => {
             <Route path="/blog" element={<Blog />} />
             <Route path="/webcomponent" element={<WebComponents />} />
             <Route path="/mobilecomponent" element={<MobileComponent />} />
+            <Route path="/uiuxcomponent" element={<UiuxSection />} />
+            <Route path="/domaincomponent" element={<Domainsection />} />
+            <Route path="/softwarecomponent" element={<SoftwareComponent />} />
+            <Route path="/skillrentcomponent" element={<SkillComponent />} />
           </Route>
         </Routes>
       </Router>
