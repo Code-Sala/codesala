@@ -38,7 +38,7 @@ const TeamSection = () => {
     },
     {
       name: "Simant Pandey",
-      role: "Graphics Designer",
+      role: "Graphic Designer",
       image:
         "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png",
       social: {
@@ -51,13 +51,13 @@ const TeamSection = () => {
   ];
 
   return (
-    <section className="bg-white dark:bg-gray-900">
+    <section className="bg-transparent dark:bg-gray-900">
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16 lg:px-6">
         <div className="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-          <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
+          <h1 className="text-3xl sm:text-5xl font-bold text-center mb-12 text-vibrant-pink dark:text-white">
             Our Team
-          </h2>
-          <p className="font-light text-gray-500 sm:text-xl dark:text-gray-400">
+          </h1>
+          <p className="font-light text-gray-700 sm:text-xl dark:text-gray-400">
             Meet the passionate individuals behind our success. Our team is
             dedicated to innovation, collaboration, and excellence.
           </p>

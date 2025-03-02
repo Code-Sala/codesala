@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import Services from "./pages/Services";
 import Blog from "./pages/Blog";
 import WebComponents from "./components/Services/WebComponents";
+import MobileComponent from "./components/Services/MobileComponent";
 
 const App = () => {
   return (
@@ -39,7 +40,8 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />
             <Route path="/blog" element={<Blog />} />
-            <Route path="//webcomponents" element={<WebComponents />} />
+            <Route path="/webcomponent" element={<WebComponents />} />
+            <Route path="/mobilecomponent" element={<MobileComponent />} />
           </Route>
         </Routes>
       </Router>
