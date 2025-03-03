@@ -24,4 +24,16 @@ function About() {
   )
    }
 
+    <>
+      <AboutHero />
+      <AboutStory />
+      <AboutMission />
+      <AboutPartnering />
+      <AboutOurGoals />
+      <AboutInterested />
+      <Contact />
+    </>
+  );
+}
+
 export default About;
