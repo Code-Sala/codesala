@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 function AboutHero() {
   return (
-    <div className="bg-gradient-to-br from-[#00AEEF]  via-[#892890] to-[#ED1D7E] min-h-[80vh]container pb-12 pt-12 flex items-center justify-center px-4 sm:px-8">
+    <div className="bg-gradient-to-br from-[#00AEEF]  via-[#892890] to-[#ED1D7E] min-h-[80vh]container pb-12 pt-[8rem] flex items-center justify-center px-4 sm:px-8">
       <motion.div
         className="max-w-8xl text-center container_lg"
         initial={{ opacity: 0, y: 50 }}
@@ -26,9 +26,9 @@ function AboutHero() {
           Welcome to CODESALA, where innovation meets practicality. We are a
           dynamic digital solutions company dedicated to helping businesses
           thrive in the ever-evolving digital world. With expertise in UI/UX
-          design, web development, domain and hosting, software integration,
-          and skill rental, we offer a full range of services tailored to meet
-          your unique needs.
+          design, web development, domain and hosting, software integration, and
+          skill rental, we offer a full range of services tailored to meet your
+          unique needs.
         </motion.p>
         <motion.div
           className="mt-8 flex justify-center"
