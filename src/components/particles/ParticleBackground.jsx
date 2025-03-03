@@ -38,7 +38,7 @@ const ParticleBackground = () => {
       interactivity: {
         events: {
           onClick: {
-            enable: true,
+            enable: false,
             mode: "push",
           },
           onHover: {
@@ -74,7 +74,7 @@ const ParticleBackground = () => {
             default: "bounce",
           },
           random: false,
-          speed: 5,
+          speed: 4,
           straight: false,
         },
         number: {
