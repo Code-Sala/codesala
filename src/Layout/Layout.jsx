@@ -8,6 +8,7 @@ import Footer from "../components/Footer/Footer";
 const Layout = () => {
   return (
     <div>
+      <Navbar/>
       {/* <ParticleBackground /> */}
 
       <div className="pt-[5rem]">
