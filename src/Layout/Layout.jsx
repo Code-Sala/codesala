@@ -9,7 +9,7 @@ const Layout = () => {
   return (
     <div>
       {/* <ParticleBackground /> */}
-
+      <Navbar />
       <div className="pt-[5rem]">
         <Outlet />
       </div>

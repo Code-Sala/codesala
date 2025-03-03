@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import services from "../../Data/Services.json";
@@ -8,7 +8,7 @@ const OfferingSection = () => {
   const isInView = useInView(sectionRef, { triggerOnce: true, threshold: 0.2 }); // Step 2: Track when in viewport
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gray-100 container">
+    <section ref={sectionRef} className="py-20 bg-gray-100 container z-50">
       <div className="max-w-6xl mx-auto px-6">
         {/* Header Section */}
         <motion.div
