@@ -1,0 +1,29 @@
+.peopleandculture {
+  background: linear-gradient(135deg, #f3f4f6 25%, #ffffff 50%, #ed1d7e 75%);
+}
+@keyframes nebula {
+  0% {
+    background: radial-gradient(
+      circle at 20% 40%,
+      rgba(128, 0, 128, 0.3),
+      transparent 50%
+    );
+  }
+  50% {
+    background: radial-gradient(
+      circle at 80% 60%,
+      rgba(255, 0, 255, 0.3),
+      transparent 50%
+    );
+  }
+  100% {
+    background: radial-gradient(
+      circle at 40% 80%,
+      rgba(0, 0, 255, 0.3),
+      transparent 50%
+    );
+  }
+}
+.animate-nebula {
+  animation: nebula 10s infinite alternate ease-in-out;
+}
