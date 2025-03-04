@@ -11,10 +11,9 @@ const Layout = () => {
       <Navbar/>
       {/* <ParticleBackground /> */}
       <Navbar />
-      <div className="">
+      <div className="pt-[5rem]">
         <Outlet />
       </div>
-
       <Footer />
     </div>
   );
