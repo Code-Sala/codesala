@@ -1,14 +1,15 @@
 import { useState } from "react";
+import "./home.css";
 
 export default function PeopleAndCulture() {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <section className="peopleandculture py-12 bg-white flex justify-center items-center container ">
+    <section className="peopleandculture py-12 bg-white flex justify-center items-center container relative">
       <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start gap-6 container_lg">
         <div className="md:w-1/2 md:ml-auto text-center md:text-left">
           <h2
-            className="text-5xl font-extrabold text-gray-900 mb-6 leading-tight animate-fadeInUp"
+            className="text-5xl font-extrabold text-vibrant-pink mb-6 leading-tight animate-fadeInUp"
             style={{ animationDelay: "0.5s" }}
           >
             Unlock Growth

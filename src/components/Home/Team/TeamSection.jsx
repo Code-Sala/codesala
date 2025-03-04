@@ -7,7 +7,7 @@ const TeamSection = () => {
   const [activeSection, setActiveSection] = useState("team");
 
   return (
-    <div className="flex flex-col items-center p-6 pt-16 mt-12">
+    <div className="flex flex-col items-center p-6 pt-16 mt-12 bg-white">
       <h1 className="text-3xl lg:text-5xl font-bold text-center  text-vibrant-pink dark:text-white">
         Together We Innovate
       </h1>
