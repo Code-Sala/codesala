@@ -1,130 +1,67 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/navigation";
 import "swiper/css/autoplay";
+import { Autoplay } from "swiper/modules";
 
 const testimonials = [
   {
-    name: "Sophia Martinez",
-    image:
-      "https://images.unsplash.com/photo-1554151228-14d9def656e4?w=600&auto=format&fit=crop&q=60",
-    quote:
-      "Fantastic experience! The team was professional, and their attention to detail made all the difference. Highly recommend!",
+    text: "Joining this company has been a game-changer for my career. The collaborative environment, cutting-edge projects, and focus on continuous learning make it an ideal workplace for tech enthusiasts.",
+    author: "Sarah Williams",
+    position: "Software Engineer at DevSolutions",
+    image: "https://randomuser.me/api/portraits/women/50.jpg",
   },
   {
-    name: "James Anderson",
-    image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=600&auto=format&fit=crop&q=60",
-    quote:
-      "Unmatched professionalism and attention to detail. Exceeded my expectations. Highly recommend their service!",
+    text: "Innovation is at the heart of everything we do. The leadership empowers employees to take ownership of their work, and the company culture fosters creativity and problem-solving.",
+    author: "Michael Johnson",
+    position: "CTO at FutureTech",
+    image: "https://randomuser.me/api/portraits/men/52.jpg",
   },
   {
-    name: "Emma Johnson",
-    image:
-      "https://images.unsplash.com/photo-1546964124-0cce460f38ef?w=600&auto=format&fit=crop&q=60",
-    quote:
-      "Great results! The team cares about clients and goes above and beyond. Very satisfied with the service!",
-  },
-  {
-    name: "Daniel Roberts",
-    image:
-      "https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=600&auto=format&fit=crop&q=60",
-    quote:
-      "Excellent service and support! They understood my needs and delivered exactly what I was looking for. 10/10!",
-  },
-  {
-    name: "Ava Wilson",
-    image:
-      "https://images.unsplash.com/photo-1512314889357-e157c22f938d?w=600&auto=format&fit=crop&q=60",
-    quote:
-      "Professional and high quality. Their dedication to exceptional service was clear at every step. Highly recommend!",
-  },
-  {
-    name: "Michael Thompson",
-    image:
-      "https://images.unsplash.com/photo-1522091066250-665186289043?w=600&auto=format&fit=crop&q=60",
-    quote:
-      "Above and beyond! The team's dedication and expertise were impressive. Everything was handled with care.",
-  },
-  {
-    name: "Olivia Davis",
-    image:
-      "https://images.unsplash.com/photo-1513379733131-47fc74b45fcf?w=600&auto=format&fit=crop&q=60",
-    quote:
-      "Amazing experience! Their professionalism and creativity really stood out. Highly impressed with the outcome!",
-  },
-  {
-    name: "Liam Harris",
-    image:
-      "https://images.unsplash.com/photo-1484589065579-248aad0d8b13?w=600&auto=format&fit=crop&q=60",
-    quote:
-      "Great communication and excellent results. The process was seamless, and I felt valued as a customer!",
-  },
-  {
-    name: "Emily White",
-    image:
-      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=600&auto=format&fit=crop&q=60",
-    quote:
-      "Best decision I've made! Exceeded my expectations. The team is friendly, responsive, and dedicated.",
-  },
-  {
-    name: "Noah Green",
-    image:
-      "https://images.unsplash.com/photo-1526948531399-320e7e40f0ca?w=600&auto=format&fit=crop&q=60",
-    quote:
-      "Superb service and support. Felt well taken care of, and the results speak for themselves.",
+    text: "A fantastic place to work with a strong emphasis on work-life balance. The team is highly supportive, and the opportunities for growth are endless.",
+    author: "Emily Roberts",
+    position: "UX Designer at BrightLabs",
+    image: "https://randomuser.me/api/portraits/women/53.jpg",
   },
 ];
 
-const Testimonials = () => {
+export default function Testimonials() {
   return (
-    <section className="bg-black text-white py-16 px-6">
-      <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-4xl font-bold">Recommended</h2>
-        <p className="italic text-2xl text-gray-300 mb-8">by our members</p>
-        <p className="text-gray-400 max-w-2xl mx-auto mb-12">
-          Urna, in est malesuada arcu massa posuere convallis. Id tristique sed
-          velit tellus lorem pellentesque id ut ultrices.
-        </p>
-
-        {/* Swiper Container */}
+    <section className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:px-8">
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,var(--color-indigo-100),white)] opacity-20"></div>
+      <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white ring-1 shadow-xl shadow-indigo-600/10 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"></div>
+      <div className="mx-auto max-w-2xl lg:max-w-4xl">
+        <h1 className="mx-auto text-3xl lg:text-5xl font-bold text-center pb-12">
+          What our clients think
+        </h1>
         <Swiper
-          spaceBetween={50}
-          slidesPerView={3}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          className="swiper-container"
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          modules={[Autoplay]}
+          className="mt-10"
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
-              {/* 🟢 Add "group" class to enable hover effect */}
-              <div className="relative bg-zinc-900 p-2 rounded-lg shadow-lg overflow-hidden ">
-                <img
-                  src={testimonial.image}
-                  alt={testimonial.name}
-                  className="w-full h-80 object-cover rounded-lg mb-4 transition-transform duration-500 ease-in-out hover:scale-105"
-                />
-
-                {/* Review text with slide-up effect */}
-                <div className="absolute bottom-0 left-0 w-full bg-zinc-900 bg-opacity-70 h-full text-white text-center p-4 transform translate-y-50 opacity-100 transition-all duration-800 ease-in-out  group-hover:opacity-100 group-hover:translate-y-0">
-                  <h1 className="pb-5 text-2xl">{testimonial.name}</h1>
-
-                  <p className="text-sm">“{testimonial.quote}”</p>
-                </div>
-              </div>
+              <figure>
+                <blockquote className="text-center text-xl/8 font-semibold text-gray-900 sm:text-2xl/9">
+                  <p>“{testimonial.text}”</p>
+                </blockquote>
+                <figcaption className="mt-10 flex flex-col items-center">
+                  <img
+                    className="size-10 rounded-full"
+                    src={testimonial.image}
+                    alt={testimonial.author}
+                  />
+                  <div className="mt-4 text-center">
+                    <div className="font-semibold text-gray-900">
+                      {testimonial.author}
+                    </div>
+                    <div className="text-gray-600">{testimonial.position}</div>
+                  </div>
+                </figcaption>
+              </figure>
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* Swipe hint for users */}
-        <div className="mt-4 text-lg text-gray-300 italic">
-          Swipe for more reviews →
-        </div>
       </div>
     </section>
   );
-};
-
-export default Testimonials;
+}

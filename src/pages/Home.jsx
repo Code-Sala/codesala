@@ -1,6 +1,7 @@
 import Hero from "../components/Home/Hero";
 import HomeServices from "../components/Home/HomeServices";
 import OurAchievement from "../components/Home/OurAchievement";
+import PeopleAndCulture from "../components/Home/PeopleAndCulture";
 import TeamSection from "../components/Home/Team/TeamSection";
 import Testimonials from "../components/Home/Testimonials";
 import WhatWeDo from "../components/Home/WhatWeDo";
@@ -31,6 +32,7 @@ const Home = () => {
         <WhatWeDo />
         <HomeServices />
         <TeamSection />
+        <PeopleAndCulture />
         <Testimonials />
       </div>
     </div>
