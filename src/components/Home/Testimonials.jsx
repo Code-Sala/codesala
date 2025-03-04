@@ -110,6 +110,7 @@ const Testimonials = () => {
                 {/* Review text with slide-up effect */}
                 <div className="absolute bottom-0 left-0 w-full bg-zinc-900 bg-opacity-70 h-full text-white text-center p-4 transform translate-y-50 opacity-100 transition-all duration-800 ease-in-out  group-hover:opacity-100 group-hover:translate-y-0">
                   <h1 className="pb-5 text-2xl">{testimonial.name}</h1>
+
                   <p className="text-sm">“{testimonial.quote}”</p>
                 </div>
               </div>
