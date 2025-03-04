@@ -2,6 +2,7 @@ import Hero from "../components/Home/Hero";
 import HomeServices from "../components/Home/HomeServices";
 import OurAchievement from "../components/Home/OurAchievement";
 import TeamSection from "../components/Home/Team/TeamSection";
+import Testimonials from "../components/Home/Testimonials";
 import WhatWeDo from "../components/Home/WhatWeDo";
 
 const Home = () => {
@@ -24,12 +25,13 @@ const Home = () => {
       ></div>
 
       {/* Content Overlay */}
-      <div className="relative z-10 pb-8">
+      <div className="relative z-10">
         <Hero />
         <OurAchievement />
         <WhatWeDo />
         <HomeServices />
         <TeamSection />
+        <Testimonials />
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import ParticleBackground from "../particles/ParticleBackground";
 
 const services = [
   "ui/ux design",
@@ -54,8 +55,10 @@ const Hero = () => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
-      className="container min-h-[80vh] flex items-center justify-center px-4 container_lg"
+      className="container min-h-[80vh] flex items-center justify-center px-4 container_lg relative"
     >
+      <ParticleBackground />
+
       <div className="max-w-2xl text-center space-y-6">
         <motion.p
           variants={containerVariants}
@@ -68,7 +71,7 @@ const Hero = () => {
           className="text-3xl sm:text-5xl font-bold leading-tight"
         >
           At CodeSala, we specialize <br /> in{" "}
-          <span className="text-5xl font-bold bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent transition-all duration-1000 hover:bg-gradient-to-tl">
+          <span className="text-3xl  lg:text-5xl font-bold bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent transition-all duration-1000 hover:bg-gradient-to-tl">
             {currentService}
           </span>{" "}
           services

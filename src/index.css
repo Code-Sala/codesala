@@ -38,7 +38,8 @@
 }
 #tsparticles {
   width: 100%;
-  height: 100%;
+  height: 80vh;
+  position: absolute;
   z-index: -10;
   margin: 0;
   padding: 0;
@@ -66,4 +67,12 @@
 
 .animated-gradient-btn:hover {
   background-position: right center;
+}
+
+.review-container {
+  transform: translateY(-200px);
+}
+
+.reviewImg:hover .review-container {
+  transform: translateY(-200px);
 }

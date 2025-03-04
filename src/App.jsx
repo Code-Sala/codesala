@@ -15,8 +15,6 @@ import Domainsection from "./components/Services/Domainsection";
 import SoftwareComponent from "./components/Services/SoftwareComponent";
 import SkillComponent from "./components/Services/SkillComponent";
 
-import ParticleBackground from "./components/particles/ParticleBackground";
-
 const App = () => {
   return (
     <>
@@ -36,7 +34,6 @@ const App = () => {
           border: "3px solid #ED1D7E",
         }}
       />
-      <ParticleBackground />
       <Router>
         <Routes>
           {/* Define the Layout route as a wrapper for the child routes */}
