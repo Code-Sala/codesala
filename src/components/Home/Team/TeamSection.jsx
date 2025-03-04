@@ -7,9 +7,9 @@ const TeamSection = () => {
   const [activeSection, setActiveSection] = useState("team");
 
   return (
-    <div className="flex flex-col items-center p-6 pt-16 mt-12">
-      <h1 className="text-3xl sm:text-5xl font-bold text-center  text-vibrant-pink dark:text-white">
-        Meet the Experts Behind Our Success
+    <div className="flex flex-col items-center p-6 pt-16 mt-12 bg-white">
+      <h1 className="text-3xl lg:text-5xl font-bold text-center  text-vibrant-pink dark:text-white">
+        Together We Innovate
       </h1>
       {/* Navigation Buttons */}
       <div className="flex gap-4  mt-12">
