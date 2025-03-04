@@ -8,15 +8,21 @@ function Blog() {
     <div>
       <NavSection />
 
-      <div className="grid md:grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-6 w-full  ">
+      <div className="grid lg:grid-cols-2 gap-6 w-full">
         <div>
           <HeroSection />
         </div>
-        <div>
+        <div className="hidden lg:block">
           <SideBar />
         </div>
       </div>
+
       <Pagecount />
+
+      {/* Move SideBar below Pagecount on small screens */}
+      <div className="lg:hidden">
+        <SideBar />
+      </div>
     </div>
   );
 }

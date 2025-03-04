@@ -8,8 +8,11 @@ const OfferingSection = () => {
   const isInView = useInView(sectionRef, { triggerOnce: true, threshold: 0.2 }); // Step 2: Track when in viewport
 
   return (
-    <section ref={sectionRef} className="py-20 bg-gray-100 container z-50">
-      <div className="max-w-6xl mx-auto px-6">
+    <section
+      ref={sectionRef}
+      className="py-20 bg-white container_lg z-50 lg:max-w-full"
+    >
+      <div className="max-w-6xl mx-auto px-6 lg:px-12 xl:px-24">
         {/* Header Section */}
         <motion.div
           className="text-center mb-12"

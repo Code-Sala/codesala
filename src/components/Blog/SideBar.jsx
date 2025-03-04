@@ -1,43 +1,27 @@
 import React from "react";
+import popularPosts from "../../Data/popularPosts.json";
 
 const SideBar = () => {
-  const posts = [
-    {
-      date: "April 5, 2023",
-      title: "Hire Remote Developers India to Save Infrastructure Costs",
-    },
-    {
-      date: "August 1, 2024",
-      title: "Salesforce Development Services in United States",
-    },
-    {
-      date: "March 17, 2023",
-      title: "Why Choose a Website Design Company in India?",
-    },
-  ];
-
   return (
-    <aside className="text-pink-700 rounded-lg text-center lg:w-30  my-10 border-black ">
-      <div className="bg-white text-pink-700 font-bold text-lg py-2 rounded-t-lg">
-        Popular Posts
+    <div className="w-100  lg:w-1/2 xl:w-70 xl:mt-10 lg:mt-0 lg:ml-80  ml-8 ">
+      <div className="bg-white shadow-lg rounded-lg p-5 my-10">
+        <h3 className="text-xl font-semibold mb-4 text-pink-400">
+          Popular Posts
+        </h3>
+        <div className="space-y-4">
+          {popularPosts.map((post, index) => (
+            <div key={index} className="border-b pb-3">
+              <p className="text-gray-500 text-sm">{post.date}</p>
+              <h4 className="text-lg font-medium mt-1">
+                <a href={post.link} className="text-blue-600 hover:underline">
+                  {post.title}
+                </a>
+              </h4>
+            </div>
+          ))}
+        </div>
       </div>
-      <ul className="bg-white text-black p-4 rounded-b-lg">
-        {posts.map((post, index) => (
-          <li
-            key={index}
-            className="mb-3 border-b border-gray-300 pb-2 last:border-none"
-          >
-            <p className="text-sm text-gray-500">{post.date}</p>
-            <a
-              href="#"
-              className="text-black font-semibold hover:underline block mt-1"
-            >
-              {post.title}
-            </a>
-          </li>
-        ))}
-      </ul>
-    </aside>
+    </div>
   );
 };
 
