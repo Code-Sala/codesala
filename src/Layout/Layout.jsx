@@ -7,8 +7,8 @@ import Footer from "../components/Footer/Footer";
 
 const Layout = () => {
   return (
-    <div>
-      <Navbar/>
+    <div className="sm:cursor-none md:cursor-none   lg:cursor-auto">
+      <Navbar />
       {/* <ParticleBackground /> */}
       <Navbar />
       <div className="">

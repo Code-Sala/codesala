@@ -37,17 +37,7 @@ const App = () => {
       <Router>
         <Routes>
           <Route path="/" element={<Layout />}>
-            {/* Nested Routes */}
-            <Route
-              path="/"
-              element={
-                <Home
-                  className={({ isActive }) =>
-                    isActive ? "text-vibrant-pink font-bold" : "text-gray-700"
-                  }
-                />
-              }
-            />
+            <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/services" element={<Services />} />

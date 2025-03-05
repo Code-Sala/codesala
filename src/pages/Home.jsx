@@ -12,7 +12,6 @@ const Home = () => {
       {/* Content Overlay */}
       <div className="relative z-10">
         <Hero />
-        {/* <OurAchievement /> */}
         <WhatWeDo />
         <HomeServices />
         <TeamSection />
