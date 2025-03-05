@@ -34,7 +34,7 @@ const ValueCard = ({ title, statement}) => {
         >
             <div className="absolute inset-0 bg-neon-glow opacity-20 blur-lg"></div>
             <h3 className="text-xl font-semibold border-l-4 border-neon pl-3 mb-2">{title}</h3>
-            <p className="text-black">{statement}</p>
+            <p className="text-gray-700">{statement}</p>
         </motion.div>
     );
 };
@@ -61,7 +61,7 @@ const OurValues = () => {
                 className="max-w-4xl mx-auto text-center mb-10 relative z-10"
             >
                 <h2 className="text-4xl font-bold text-vibrant-pink">Our Values</h2>
-                <p className="text-gray-400">What drives us every day.</p>
+                <p className="text-gray-700">What drives us every day.</p>
             </motion.div>
             <motion.div 
                 initial="hidden" 

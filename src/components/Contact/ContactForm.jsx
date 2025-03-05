@@ -1,25 +1,25 @@
 import { Mail, Phone, Globe } from "lucide-react";
-
+import ContactImg from "../../assets/img/contact/bg.avif"
 function ContactForm() {
   return (
     <>
     <div className="contactform min-h-screen flex items-center justify-center p-6 pt-30">
-      <div className="relative w-full max-w-6xl flex flex-wrap bg-gray-100 shadow-lg rounded-lg overflow-hidden">
+      <div className="relative w-full max-w-6xl flex flex-wrap bg-gray-100  shadow-[0_-2px_5px_rgba(0,0,0,0.3)] rounded-lg overflow-hidden">
         {/* Image Section */}
         <div className="relative w-full md:w-1/2 h-96 md:h-auto">
           <img
-            src="../src/assets/img/contact/bg.avif"
+            src= {ContactImg}
             alt="Contact Background"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black opacity-50"></div>
+          <div className="absolute inset-0 bg-black opacity-40"></div>
         </div>
 
         {/* Form Section */}
         <div className="w-full md:w-1/2 p-8 bg-white flex flex-col justify-center ">
           <h1 className="text-3xl font-bold text-gray-800 text-center">Contact Us</h1>
           <p className="text-gray-600 text-center mt-2">
-            "Have questions or need assistance? Feel free to reach out to us - we’re here to help!"
+            &quot;Have questions or need assistance? Feel free to reach out to us - we’re here to help!&quot;
           </p>
           <form className="space-y-4 mt-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -62,7 +62,7 @@ function ContactForm() {
     </div>
 
 
-<div className="contact min-h-[40vh] max-w-7xl mx-auto text-center wrape pt-4 flex flex-wrap gap-4">
+<div className="contact min-h-[40vh] max-w-7xl mx-auto text-center wrape pt-4 flex flex-wrap gap-4 mt-15 mb-15">
 <div className="card flex flex-col md:flex-row gap-4 w-full">
   <div className="cards w-full md:w-1/3 bg-white h-64 flex flex-col justify-center items-center rounded-lg">
     <div className="icons p-5 font-extrabold pb-0 text-center flex justify-center ">
