@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "../../assets/img/logo/logo1.png";
@@ -7,11 +7,11 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Detect scroll to change navbar background
+  const location = useLocation();
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 50) {
-        // You can adjust this threshold value as needed
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -33,26 +33,47 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 container_lg">
-        {/* Logo */}
         <Link to="/" className="text-xl font-bold text-gray-800">
           <img src={logo} alt="logo1" className="w-[9rem] h-6" />
         </Link>
 
-        {/* Desktop Menu */}
         <div className="hidden lg:flex space-x-6">
-          <Link to="/" className="text-gray-700 hover:text-vibrant-pink">
+          <Link
+            to="/"
+            className={` hover:text-vibrant-pink ${
+              location.pathname === "/" ? "text-vibrant-pink" : "text-gray-700"
+            }`}
+          >
             Home
           </Link>
-          <Link to="/about" className="text-gray-700 hover:text-vibrant-pink">
+          <Link
+            to="/about"
+            className={` hover:text-vibrant-pink ${
+              location.pathname === "/about"
+                ? "text-vibrant-pink"
+                : "text-gray-700"
+            }`}
+          >
             About
           </Link>
           <Link
             to="/services"
-            className="text-gray-700 hover:text-vibrant-pink"
+            className={` hover:text-vibrant-pink ${
+              location.pathname === "/services"
+                ? "text-vibrant-pink"
+                : "text-gray-700"
+            }`}
           >
             Services
           </Link>
-          <Link to="/blog" className="text-gray-700 hover:text-vibrant-pink">
+          <Link
+            to="/blog"
+            className={` hover:text-vibrant-pink ${
+              location.pathname === "/blog"
+                ? "text-vibrant-pink"
+                : "text-gray-700"
+            }`}
+          >
             Blogs
           </Link>
         </div>
@@ -79,21 +100,31 @@ const Navbar = () => {
         <div className="lg:hidden bg-white shadow-md absolute top-16 left-0 w-full p-4 z-50">
           <Link
             to="/"
-            className="block text-gray-700 py-2"
+            className={` hover:text-vibrant-pink ${
+              location.pathname === "/" ? "text-vibrant-pink" : "text-gray-700"
+            }`}
             onClick={() => setIsOpen(false)}
           >
             Home
           </Link>
           <Link
             to="/about"
-            className="block text-gray-700 py-2"
+            className={` hover:text-vibrant-pink ${
+              location.pathname === "/about"
+                ? "text-vibrant-pink"
+                : "text-gray-700"
+            }`}
             onClick={() => setIsOpen(false)}
           >
             About
           </Link>
           <Link
             to="/services"
-            className="block text-gray-700 py-2"
+            className={` hover:text-vibrant-pink ${
+              location.pathname === "/services"
+                ? "text-vibrant-pink"
+                : "text-gray-700"
+            }`}
             onClick={() => setIsOpen(false)}
           >
             Services

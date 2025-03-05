@@ -22,7 +22,7 @@ const values = [
     icon: Users,
   },
   {
-    title: "Reliable Products",
+    title: "Long-lasting product",
     description:
       "Our solutions are designed for longevity and scalability, supporting business growth and technological advancements.",
     icon: Layers,
@@ -55,12 +55,16 @@ const WhatWeDo = () => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
-      className="container min-h-screen flex flex-col items-center justify-center px-4 mx-auto container_lg pb-4"
+      className="container min-h-screen flex flex-col items-center justify-center px-4 mx-auto pb-4"
     >
-      <h1 className="text-3xl sm:text-5xl font-bold text-center mb-12 text-vibrant-pink">
+      <h1 className="text-3xl sm:text-5xl font-bold text-center mb-2 text-vibrant-pink">
         What We Offer!
       </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-6xl p-4">
+      <p className="text-lg text-center text-gray-600 mb-16">
+        We provide trusted solutions that stand the test of time.
+      </p>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl px-4 ">
         {values.map((value, index) => {
           const Icon = value.icon;
           return (
@@ -70,13 +74,15 @@ const WhatWeDo = () => {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               variants={cardVariants}
-              className="bg-transparent shadow-lg rounded-lg p-6  flex flex-col items-center text-center hover:shadow-xl"
+              className="bg-transparent shadow-lg rounded-lg flex flex-col items-center text-center hover:shadow-xl px-6 py-8"
             >
-              <Icon className="h-12 w-12 text-vibrant-pink mb-4" />
-              <h2 className="text-xl font-semibold text-vibrant-pink">
+              <div className="p-4 bg-vibrant-pink rounded-full">
+                <Icon className="h-16 w-16 text-white" />
+              </div>
+              <h2 className="text-xl font-semibold text-vibrant-pink mt-4 px-4">
                 {value.title}
               </h2>
-              <p className="text-gray-700 mt-2">{value.description}</p>
+              <p className="text-gray-800 mt-2">{value.description}</p>
             </motion.div>
           );
         })}
