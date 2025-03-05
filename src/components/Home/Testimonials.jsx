@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
-import { MoveLeft, MoveRight } from "lucide-react";
+import { MoveRight } from "lucide-react";
 
 const testimonials = [
   {
@@ -59,9 +59,6 @@ export default function Testimonials() {
                     <div className="text-gray-600">{testimonial.position}</div>
                   </div>
                   <div className="flex gap-150">
-                    <span className="text-center">
-                      <MoveLeft />
-                    </span>
                     <span className="text-center">
                       <MoveRight />
                     </span>

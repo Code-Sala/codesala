@@ -1,14 +1,8 @@
-import { motion, useInView } from "framer-motion";
-import {
-  Code,
-  Smartphone,
-  PanelsTopLeft,
-  Server,
-  Users,
-  Plug,
-} from "lucide-react";
+/* eslint-disable react/prop-types */
+import { motion } from "framer-motion";
+import { Code, Smartphone, Users, Plug } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useRef } from "react";
+import { useState } from "react";
 
 const services = [
   {
@@ -25,19 +19,7 @@ const services = [
     icon: Smartphone,
     link: "/services/app-development",
   },
-  {
-    title: "UI/UX Design",
-    description: "Creating visually appealing and user-friendly interfaces.",
-    icon: PanelsTopLeft,
-    link: "/services/ui-ux-design",
-  },
-  {
-    title: "Domain & Hosting",
-    description:
-      "Secure and reliable domain registration and hosting services.",
-    icon: Server,
-    link: "/services/domain-hosting",
-  },
+
   {
     title: "Skill Rental",
     description:
@@ -54,81 +36,88 @@ const services = [
   },
 ];
 
-// Parent container animation
-const containerVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      staggerChildren: 0.2,
-      duration: 0.5,
-      ease: "easeOut",
-    },
-  },
-};
-
-// Individual card animation
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
-};
-
 const HomeServices = () => {
-  const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, margin: "-100px" });
+  return (
+    <div className="container mx-auto py-12 px-6 flex flex-col items-center">
+      <h1 className="text-3xl sm:text-5xl font-extrabold text-center text-vibrant-pink py-2 leading-tight">
+        Explore Our Expertise
+      </h1>
+      <p className="text-lg text-center text-gray-600 mb-12">
+        Explore the depth of our skills and capabilities in every solution we
+        offer.
+      </p>
+      <div className="flex gap-6">
+        <div className="max-w-6xl bg-amber-700 shadow-lg contain-content relative">
+          <img
+            src="https://images.unsplash.com/photo-1726607424562-62cf93236dd8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
+            alt="service image"
+            className="h-full w-full object-cover"
+          />
+
+          <div className="absolute top-0 left-0 w-full h-full bg-gray-900 opacity-50 z-10" />
+
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4 z-20">
+            <h1 className="text-3xl md:text-5xl font-bold py-2">
+              Our Services
+            </h1>
+            <p className="mt-4 text-sm md:text-lg max-w-md">
+              We offer a wide range of services to meet your needs, from
+              professional solutions to innovative ideas.
+            </p>
+          </div>
+
+          <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 px-4 py-2 border-2 border-white text-white hover:text-gray-900 hover:border-white hover:bg-white z-20">
+            More Services
+          </button>
+        </div>
+
+        <div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 max-w-6xl">
+            {services.map((service, index) => (
+              <FlippingCard key={index} service={service} />
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const FlippingCard = ({ service }) => {
+  const [flipped, setFlipped] = useState(false);
+  const Icon = service.icon;
 
   return (
-    <motion.div
-      ref={sectionRef}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={containerVariants}
-      className="container flex flex-col items-center justify-center px-4 container_lg mx-auto pb-4 pt-8"
+    <div
+      className="relative w-64 h-64 perspective"
+      onMouseEnter={() => setFlipped(true)}
+      onMouseLeave={() => setFlipped(false)}
     >
-      <motion.h1
-        variants={cardVariants}
-        className="text-3xl sm:text-5xl font-bold text-center mb-12 text-vibrant-pink"
-      >
-        Explore Our Expertise
-      </motion.h1>
       <motion.div
-        variants={containerVariants}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-6xl mn-4"
+        className="w-full h-full absolute transition-transform duration-500"
+        animate={{ rotateY: flipped ? 180 : 0 }}
+        style={{ transformStyle: "preserve-3d" }}
       >
-        {services.map((service, index) => {
-          const Icon = service.icon;
-          return (
-            <motion.div
-              key={index}
-              variants={cardVariants}
-              whileHover={{ scale: 1.03, rotate: 1 }}
-              className="relative bg-transparent py-8 px-4 rounded-xl shadow-xl flex flex-col items-center text-center hover:shadow-2xl transform transition-all"
-            >
-              <Icon className="w-16 h-16 text-vibrant-pink mb-4" />
-              <h2 className="text-xl font-semibold text-gray-700">
-                {service.title}
-              </h2>
-              <p className="text-gray-700 mt-2">{service.description}</p>
-              <Link
-                to={service.link}
-                className="mt-4 inline-block px-4 py-2 bg-vibrant-pink text-white rounded-md hover:bg-bright-purple transition"
-              >
-                Read More
-              </Link>
-            </motion.div>
-          );
-        })}
+        {/* Front Side */}
+        <div className="absolute w-full h-full flex flex-col items-center justify-center bg-dark-gold text-black rounded-lg shadow-lg backface-hidden">
+          <Icon className="w-14 h-14 mb-4 text-vibrant-pink" />
+          <h2 className="text-xl font-semibold text-vibrant-pink">
+            {service.title}
+          </h2>
+        </div>
+
+        {/* Back Side */}
+        <div className="absolute w-full h-full flex flex-col items-center justify-center bg-white text-gray-700 rounded-lg shadow-lg rotate-y-180 backface-hidden">
+          <p className="text-center px-4">{service.description}</p>
+          <Link
+            to={service.link}
+            className="mt-4 px-4 py-2 bg-gold text-vibrant-pink rounded-md hover:underline"
+          >
+            Read More
+          </Link>
+        </div>
       </motion.div>
-      <motion.div variants={cardVariants}>
-        <Link
-          to="/services"
-          className="hidden lg:inline-block text-white px-4 py-2 rounded-md animated-gradient-btn mt-12"
-        >
-          More Services
-        </Link>
-      </motion.div>
-    </motion.div>
+    </div>
   );
 };
 

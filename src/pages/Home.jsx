@@ -1,6 +1,6 @@
 import Hero from "../components/Home/Hero";
 import HomeServices from "../components/Home/HomeServices";
-import OurAchievement from "../components/Home/OurAchievement";
+// import OurAchievement from "../components/Home/OurAchievement";
 import PeopleAndCulture from "../components/Home/PeopleAndCulture";
 import TeamSection from "../components/Home/Team/TeamSection";
 import Testimonials from "../components/Home/Testimonials";
@@ -12,7 +12,7 @@ const Home = () => {
       {/* Content Overlay */}
       <div className="relative z-10">
         <Hero />
-        <OurAchievement />
+        {/* <OurAchievement /> */}
         <WhatWeDo />
         <HomeServices />
         <TeamSection />

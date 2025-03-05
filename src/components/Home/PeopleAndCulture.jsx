@@ -6,6 +6,8 @@ export default function PeopleAndCulture() {
 
   return (
     <section className="peopleandculture py-12 bg-white flex justify-center items-center container relative">
+      {/* <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-vibrant-pink to-bright-purple opacity-20 blur-3xl z-10" /> */}
+
       <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start gap-6 container_lg">
         <div className="md:w-1/2 md:ml-auto text-center md:text-left">
           <h2
