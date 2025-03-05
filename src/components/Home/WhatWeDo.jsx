@@ -57,7 +57,7 @@ const WhatWeDo = () => {
       variants={containerVariants}
       className="container min-h-screen flex flex-col items-center justify-center px-4 mx-auto pb-4"
     >
-      <h1 className="text-3xl sm:text-5xl font-extrabold text-center mb-2 text-vibrant-pink">
+      <h1 className="text-3xl sm:text-5xl font-bold text-center mb-2 text-vibrant-pink">
         What We Offer!
       </h1>
       <p className="text-lg text-center text-gray-600 mb-16">

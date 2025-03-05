@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Code, Smartphone, Users, Plug } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import homeserviceimg from "../../assets/img/home/homeservice.png";
 
 const services = [
   {
@@ -39,7 +40,7 @@ const services = [
 const HomeServices = () => {
   return (
     <div className="container mx-auto py-12 px-6 flex flex-col items-center">
-      <h1 className="text-3xl sm:text-5xl font-extrabold text-center text-vibrant-pink py-2 leading-tight">
+      <h1 className="text-3xl sm:text-5xl font-bold text-center text-vibrant-pink py-2 leading-tight">
         Explore Our Expertise
       </h1>
       <p className="text-lg text-center text-gray-600 mb-12">
@@ -47,9 +48,9 @@ const HomeServices = () => {
         offer.
       </p>
       <div className="flex gap-6">
-        <div className="max-w-6xl bg-amber-700 shadow-lg contain-content relative">
+        <div className="max-w-6xl bg-amber-700 shadow-lg contain-content relative hidden md:hidden lg:block">
           <img
-            src="https://images.unsplash.com/photo-1726607424562-62cf93236dd8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxfHx8ZW58MHx8fHx8"
+            src={homeserviceimg}
             alt="service image"
             className="h-full w-full object-cover"
           />
@@ -66,9 +67,12 @@ const HomeServices = () => {
             </p>
           </div>
 
-          <button className="absolute bottom-10 left-1/2 transform -translate-x-1/2 px-4 py-2 border-2 border-white text-white hover:text-gray-900 hover:border-white hover:bg-white z-20">
+          <Link
+            to="/services"
+            className="absolute bottom-10 left-1/2 transform -translate-x-1/2 px-4 py-2 border-2 border-white text-white hover:text-gray-900 hover:border-white hover:bg-white z-20"
+          >
             More Services
-          </button>
+          </Link>
         </div>
 
         <div>
