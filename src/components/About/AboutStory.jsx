@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import AboutStoryImg from "../../assets/img/AboutStory.webp" 
 
 function AboutStory() {
   return (
@@ -10,7 +11,7 @@ function AboutStory() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
-        OUR STORY
+        Our Story
       </motion.h1>
 
       {/* Story Content - Responsive Layout */}
@@ -22,7 +23,7 @@ function AboutStory() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-gray-700 text-lg leading-relaxed">
+          <p className="text-gray-700 text-md pt-0 leading-loose">
             Welcome to <strong>CODESALA</strong>, where innovation meets
             practicality. We are a dynamic digital solutions company dedicated
             to helping businesses thrive in the ever-evolving digital world.
@@ -58,9 +59,9 @@ function AboutStory() {
           transition={{ duration: 0.8 }}
         >
           <img
-            src="./src/assets/img/story-curve.webp"
+            src={AboutStoryImg}
             alt="Our Story"
-            className="rounded-md w-full max-w-md mx-auto"
+            className="rounded-md h-[60vh] w-full  "
           />
         </motion.div>
       </div>
