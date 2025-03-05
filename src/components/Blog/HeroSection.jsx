@@ -1,10 +1,9 @@
 import React from "react";
-import Blog from "../../Data/Blog.json";
-
-const HeroSection = () => {
+import blog from "../../Data/Blog.json";
+const HeroSection = ({ posts }) => {
   return (
-    <div className="container mx-auto px-4 w-full">
-      {Blog.map((blog, index) => (
+    <div className=" CardComponent container mx-auto px-4 w-full">
+      {posts.map((blog, index) => (
         <div
           key={index}
           className="card lg:card-side bg-white shadow-sm h-70 flex my-10 mx-2 lg:ml-5 w-full lg:w-220 transition-transform transform hover:scale-105 duration-300 hover:shadow-[#892890]"
