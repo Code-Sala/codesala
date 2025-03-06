@@ -84,7 +84,7 @@ const OfferingSection = () => {
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  {service.button ? "Get Started" : "Learn More"}
+                  {service.button ? "Learn More" : "Learn More"}
                 </motion.button>
               </Link>
             </motion.div>

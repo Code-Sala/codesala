@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; // Added import
+import imageSoftware from "../../assets/img/services/software1.png";
 
 const SoftwareComponent = () => {
   return (
@@ -43,7 +45,7 @@ const SoftwareComponent = () => {
             transition={{ duration: 1 }}
           >
             <img
-              src="src\assets\img\services\domain1.png"
+              src={imageSoftware}
               alt="UI/UX Design"
               className="pl-10 md:pl-20 w-full md:w-[30rem] rounded-lg h-auto shadow-lg"
             />
@@ -87,7 +89,7 @@ const SoftwareComponent = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              About Us
+              <Link to="/contact">Let's Start</Link>
             </motion.button>
           </motion.div>
         </section>

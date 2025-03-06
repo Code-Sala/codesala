@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; // Added import
+import imageSkill from "../../../src/assets/img/services/skill.png";
 
 const SkillComponent = () => {
   return (
@@ -43,7 +45,7 @@ const SkillComponent = () => {
             transition={{ duration: 1 }}
           >
             <img
-              src="src\assets\img\services\ai1.png"
+              src={imageSkill}
               alt="UI/UX Design"
               className="pl-10 md:pl-20 w-full md:w-[30rem] rounded-lg h-auto shadow-lg"
             />
@@ -87,7 +89,7 @@ const SkillComponent = () => {
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
-              About Us
+              <Link to="/contact">Let's Start</Link>
             </motion.button>
           </motion.div>
         </section>

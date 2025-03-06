@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import imageDomain from "../../../src/assets/img/services/domain1.png";
 
 const Domainsection = () => {
   return (
@@ -41,7 +43,7 @@ const Domainsection = () => {
           transition={{ duration: 1 }}
         >
           <img
-            src="src\assets\img\services\domain1.png"
+            src={imageDomain}
             alt="UI/UX Design"
             className="pl-10 md:pl-20 w-full md:w-[30rem] rounded-lg h-auto shadow-lg"
           />
@@ -83,7 +85,7 @@ const Domainsection = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            About Us
+            <Link to="/contact">Let's Start</Link>
           </motion.button>
         </motion.div>
       </section>
