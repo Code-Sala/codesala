@@ -4,7 +4,7 @@ function ContactForm() {
   return (
     <>
     <div className="contactform min-h-screen flex items-center justify-center p-6 pt-30">
-      <div className="relative w-full max-w-6xl flex flex-wrap bg-gray-100  shadow-[0_-2px_5px_rgba(0,0,0,0.3)] rounded-lg overflow-hidden">
+      <div className="relative w-full max-w-6xl flex flex-wrap container bg-gray-100  shadow-[0_-2px_5px_rgba(0,0,0,0.3)] rounded-lg overflow-hidden">
         {/* Image Section */}
         <div className="relative w-full md:w-1/2 h-96 md:h-auto">
           <img
@@ -70,7 +70,7 @@ function ContactForm() {
     </div>
     <h1 className="text-center text-2xl pt-4 font-semibold">Email us:</h1>
     <p className="paragraph text-center mt-4 mb-4">Email us for general queries, including marketing <br /> and partnership opportunities.</p>
-    <a href="#" className="link pt-2 text-vibrant-pink no-underline">codesalaofficial@gmail.com</a>
+    <a href="#" className="link pt-2 text-vibrant-pink no-underline">info@codesala.com</a>
   </div>
   <div className="cards w-full md:w-1/3 bg-white h-64 flex flex-col justify-center items-center rounded-lg">
     <div className="icons p-5 pb-1 text-vibrant-pink text-center flex justify-center ">
@@ -78,7 +78,7 @@ function ContactForm() {
     </div>
     <h1 className="text-center text-2xl pt-4 font-semibold">Call us:</h1>
     <p className="paragraph text-center mt-4 mb-4">Call us to speak to a member of our team. We are always happy to help.</p>
-    <a href="#" className="link pt-2 text-vibrant-pink no-underline">+1 (646) 786-5060</a>
+    <a href="#" className="link pt-2 text-vibrant-pink no-underline">+13323226043</a>
   </div>
   <div className="cards w-full md:w-1/3 bg-white h-64 flex flex-col justify-center items-center rounded-lg">
     <div className="icons p-5 pb-1 text-vibrant-pink no-underline text-center flex justify-center ">
