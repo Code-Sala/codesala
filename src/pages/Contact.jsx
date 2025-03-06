@@ -1,4 +1,5 @@
 import ContactForm from "../components/Contact/ContactForm"
+import ContactLocation from "../components/Contact/ContactLocation"
 // import ContactHero from "../components/Contact/ContactHero"
 
 function Contact() {
@@ -6,6 +7,7 @@ function Contact() {
    <>
    {/* <ContactHero/> */}
    <ContactForm/>
+   <ContactLocation/>
    </>
   )
 }
