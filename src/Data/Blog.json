@@ -1,35 +1,40 @@
 [
   {
     "id": 1,
-    "image": "src/assets/img/blog/first img.png",
+    "image": "assets/img/blog/firstimg.png",
+
     "time": "February 25, 2025",
     "title": "AI and ML in Custom Software Development",
     "mainBlog": "Artificial Intelligence (AI) and Machine Learning (ML) are revolutionizing the way businesses approach software development. Custom software solutions, tailored to specific business needs, are now more powerful than ever with the integration of AI and ML. These technologies enable software to learn, adapt, and make intelligent decisions, enhancing user experience, efficiency, and automation."
   },
   {
     "id": 2,
-    "image": "src/assets/img/blog/second img.png",
+    "image": "assets/img/blog/secondimg.png",
+
     "time": "February 25, 2025",
     "title": "IoT in Software Development: New Opportunities and Challenges",
     "mainBlog": "The Internet of Things (IoT) has revolutionized the way software is developed and integrated into everyday life. With the increasing number of connected devices, industries are leveraging IoT to enhance automation, efficiency, and user experiences. "
   },
   {
     "id": 3,
-    "image": "src/assets/img/blog/third img.png",
+    "image": "assets/img/blog/thirdimg.png",
+
     "time": "February 25, 2025",
     "title": "The Future of Software Development: Trends and Predictions",
     "mainBlog": "The world of software development is evolving at an unprecedented pace, driven by advancements in artificial intelligence, cloud computing, and new programming paradigms. As technology progresses, developers and businesses must stay ahead of emerging trends to remain competitive."
   },
   {
     "id": 4,
-    "image": "src/assets/img/blog/fourth img.png",
+    "image": "assets/img/blog/fourthimg.png",
+
     "time": "February 25, 2025",
     "title": "The Role of Data Science in Software Development",
     "mainBlog": "One of the key contributions of data science to software development is its ability to improve decision-making. Through data analysis, developers can identify user behavior, optimize features, and predict potential issues before they arise. This data-driven approach ensures that software meets user expectations and delivers a seamless experience."
   },
   {
     "id": 5,
-    "image": "src/assets/img/blog/fifth img.png",
+    "image": "assets/img/blog/fifthimg.png",
+
     "time": "February 25, 2025",
     "title": "The Impact of Cloud Computing on Software Development",
     "mainBlog": "Cloud computing has revolutionized the software development landscape, providing scalable, cost-effective, and flexible solutions for businesses and developers alike. With the adoption of cloud services, companies can streamline development processes, enhance collaboration, and deploy applications faster than ever before. "
