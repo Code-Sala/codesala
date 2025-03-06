@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-
+import { Check } from "lucide-react";
+import AboutMissionImg from  "../../assets/img/ourmission.webp"
 function AboutMission() {
   return (
     <div className="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16 pt-20">
@@ -12,10 +13,9 @@ function AboutMission() {
       >
         OUR MISSION
       </motion.h1>
-
+   
       {/* Mission Content - Responsive Layout */}
       <div className="flex flex-col-reverse sm:flex-row items-center sm:items-start gap-12 pt-12 pb-12">
-        
         {/* Left Section - Image (Hidden on Small Screens) */}
         <motion.div
           className="hidden sm:block w-full sm:w-1/2"
@@ -24,8 +24,7 @@ function AboutMission() {
           transition={{ duration: 0.8 }}
         >
           <img
-            src="./src/assets/img/ourmission.webp"
-            alt="Our Mission"
+            src= {AboutMissionImg}
             className="rounded-md w-full max-w-md mx-auto"
           />
         </motion.div>
@@ -37,18 +36,20 @@ function AboutMission() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-gray-700 text-lg leading-relaxed">
-            Welcome to <strong>CODESALA</strong>, where innovation meets practicality. We are a dynamic digital solutions company dedicated to helping businesses thrive in the ever-evolving digital world. 
-            With expertise in UI/UX design, web development, domain and hosting, software integration, and skill rental, we offer a full range of services tailored to meet your unique needs.
-            <br /><br />
-            At <strong>CODESALA</strong>, we believe that technology should make life easier, not more complicated. That&apos;s why we focus on creating simple, secure, and scalable solutions that bring your ideas to life while enhancing your business growth. 
-            Whether you need a sleek, user-friendly design, seamless integration, or skilled professionals for your team, we&apos;ve got you covered.
-            <br /><br />
-            We are passionate about helping you succeed by delivering reliable, efficient, and innovative solutions that elevate your business. 
-            Our approach is built on transparency, proactiveness, and a genuine commitment to your success.
-            <br /><br />
-            <strong>Partner with CODESALA</strong> and let&apos;s take your business to the next level!
+          <p className="text-gray-700 leading-loose pt-2 text-md">
+          At <strong>CODESALA</strong>, we are committed to delivering high-quality, innovative solutions that help businesses and individuals thrive in the digital era. Our mission is to create user-friendly, cutting-edge technologies that empower our customers to achieve their goals effortlessly. <br />
           </p>
+          <div className="wrap flex justify-evenly pt-6 list-none">
+            <div className="first">
+            <li className="flex gap-3"><span><Check className="text-vibrant-pink"/></span><p>Innovation </p></li>
+            <li className="flex gap-3"><span><Check className="text-vibrant-pink"/></span><p>Customer-Centricity </p></li>
+            </div>
+            <div className="second">
+            <li className="flex gap-3"><span><Check className="text-vibrant-pink"/></span><p>Excellence</p></li>
+            <li className="flex gap-3"><span><Check className="text-vibrant-pink"/></span><p>Integrity </p></li>
+            </div>
+          </div><br />
+          <p>We dream of a future where businesses, big or small, have the tools they need to scale effortlessly. Our goal is to be a global leader in digital solutions, helping millions transform their dreams into reality.</p>
         </motion.div>
       </div>
     </div>
