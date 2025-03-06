@@ -57,13 +57,15 @@ const TimelineService = () => {
   return (
     <div className=" mx-auto py-12 px-4 max-w-6xl pt-20">
       <motion.h1
-        className="text-3xl sm:text-5xl font-bold text-center mb-12 text-vibrant-pink"
+        className="text-3xl sm:text-5xl font-bold text-center  text-vibrant-pink"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
       >
         Partnering with CodeSala brings you:
       </motion.h1>
+     <p className="text-center pt-3 text-gray-700">&quot;Cutting-edge solutions, expert collaboration, and seamless innovation to elevate your projects.&quot;</p>
+
       <div className="relative border-l-4 text-vibrant-pink pl-4 mt-30">
         {services.map((service, index) => {
           const Icon = service.icon;
