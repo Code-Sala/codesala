@@ -3,9 +3,25 @@ import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
 import services from "../../Data/Services.json";
 
+// Import images
+import firstImg from "../../assets/img/services/webdevelopment.png";
+import secondImg from "../../assets/img/services/mobileApp.png";
+import thirdImg from "../../assets/img/services/uiux.png";
+import fourthImg from "../../assets/img/services/domainandhosting.png";
+import fifthImg from "../../assets/img/services/software.png";
+import sixtImg from "../../assets/img/services/skill1.png";
+
 const OfferingSection = () => {
-  const sectionRef = useRef(null); // Step 1: Create a ref
-  const isInView = useInView(sectionRef, { triggerOnce: true, threshold: 0.2 }); // Step 2: Track when in viewport
+  const sectionRef = useRef(null);
+  const isInView = useInView(sectionRef, { triggerOnce: true, threshold: 0.2 });
+
+  // Update services to use local images
+  const updatedServices = services.map((service, index) => {
+    return {
+      ...service,
+      img: [firstImg, secondImg, thirdImg, fourthImg, fifthImg, sixtImg][index], // Assign local images
+    };
+  });
 
   return (
     <section
@@ -30,7 +46,7 @@ const OfferingSection = () => {
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.map((service, index) => (
+          {updatedServices.map((service, index) => (
             <motion.div
               key={index}
               className="bg-white p-6 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
