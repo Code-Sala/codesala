@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; // Added import
-import webImage from "../../assets/img/services/web.png"; // Added image import
+import imageMobile from "../../../src/assets/img/services/mobile.png"; // Added image import
 
 const MobileComponent = () => {
   return (
@@ -48,7 +49,7 @@ const MobileComponent = () => {
           transition={{ duration: 1 }}
         >
           <img
-            src="src\assets\img\services\mobile.png"
+            src={imageMobile}
             alt="Web Development"
             className="pl-10 md:pl-20 w-full md:w-140 rounded-lg h-100 shadow-lg"
           />
@@ -92,7 +93,7 @@ const MobileComponent = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            About Us
+            <Link to="/contact">Let's Start</Link>
           </motion.button>
         </motion.div>
       </section>

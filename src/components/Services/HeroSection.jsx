@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <div className="bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] min-h-[80vh] flex items-center justify-center px-4 sm:px-8 ">
+    <div className="bg-gradient-to-br from-[#00AEEF]  via-[#892890] to-[#ED1D7E] min-h-[80vh]container pb-24   pt-[8rem] flex items-center justify-center px-4 sm:px-8">
       <motion.div
         className="max-w-8xl text-center container_lg"
         initial={{ opacity: 0, y: 50 }}
