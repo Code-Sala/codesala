@@ -13,6 +13,8 @@ import UiuxSection from "./components/Services/uiuxSection";
 import Domainsection from "./components/Services/Domainsection";
 import SoftwareComponent from "./components/Services/SoftwareComponent";
 import SkillComponent from "./components/Services/SkillComponent";
+import Policy from "./pages/Policy";
+import Terms from "./pages/Terms";
 
 const App = () => {
   return (
@@ -50,6 +52,8 @@ const App = () => {
             <Route path="/domaincomponent" element={<Domainsection />} />
             <Route path="/softwarecomponent" element={<SoftwareComponent />} />
             <Route path="/skillrentcomponent" element={<SkillComponent />} />
+            <Route path="/privacy" element={<Policy />} />
+            <Route path="/terms" element={<Terms />} />
           </Route>
         </Routes>
       </Router>
