@@ -1,24 +1,29 @@
 import { useEffect, useRef, useState } from "react";
-import { Play, Pause } from "lucide-react";
+// import { Headphones, HeadphoneOff } from "lucide-react";
 import sampleMusic from "../assets/sound/sampleMusic.mp3";
 import "./music.css";
+
+import volumeoff from "../assets/svg/volumeoff.svg";
+import volumeon from "../assets/svg/volumeon.svg";
 
 function OpenMusic() {
   const audioRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [showModal, setShowModal] = useState(true);
   const audioContextRef = useRef(null);
   const analyzerRef = useRef(null);
   const dataArrayRef = useRef(null);
 
   useEffect(() => {
-    const audio = audioRef.current;
-    if (!audio) return;
+    if (!audioRef.current) return;
 
     if (!audioContextRef.current) {
       audioContextRef.current = new (window.AudioContext ||
         window.webkitAudioContext)();
       const analyzer = audioContextRef.current.createAnalyser();
-      const source = audioContextRef.current.createMediaElementSource(audio);
+      const source = audioContextRef.current.createMediaElementSource(
+        audioRef.current
+      );
 
       source.connect(analyzer);
       analyzer.connect(audioContextRef.current.destination);
@@ -30,29 +35,14 @@ function OpenMusic() {
   }, []);
 
   useEffect(() => {
-    const animate = () => {
-      if (!isPlaying || !analyzerRef.current || !dataArrayRef.current) return;
-
-      requestAnimationFrame(animate);
-      analyzerRef.current.getByteFrequencyData(dataArrayRef.current);
-
-      const avgFrequency =
-        dataArrayRef.current.reduce((a, b) => a + b, 0) /
-        dataArrayRef.current.length;
-      const glowIntensity = Math.min(60, avgFrequency / 2);
-      const scaleSize = 1 + avgFrequency / 200;
-
-      document.documentElement.style.setProperty(
-        "--glow-intensity",
-        `${glowIntensity}px`
-      );
-      document.documentElement.style.setProperty("--scale-size", scaleSize);
-    };
+    if (showModal) return;
 
     if (isPlaying) {
-      audioContextRef.current.resume().then(() => animate());
+      audioContextRef.current.resume().then(() => {
+        audioRef.current?.play();
+      });
     }
-  }, [isPlaying]);
+  }, [showModal, isPlaying]);
 
   const toggleAudio = () => {
     if (audioRef.current) {
@@ -67,18 +57,52 @@ function OpenMusic() {
 
   return (
     <div>
+      {/* Audio Element */}
       <audio ref={audioRef} loop>
         <source src={sampleMusic} type="audio/mp3" />
         Your browser does not support the audio element.
       </audio>
 
+      {/* Music Control Button */}
       <div
         onClick={toggleAudio}
-        className={`audio-control cursor-pointer fixed bottom-25 right-4 z-90 bg-gradient-to-r from-pink-500 to-purple-600 text-white rounded-full hover:scale-110 shadow-lg transition-all duration-300 
-        ${isPlaying ? "playing" : ""}`}
+        className={`audio-control fixed bottom-6 right-6 z-50 bg-white text-white p-3 rounded-full shadow-md transition-all duration-300 hover:scale-110`}
       >
-        {isPlaying ? <Pause size={20} /> : <Play size={20} />}
+        {isPlaying ? (
+          <img src={volumeon} alt="img1" />
+        ) : (
+          <img src={volumeoff} alt="img1" />
+        )}
       </div>
+
+      {/* Minimal Modal */}
+      {showModal && (
+        <div className="fixed inset-0 z-90 flex items-center justify-center bg-gray-900/99">
+          <div className=" text-center   ">
+            {/* <Music size={32} className="text-gray-800 text-center mb-3" /> */}
+            <h2 className="text-[2rem] text-gray-200 font-medium">
+              Set the mood with music?
+            </h2>
+            <div className="mt-4 flex justify-center gap-6">
+              <span
+                className="text-white cursor-pointer hover:underline text-2xl rounded-full bg-vibrant-pink p-4"
+                onClick={() => {
+                  setShowModal(false);
+                  setIsPlaying(true);
+                }}
+              >
+                Yes
+              </span>
+              <span
+                className="text-vibrant-pink cursor-pointer hover:underline text-2xl p-4  rounded-full border-vibrant-pink border-2"
+                onClick={() => setShowModal(false)}
+              >
+                No
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import ParticleBackground from "../particles/ParticleBackground";
+// import ParticleBackground from "../particles/ParticleBackground";
 
 const services = [
   "ui/ux design",
@@ -55,14 +55,15 @@ const Hero = () => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
-      className="container min-h-[80vh] flex items-center justify-center px-4 container_lg relative"
+      className="container bg-cover min-h-[80vh] flex items-center justify-center px-4 opacity-40 relative bg-[url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdhbGxwYXBlciUyMDRrfGVufDB8fDB8fHww)] text-white"
     >
-      <ParticleBackground />
-
-      <div className="max-w-2xl text-center space-y-6">
+      <div className="background_linear bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] absolute w-full h-full z-10 opacity-90  "></div>
+      {/* <ParticleBackground /> */}
+      {/* 80deg, rgba(236, 7, 199, .8) 0%, rgba(19, 139, 255, .8) */}
+      <div className="max-w-2xl text-center space-y-6 z-50">
         <motion.p
           variants={containerVariants}
-          className="text-gray-700 text-lg"
+          className="text-gray-200 text-2xl "
         >
           CodeSala - Your digital partner
         </motion.p>
@@ -71,7 +72,7 @@ const Hero = () => {
           className="text-3xl sm:text-5xl font-bold leading-tight"
         >
           At CodeSala, we specialize <br /> in{" "}
-          <span className="text-3xl  lg:text-5xl font-bold bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent transition-all duration-1000 hover:bg-gradient-to-tl">
+          <span className="text-3xl  lg:text-5xl font-bold bg-gradient-to-l from-[#00aeef] via-[#489ff7] via-[#7f8cf2] via-[#ae73df] via-[#d354bd] to-[#00aeef] bg-clip-text text-transparent  transition-all duration-1000 hover:bg-gradient-to-tl">
             {currentService}
           </span>{" "}
           services
@@ -79,7 +80,7 @@ const Hero = () => {
         <motion.div variants={containerVariants}>
           <Link
             to="/contact"
-            className="inline-block animated-gradient-btn text-white px-6 py-3 rounded-md text-lg font-medium mt-2"
+            className="inline-block z-50 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 py-3 rounded-[3rem] text-lg font-medium mt-2"
           >
             Let&apos;s start a project!
           </Link>
