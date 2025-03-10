@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 // import { Headphones, HeadphoneOff } from "lucide-react";
-import sampleMusic from "../assets/sound/sampleMusic.mp3";
+import sampleMusic from "../assets/sound/chillMusic.mp3";
 import "./music.css";
 
 import volumeoff from "../assets/svg/volumeoff.svg";

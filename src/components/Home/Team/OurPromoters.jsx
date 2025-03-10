@@ -1,7 +1,7 @@
 function OurPromoters() {
   const promoters = [
     {
-      name: "John Doe",
+      name: "Baburam Dangi",
       role: "Founder & CEO",
       image:
         "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gough.png",
@@ -12,8 +12,8 @@ function OurPromoters() {
       },
     },
     {
-      name: "Jane Smith",
-      role: "Co-Founder & COO",
+      name: "Suresh Ghimire",
+      role: "Co-Founder",
       image:
         "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png",
       social: {

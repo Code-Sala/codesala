@@ -2,18 +2,18 @@ import { Link } from "react-router-dom";
 import logo1 from "../../assets/img/logo/logo1.png";
 function Footer() {
   return (
-    <footer className="footer bg-base-200 text-base-content py-12 relative container">
+    <footer className="footer   py-12 relative container bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] ">
       <div className="container_lg p-10 flex justify-between  mx-auto z-50">
         <aside className="text-lg">
           <Link to="/">
             <img src={logo1} alt="footer logo" className="max-w-36 mb-2" />
           </Link>
-          <p className="text-vibrant-pink">
+          <p className=" text-vibrant-pink ">
             Providing reliable tech since 2024
           </p>
         </aside>
-        <nav className="flex flex-col gap-2">
-          <h6 className="footer-title">Services</h6>
+        <nav className="flex flex-col gap-2 text-gray-800">
+          <h6 className=" text-xl text-black uppercase">Services</h6>
           <Link to="/webcomponent" className="link link-hover">
             Web Development
           </Link>
@@ -28,7 +28,7 @@ function Footer() {
           </Link>
         </nav>
         <nav className="flex flex-col gap-2">
-          <h6 className="footer-title">Company</h6>
+          <h6 className="text-xl text-black uppercase">Company</h6>
           <Link to="/about" className="link link-hover">
             About us
           </Link>
@@ -43,7 +43,7 @@ function Footer() {
           </Link>
         </nav>
         <nav className="flex flex-col gap-2">
-          <h6 className="footer-title">Legal</h6>
+          <h6 className="text-xl text-black uppercase">Legal</h6>
           <Link to="/terms" className="link link-hover">
             Terms of use
           </Link>
