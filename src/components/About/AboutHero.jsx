@@ -1,10 +1,14 @@
 import { motion } from "framer-motion";
+import groupImg from "../../assets/img/home/Group.jpg";
 
 function AboutHero() {
   return (
-    <div className="bg-gradient-to-br from-[#00AEEF]  via-[#892890] to-[#ED1D7E] min-h-[80vh]container pb-24   pt-[8rem] flex items-center justify-center px-4 sm:px-8">
+    <div className="bg-gradient-to-br  from-[#00AEEF]  via-[#892890] to-[#ED1D7E] min-h-[100vh] container pb-24 z-10  pt-[6.2rem] flex items-center justify-center px-4 sm:px-8">
+      <div className="absolute w-full h-full z-1 bg-cover opacity-30 overflow-hidden ">
+        <img src={groupImg} alt="group image" className=" object-cover " />
+      </div>
       <motion.div
-        className="max-w-8xl text-center container_lg"
+        className="max-w-8xl text-center container_lg z-40"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -18,7 +22,7 @@ function AboutHero() {
           Your Partner for Ultimate <br /> Success
         </motion.h1>
         <motion.p
-          className="text-white font-semibold text-base sm:text-lg md:text-xl mt-6 px-2 sm:px-10"
+          className="text-white font-semibold text-base sm:text-lg md:text-md mt-6 px-2 sm:px-10"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}

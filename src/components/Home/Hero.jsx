@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-// import ParticleBackground from "../particles/ParticleBackground";
+import ParticleBackground from "../particles/ParticleBackground";
+// import groupImg from "https://elements-resized.envatousercontent.com/envato-dam-assets-production/EVA/TRX/6c/9f/62/48/31/v1_E11/E114HT2R.jpg?w=1600&cf_fit=scale-down&mark-alpha=18&mark=https%3A%2F%2Felements-assets.envato.com%2Fstatic%2Fwatermark4.png&q=85&format=auto&s=6c2d34838d9f9da9d4254bf41ebe29eecb873f1a7072381997599f6f5b56e6e4";
+import codeImg from "../../assets/img/home/code.jpeg";
 
 const services = [
   "ui/ux design",
@@ -55,24 +57,29 @@ const Hero = () => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
-      className="container bg-cover min-h-[80vh] flex items-center justify-center px-4 opacity-40 relative bg-[url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdhbGxwYXBlciUyMDRrfGVufDB8fDB8fHww)] text-white"
+      className="container bg-cover min-h-[100vh] flex items-center justify-center px-4 opacity-40 relative bg-[(../../assets/img/home/Group.jpg)] text-white"
     >
-      <div className="background_linear bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] absolute w-full h-full z-10 opacity-90  "></div>
-      {/* <ParticleBackground /> */}
+      {/* <img src={btrfly} alt="" /> */}
+      <div className="background_linear bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] absolute w-full h-full z-10 opacity-40  "></div>
+      <div className="absolute w-full h-full z-9 bg-cover overflow-hidden ">
+        <img src={codeImg} alt="group image" className="w-full object-cover " />
+      </div>
+
+      <ParticleBackground />
       {/* 80deg, rgba(236, 7, 199, .8) 0%, rgba(19, 139, 255, .8) */}
       <div className="max-w-2xl text-center space-y-6 z-50">
-        <motion.p
+        {/* <motion.p
           variants={containerVariants}
-          className="text-gray-200 text-2xl "
+          className=" text-2xl bg-gradient-to-l from-[#00aeef] via-[#489ff7] via-[#7f8cf2] via-[#00aeef] via-[#00aeef] to-[#00aeef] bg-clip-text text-transparent font-mono font-bold"
         >
-          CodeSala - Your digital partner
-        </motion.p>
+          Technology Will Change Humanity Forever
+        </motion.p> */}
         <motion.h1
           variants={containerVariants}
           className="text-3xl sm:text-5xl font-bold leading-tight"
         >
           At CodeSala, we specialize <br /> in{" "}
-          <span className="text-3xl  lg:text-5xl font-bold bg-gradient-to-l from-[#00aeef] via-[#489ff7] via-[#7f8cf2] via-[#ae73df] via-[#d354bd] to-[#00aeef] bg-clip-text text-transparent  transition-all duration-1000 hover:bg-gradient-to-tl">
+          <span className="text-3xl  lg:text-5xl font-bold text-cyan-400 bg-clip-text   transition-all duration-1000 hover:bg-gradient-to-tl">
             {currentService}
           </span>{" "}
           services

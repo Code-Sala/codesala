@@ -1,7 +1,7 @@
 function BoardAdvisory() {
   const advisors = [
     {
-      name: "Dr. Alex Johnson",
+      name: "John Doe",
       role: "Strategic Advisor",
       image:
         "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/thomas-lean.png",
@@ -11,7 +11,7 @@ function BoardAdvisory() {
       },
     },
     {
-      name: "Emily Roberts",
+      name: "Niraj Gautam",
       role: "Financial Advisor",
       image:
         "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/lana-byrd.png",
@@ -21,7 +21,7 @@ function BoardAdvisory() {
       },
     },
     {
-      name: "Mark Williams",
+      name: "Pulav Raj Giri",
       role: "Technology Consultant",
       image:
         "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/steve-job.png",

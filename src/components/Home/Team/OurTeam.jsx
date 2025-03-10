@@ -26,7 +26,7 @@ function OurTeam() {
     },
     {
       name: "Sadip Khatri",
-      role: "FullStack Developer",
+      role: "FullStack Engineer",
       image:
         "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png",
       social: {

@@ -63,6 +63,7 @@
   background-size: 300% 300%;
   background-image: linear-gradient(to bottom right, #ec07c7cc, #138bffcc);
   transition: background-position 0.5s ease-in-out;
+  color: white;
 }
 
 .animated-gradient-btn:hover {
@@ -108,7 +109,7 @@
 } */
 
 .btn-grad:hover {
-  background-position: right center; /* change the direction of the change here */
+  background-position: right center;
   color: #fff;
   text-decoration: none;
 }
