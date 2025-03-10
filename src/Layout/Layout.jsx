@@ -9,6 +9,8 @@ const Layout = () => {
     <div className="sm:cursor-none md:cursor-none lg:cursor-auto">
       <Navbar />
       {/* <ParticleBackground /> */}
+   
+      <div className="pt-[5rem]">
 
       <div className="pt-[5rem] bg-#fff">
         <Outlet />
