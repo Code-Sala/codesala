@@ -1,5 +1,7 @@
 import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
+import imageWeb from "../../assets/img/services/web.png";
 
 const WebComponents = () => {
   return (
@@ -48,7 +50,7 @@ const WebComponents = () => {
           transition={{ duration: 1 }}
         >
           <img
-            src="src\assets\img\services\web.png"
+            src={imageWeb}
             alt="Web Development"
             className="pl-10 md:pl-20 w-full md:w-120 rounded-lg h-auto shadow-lg"
           />
@@ -90,7 +92,7 @@ const WebComponents = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            About Us
+            <Link to="/contact">Let's Start</Link>
           </motion.button>
         </motion.div>
       </section>

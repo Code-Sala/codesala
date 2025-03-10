@@ -14,7 +14,8 @@ import Domainsection from "./components/Services/Domainsection";
 import SoftwareComponent from "./components/Services/SoftwareComponent";
 import SkillComponent from "./components/Services/SkillComponent";
 import Cookies from "./components/Cookies/Cookies";
-
+import Policy from "./pages/Policy";
+import Terms from "./pages/Terms";
 const App = () => {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
@@ -59,6 +60,8 @@ const App = () => {
             <Route path="/softwarecomponent" element={<SoftwareComponent />} />
             <Route path="/skillrentcomponent" element={<SkillComponent />} />
             <Route path="/cookies" element={<Cookies />} />
+            <Route path="/privacy" element={<Policy />} />
+            <Route path="/terms" element={<Terms />} />
           </Route>
         </Routes>
       </Router>

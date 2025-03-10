@@ -1,5 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import imageUI from "../../assets/img/services/uiux1.png";
 
 const UiuxSection = () => {
   return (
@@ -47,7 +49,7 @@ const UiuxSection = () => {
           transition={{ duration: 1 }}
         >
           <img
-            src="src\assets\img\services\uiux1.png"
+            src={imageUI}
             alt="Web Development"
             className="pl-10 md:pl-20 w-full md:w-[30rem] rounded-lg h-auto shadow-lg"
           />
@@ -88,7 +90,7 @@ const UiuxSection = () => {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-            About Us
+            <Link to="/contact">Let's Start</Link>
           </motion.button>
         </motion.div>
       </section>

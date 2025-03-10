@@ -8,7 +8,7 @@ export default function PeopleAndCulture() {
         {/* Text Section */}
         <div className="md:w-1/2 md:ml-auto text-center md:text-left px-4">
           <h2
-            className="text-3xl sm:text-4xl md:text-5xl font-bold text-vibrant-pink mb-6 leading-tight animate-fadeInUp"
+            className="text-3xl sm:text-4xl text-bold md:text-5xl font-bold bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent animate-fadeInUp"
             style={{ animationDelay: "0.5s" }}
           >
             Unlock Growth
@@ -24,7 +24,7 @@ export default function PeopleAndCulture() {
             boundaries. Whether you&apos;re a coding virtuoso, a design maestro,
             or a strategic guru, you&apos;ll find your tribe here.
           </p>
-          <button className="mt-6 lg:inline-block text-white px-6 py-3 rounded-md animated-gradient-btn">
+          <button className="mt-6 lg:inline-block text-white px-6 py-3 animated-gradient-btn rounded-[3rem]">
             Apply now
           </button>
         </div>
