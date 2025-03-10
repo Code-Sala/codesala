@@ -10,7 +10,7 @@ const Layout = () => {
     <div className="sm:cursor-none md:cursor-none   lg:cursor-auto">
       <Navbar />
       {/* <ParticleBackground /> */}
-      <Navbar />
+   
       <div className="pt-[5rem]">
         <Outlet />
       </div>

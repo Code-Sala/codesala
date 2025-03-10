@@ -1,4 +1,4 @@
-// src/App.js
+import { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AnimatedCursor from "react-animated-cursor";
 import Layout from "./Layout/Layout";
@@ -13,28 +13,36 @@ import UiuxSection from "./components/Services/uiuxSection";
 import Domainsection from "./components/Services/Domainsection";
 import SoftwareComponent from "./components/Services/SoftwareComponent";
 import SkillComponent from "./components/Services/SkillComponent";
+import Cookies from "./components/Cookies/Cookies";
 
 const App = () => {
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    // Detect touch device
+    setIsTouchDevice("ontouchstart" in window || navigator.maxTouchPoints > 0);
+  }, []);
+
   return (
     <>
-      <AnimatedCursor
-        innerSize={14}
-        outerSize={35}
-        innerScale={1}
-        outerScale={2}
-        outerAlpha={0}
-        hasBlendMode={true}
-        innerStyle={{
-          backgroundColor: "purple",
-        }}
-        outerStyle={{
-          // backgroundColor:'#ED1D7E',
-          opacity: 0.45,
-          border: "3px solid #ED1D7E",
-        }}
-      />
-
-      {/* <ParticleBackground /> */}
+      {/* Render AnimatedCursor only if not on a touch device */}
+      {!isTouchDevice && (
+        <AnimatedCursor
+          innerSize={14}
+          outerSize={35}
+          innerScale={1}
+          outerScale={2}
+          outerAlpha={0}
+          hasBlendMode={true}
+          innerStyle={{
+            backgroundColor: "purple",
+          }}
+          outerStyle={{
+            opacity: 0.45,
+            border: "3px solid #ED1D7E",
+          }}
+        />
+      )}
 
       <Router>
         <Routes>
@@ -50,6 +58,7 @@ const App = () => {
             <Route path="/domaincomponent" element={<Domainsection />} />
             <Route path="/softwarecomponent" element={<SoftwareComponent />} />
             <Route path="/skillrentcomponent" element={<SkillComponent />} />
+            <Route path="/cookies" element={<Cookies />} />
           </Route>
         </Routes>
       </Router>
