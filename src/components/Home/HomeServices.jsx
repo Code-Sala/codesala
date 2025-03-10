@@ -40,7 +40,7 @@ const services = [
 const HomeServices = () => {
   return (
     <div className="container mx-auto py-12 px-6 flex flex-col items-center">
-      <h1 className="text-3xl sm:text-5xl font-bold text-center text-vibrant-pink py-2 leading-tight">
+      <h1 className="text-3xl sm:text-5xl font-bold text-center  bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent py-2 leading-tight">
         Explore Our Expertise
       </h1>
       <p className="text-lg text-center text-gray-600 mb-12">
@@ -104,8 +104,9 @@ const FlippingCard = ({ service }) => {
       >
         {/* Front Side */}
         <div className="absolute w-full h-full flex flex-col items-center justify-center bg-dark-gold text-black rounded-lg shadow-lg backface-hidden">
-          <Icon className="w-14 h-14 mb-4 text-vibrant-pink" />
-          <h2 className="text-xl font-semibold text-vibrant-pink">
+          <Icon className="w-14 h-14 mb-4 bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] text-white rounded-full p-3 mask mask-image" />
+
+          <h2 className="text-xl font-semibold  bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent">
             {service.title}
           </h2>
         </div>

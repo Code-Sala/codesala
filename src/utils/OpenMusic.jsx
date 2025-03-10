@@ -66,7 +66,7 @@ function OpenMusic() {
       {/* Music Control Button */}
       <div
         onClick={toggleAudio}
-        className={`fixed bottom-6 right-6 z-50 bg-white text-white p-3 rounded-full shadow-md transition-all duration-300 hover:scale-110`}
+        className={`audio-control fixed bottom-6 right-6 z-50 bg-white text-white p-3 rounded-full shadow-md transition-all duration-300 hover:scale-110`}
       >
         {isPlaying ? (
           <img src={volumeon} alt="img1" />
