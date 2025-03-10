@@ -28,57 +28,65 @@ export default function Contact() {
         </motion.div>
 
         {/* Contact Information Section */}
-        <div className="flex flex-col space-y-6 lg:border-l lg:border-r lg:border-gray-200 lg:px-6">
-          <motion.h1
-            className="text-2xl md:text-3xl font-semibold text-[#ED1D7E] mb-6 text-center"
-            initial={{ y: -50, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.8 }}
-          >
-            Contact Us
-          </motion.h1>
+        <div className="flex flex-col items-center space-y-6 lg:border-l lg:border-r lg:border-gray-200 lg:px-6">
+  <motion.h1 
+    className="text-2xl md:text-3xl font-semibold text-[#ED1D7E] mb-6 text-center"
+    initial={{ y: -50, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ duration: 0.8 }}
+  >
+    Contact Us
+  </motion.h1>
 
-          {/* Contact Details */}
-          <div className="flex flex-col space-y-6">
-            <motion.div
-              className="flex items-center gap-3 justify-center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <MapPin className="text-[#ED1D7E] w-8 h-8 flex-shrink-0" />
-              <p className="text-gray-700">Bhawan Pau, Kathmandu</p>
-            </motion.div>
+  {/* Contact Details */}
+  <div className="flex flex-col space-y-6">
+    <motion.div
+      className="flex items-start gap-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8, delay: 0.2 }}
+    >
+      <MapPin className="text-[#ED1D7E] w-8 h-8 flex-shrink-0" />
+      <div className="flex-1">
+        <p className="text-gray-700 m-0">Bhawan Pau, Kathmandu</p>
+      </div>
+    </motion.div>
 
-            <motion.div
-              className="flex items-center gap-3 justify-center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <Mail className="text-[#ED1D7E] w-8 h-8 flex-shrink-0" />
-              <p className="text-gray-700 break-words">
-                <a href="mailto:codesalaofficial@gmail.com" className="hover:underline">
-                  codesalaofficial@gmail.com
-                </a>
-              </p>
-            </motion.div>
+    <motion.div
+      className="flex items-start gap-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
+    >
+      <Mail className="text-[#ED1D7E] w-8 h-8 flex-shrink-0" />
+      <div className="flex-1">
+        <p className="text-gray-700 m-0 break-words">
+          <a href="mailto:codesalaofficial@gmail.com" className="hover:underline">
+            codesalaofficial@gmail.com
+          </a>
+        </p>
+      </div>
+    </motion.div>
 
-            <motion.div
-              className="flex items-center gap-3 justify-center"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <Phone className="text-[#ED1D7E] w-8 h-8 flex-shrink-0" />
-              <p className="text-gray-700">
-                <a href="tel:9769857456" className="hover:underline">
-                  +977 9769857456
-                </a>
-              </p>
-            </motion.div>
-          </div>
-        </div>
+    <motion.div
+      className="flex items-start gap-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8, delay: 0.6 }}
+    >
+      <Phone className="text-[#ED1D7E] w-8 h-8 flex-shrink-0" />
+      <div className="flex-1">
+        <p className="text-gray-700 m-0">
+          <a href="tel:9769857456" className="hover:underline">
+            +977 9769857456
+          </a>
+        </p>
+      </div>
+    </motion.div>
+  </div>
+</div>
+
+
 
         {/* Follow Us Section */}
         <div className="flex flex-col space-y-6">

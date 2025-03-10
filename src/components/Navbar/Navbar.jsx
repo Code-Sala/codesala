@@ -33,7 +33,7 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 container_lg">
-        <Link to="/" className="text-xl font-bold text-gray-800">
+        <Link to="/" className="text-xl font-bold text-gray-200">
           <img src={logo} alt="logo1" className="w-[9rem] h-6" />
         </Link>
 
@@ -81,7 +81,7 @@ const Navbar = () => {
         {/* Contact Button */}
         <Link
           to="/contact"
-          className="hidden lg:inline-block text-white px-4 py-2 rounded-md animated-gradient-btn"
+          className="hidden lg:inline-block text-white px-4 py-2 animated-gradient-btn rounded-[3rem]"
         >
           Contact Us
         </Link>
@@ -131,7 +131,7 @@ const Navbar = () => {
           </Link>
           <Link
             to="/contact"
-            className="block text-white bg-vibrant-pink py-2 text-center rounded-md hover:bg-deep-purple mt-2"
+            className="block text-white bg-vibrant-pink py-2 text-center rounded-[3rem] hover:bg-deep-purple mt-2"
             onClick={() => setIsOpen(false)}
           >
             Contact

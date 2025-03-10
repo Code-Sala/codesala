@@ -31,7 +31,7 @@ export default function Testimonials() {
       <div className="absolute inset-0 -z-10 opacity-20"></div>
       <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white ring-1 shadow-xl shadow-vibrant-pink/20 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center"></div>
       <div className="mx-auto max-w-2xl lg:max-w-4xl">
-        <h1 className="mx-auto text-3xl lg:text-5xl font-bold text-center pb-8  leading-tight text-vibrant-pink">
+        <h1 className="mx-auto text-3xl lg:text-5xl font-bold text-center pb-8  leading-tight   bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent animate-fadeInUp">
           What our clients think
         </h1>
         <Swiper

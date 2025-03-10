@@ -58,10 +58,10 @@ const ParticleBackground = () => {
       },
       particles: {
         color: {
-          value: "#ed1d7e",
+          value: "#fff",
         },
         links: {
-          color: "#ed1d7e",
+          color: "#fff",
           distance: 150,
           enable: true,
           opacity: 0.5,
@@ -74,7 +74,7 @@ const ParticleBackground = () => {
             default: "bounce",
           },
           random: false,
-          speed: 4,
+          speed: 2,
           straight: false,
         },
         number: {
