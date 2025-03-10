@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Facebook, Linkedin, Mail, MapPin, Phone, X } from "lucide-react";
+import { Facebook, Linkedin, Mail, MapPin, Phone, } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -62,7 +62,7 @@ export default function Contact() {
       <div className="flex-1">
         <p className="text-gray-700 m-0 break-words">
           <a href="mailto:codesalaofficial@gmail.com" className="hover:underline">
-            codesalaofficial@gmail.com
+          np@codesala.com
           </a>
         </p>
       </div>
@@ -78,7 +78,7 @@ export default function Contact() {
       <div className="flex-1">
         <p className="text-gray-700 m-0">
           <a href="tel:9769857456" className="hover:underline">
-            +977 9769857456
+          +977-15924442
           </a>
         </p>
       </div>
@@ -112,7 +112,8 @@ export default function Contact() {
               <Linkedin className="text-[#ED1D7E] w-10 h-10 hover:scale-110 transition-transform" />
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <X className="text-[#ED1D7E] w-10 h-10 hover:scale-110 transition-transform" />
+              {/* <X className="text-[#ED1D7E] w-10 h-10 hover:scale-110 transition-transform" /> */}
+              <i className="fa-brands fa-x-twitter"></i>
             </a>
           </motion.div>
         </div>
