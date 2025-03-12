@@ -57,8 +57,11 @@ const Hero = () => {
       variants={containerVariants}
       className="relative min-h-screen flex flex-col items-center justify-center px-6 sm:px-12 text-white text-center"
     >
+      <div className="z-60">
+        <ParticleBackground />
+      </div>
       {/* Gradient Overlay */}
-      <div className="background_linear bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] absolute w-full h-full z-10 opacity-40"></div>
+      <div className="background_linear bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] absolute w-full h-full z-10 opacity-70"></div>
 
       <div className="absolute inset-0 hidden sm:block">
         <img
@@ -69,7 +72,6 @@ const Hero = () => {
       </div>
 
       {/* Particles */}
-      <ParticleBackground />
 
       {/* Text Content */}
       <div className="relative z-10 max-w-2xl space-y-6">
