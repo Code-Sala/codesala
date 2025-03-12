@@ -34,7 +34,7 @@ const ParticleBackground = () => {
           value: "transparent",
         },
       },
-      fpsLimit: 90,
+      fpsLimit: 60,
       interactivity: {
         events: {
           onClick: {
@@ -51,8 +51,8 @@ const ParticleBackground = () => {
             quantity: 4,
           },
           repulse: {
-            distance: 100,
-            duration: 0.9,
+            distance: 50,
+            duration: 0.5,
           },
         },
       },
@@ -64,24 +64,24 @@ const ParticleBackground = () => {
           color: "#fff",
           distance: 150,
           enable: true,
-          opacity: 0.8,
+          opacity: 0.7,
           width: 1,
         },
         move: {
           direction: "none",
-          enable: false,
+          enable: true,
           outModes: {
             default: "bounce",
           },
           random: false,
-          speed: 2,
+          speed: 4,
           straight: false,
         },
         number: {
           density: {
-            enable: true,
+            enable: false,
           },
-          value: 100,
+          value: 50,
         },
         opacity: {
           value: 0.5,
