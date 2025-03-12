@@ -1,19 +1,27 @@
 import { Link } from "react-router-dom";
 import logo1 from "../../assets/img/logo/logo1.png";
+
 function Footer() {
   return (
-    <footer className="footer   py-12 relative container bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] ">
-      <div className="container_lg p-10 flex justify-between  mx-auto z-50">
-        <aside className="text-lg">
+    <footer className="footer py-12 bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc]">
+      <div className="container_lg p-10 flex flex-wrap justify-between gap-8 mx-auto text-center md:text-left">
+        {/* Logo and Intro */}
+        <aside className="w-full md:w-1/3 lg:w-1/4">
           <Link to="/">
-            <img src={logo1} alt="footer logo" className="max-w-36 mb-2" />
+            <img
+              src={logo1}
+              alt="footer logo"
+              className="max-w-36 mx-auto md:mx-0 mb-2"
+            />
           </Link>
-          <p className=" text-vibrant-pink ">
+          <p className="text-vibrant-pink">
             Providing reliable tech since 2024
           </p>
         </aside>
-        <nav className="flex flex-col gap-2 text-gray-800">
-          <h6 className=" text-xl text-black uppercase">Services</h6>
+
+        {/* Services Section */}
+        <nav className="w-full md:w-auto flex flex-col gap-2">
+          <h6 className="text-xl text-black uppercase">Services</h6>
           <Link to="/webcomponent" className="link link-hover">
             Web Development
           </Link>
@@ -27,7 +35,9 @@ function Footer() {
             Skill Rent
           </Link>
         </nav>
-        <nav className="flex flex-col gap-2">
+
+        {/* Company Section */}
+        <nav className="w-full md:w-auto flex flex-col gap-2">
           <h6 className="text-xl text-black uppercase">Company</h6>
           <Link to="/about" className="link link-hover">
             About us
@@ -42,7 +52,9 @@ function Footer() {
             Services
           </Link>
         </nav>
-        <nav className="flex flex-col gap-2">
+
+        {/* Legal Section */}
+        <nav className="w-full md:w-auto flex flex-col gap-2">
           <h6 className="text-xl text-black uppercase">Legal</h6>
           <Link to="/terms" className="link link-hover">
             Terms of use
