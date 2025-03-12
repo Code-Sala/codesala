@@ -51,8 +51,8 @@ const ParticleBackground = () => {
             quantity: 4,
           },
           repulse: {
-            distance: 200,
-            duration: 0.4,
+            distance: 100,
+            duration: 0.9,
           },
         },
       },
@@ -64,12 +64,12 @@ const ParticleBackground = () => {
           color: "#fff",
           distance: 150,
           enable: true,
-          opacity: 0.5,
+          opacity: 0.8,
           width: 1,
         },
         move: {
           direction: "none",
-          enable: true,
+          enable: false,
           outModes: {
             default: "bounce",
           },
