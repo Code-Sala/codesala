@@ -62,26 +62,27 @@ const Domainsection = () => {
           </p>
           <ul className="space-y-2 text-gray-700">
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Fast & Secure Hosting
+              <span className="text-pink-500 mr-2">✔</span> Fast & Secure
+              Hosting
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Easy Domain
+              <span className="text-pink-500 mr-2">✔</span> Easy Domain
               Management
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> SSL & Security
+              <span className="text-pink-500 mr-2">✔</span> SSL & Security
               Protection
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Scalable Solutions
+              <span className="text-pink-500 mr-2">✔</span> Scalable Solutions
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Affordable Pricing &
+              <span className="text-pink-500 mr-2">✔</span> Affordable Pricing &
               No Hidden Fees
             </li>
           </ul>
           <motion.button
-            className="mt-6 px-6 py-2 border border-red-500 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition"
+            className="mt-6 px-6 py-2 border border-pink-500 text-pink-500 rounded-lg hover:bg-pink-500 hover:text-white transition"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >

@@ -68,25 +68,25 @@ const UiuxSection = () => {
           </p>
           <ul className="space-y-2 text-gray-700">
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> User-Centered Design
+              <span className="text-pink-500 mr-2">✔</span> User-Centered Design
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Innovative & Modern
+              <span className="text-pink-500 mr-2">✔</span> Innovative & Modern
               Aesthetics
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Responsive &
+              <span className="text-pink-500 mr-2">✔</span> Responsive &
               Accessible
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Data-Driven Approach
+              <span className="text-pink-500 mr-2">✔</span> Data-Driven Approach
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Smooth User Flows
+              <span className="text-pink-500 mr-2">✔</span> Smooth User Flows
             </li>
           </ul>
           <motion.button
-            className="mt-6 px-6 py-2 border border-red-500 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition"
+            className="mt-6 px-6 py-2 border border-pink-500 text-pink-500 rounded-lg hover:bg-pink-500 hover:text-white transition"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >

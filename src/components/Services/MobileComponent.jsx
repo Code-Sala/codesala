@@ -68,28 +68,28 @@ const MobileComponent = () => {
           </p>
           <ul className="space-y-2 text-gray-700">
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span>Native &
+              <span className="text-pink-500 mr-2">✔</span>Native &
               cross-platform development
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Focus on UX/UI and
+              <span className="text-pink-500 mr-2">✔</span> Focus on UX/UI and
               performance
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> End-to-end security
+              <span className="text-pink-500 mr-2">✔</span> End-to-end security
               and scalability
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Industry-specific
+              <span className="text-pink-500 mr-2">✔</span> Industry-specific
               solutions
             </li>
             <li className="flex items-center">
-              <span className="text-red-500 mr-2">✔</span> Ongoing support and
+              <span className="text-pink-500 mr-2">✔</span> Ongoing support and
               updates
             </li>
           </ul>
           <motion.button
-            className="mt-6 px-6 py-2 border border-red-500 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition"
+            className="mt-6 px-6 py-2 border border-pink-500 text-pink-500 rounded-lg hover:bg-pink-500 hover:text-white transition"
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >

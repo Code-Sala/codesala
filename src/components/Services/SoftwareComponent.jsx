@@ -64,28 +64,28 @@ const SoftwareComponent = () => {
             </p>
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-center">
-                <span className="text-red-500 mr-2">✔</span> Seamless
+                <span className="text-pink-500 mr-2">✔</span> Seamless
                 Connectivity
               </li>
               <li className="flex items-center">
-                <span className="text-red-500 mr-2">✔</span> Custom Integration
+                <span className="text-pink-500 mr-2">✔</span> Custom Integration
                 Solutions
               </li>
               <li className="flex items-center">
-                <span className="text-red-500 mr-2">✔</span> API & Legacy System
-                Expertise
+                <span className="text-pink-500 mr-2">✔</span> API & Legacy
+                System Expertise
               </li>
               <li className="flex items-center">
-                <span className="text-red-500 mr-2">✔</span> Enhanced Automation
-                & Productivity
+                <span className="text-pink-500 mr-2">✔</span> Enhanced
+                Automation & Productivity
               </li>
               <li className="flex items-center">
-                <span className="text-red-500 mr-2">✔</span> Ongoing Support &
+                <span className="text-pink-500 mr-2">✔</span> Ongoing Support &
                 Maintenance
               </li>
             </ul>
             <motion.button
-              className="mt-6 px-6 py-2 border border-red-500 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition"
+              className="mt-6 px-6 py-2 border border-pink-500 text-pink-500 rounded-lg hover:bg-pink-500 hover:text-white transition"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
