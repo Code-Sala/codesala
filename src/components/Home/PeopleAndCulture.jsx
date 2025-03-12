@@ -2,7 +2,7 @@ import "./home.css";
 
 export default function PeopleAndCulture() {
   return (
-    <section className="py-12 bg-white flex justify-center items-center px-6 sm:px-12">
+    <section className="py-12 bg-white flex justify-center items-center px-6 sm:px-12 relative">
       {/* Background Gradient */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-vibrant-pink to-bright-purple opacity-20 blur-3xl z-0" />
 

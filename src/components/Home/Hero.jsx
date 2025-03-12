@@ -58,9 +58,8 @@ const Hero = () => {
       className="relative min-h-screen flex flex-col items-center justify-center px-6 sm:px-12 text-white text-center"
     >
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] opacity-50"></div>
+      <div className="background_linear bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] absolute w-full h-full z-10 opacity-40"></div>
 
-      {/* Background Image - Hidden on Small Devices */}
       <div className="absolute inset-0 hidden sm:block">
         <img
           src={codeImg}
