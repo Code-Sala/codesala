@@ -65,18 +65,18 @@ const SkillComponent = () => {
             </p>
             <ul className="space-y-2 text-gray-700">
               <li className="flex items-center">
-                <span className="text-red-500 mr-2">✔</span> Flexibility &
+                <span className="text-pink-500 mr-2">✔</span> Flexibility &
                 Convenience
               </li>
               <li className="flex items-center">
-                <span className="text-red-500 mr-2">✔</span> Cost-Effective
+                <span className="text-pink-500 mr-2">✔</span> Cost-Effective
                 Solutions
               </li>
               <li className="flex items-center">
-                <span className="text-red-500 mr-2">✔</span>Quality Assurance
+                <span className="text-pink-500 mr-2">✔</span>Quality Assurance
               </li>
               <li className="flex items-center">
-                <span className="text-red-500 mr-2">✔</span> Support &
+                <span className="text-pink-500 mr-2">✔</span> Support &
                 Reliability
               </li>
               {/* <li className="flex items-center">
@@ -85,7 +85,7 @@ const SkillComponent = () => {
               </li> */}
             </ul>
             <motion.button
-              className="mt-6 px-6 py-2 border border-red-500 text-red-500 rounded-lg hover:bg-red-500 hover:text-white transition"
+              className="mt-6 px-6 py-2 border border-red-500 text-red-500 rounded-lg hover:bg-pink-500 hover:text-white transition"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >

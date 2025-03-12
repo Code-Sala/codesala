@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import HeroSection from "../components/Blog/HeroSection";
 import NavSection from "../components/Blog/NavSection";
 import Pagecount from "../components/Blog/Pagecount";
-import SideBar from "../components/Blog/SideBar";
+// import SideBar from "../components/Blog/SideBar";
 import BlogData from "../Data/Blog.json";
 
 function Blog() {
@@ -18,14 +18,11 @@ function Blog() {
     <div>
       <NavSection />
 
-      <div className="grid lg:grid-cols-2 gap-6 w-full">
-        <div>
-          <HeroSection posts={currentPosts} />
-        </div>
-        <div className="hidden lg:block">
+      <HeroSection posts={currentPosts} />
+
+      {/* <div className="hidden lg:block">
           <SideBar />
-        </div>
-      </div>
+        </div> */}
 
       <Pagecount
         currentPage={currentPage}
@@ -34,10 +31,10 @@ function Blog() {
         postsPerPage={postsPerPage}
       />
 
-      {/* Move SideBar below Pagecount on small screens */}
-      <div className="lg:hidden">
+      {/* Move SideBar below Pagecount when screen width is less than 1180px */}
+      {/* <div className="block lg:hidden">
         <SideBar />
-      </div>
+      </div> */}
     </div>
   );
 }
