@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
-// import ParticleBackground from "../particles/ParticleBackground";
+import ParticleBackground from "../particles/ParticleBackground";
+import codeImg from "../../assets/img/home/code.jpeg";
 
 const services = [
   "ui/ux design",
@@ -10,7 +11,6 @@ const services = [
   "web development",
 ];
 
-// Parent container animation
 const containerVariants = {
   hidden: { opacity: 0, y: 50 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
@@ -55,24 +55,32 @@ const Hero = () => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
-      className="container bg-cover min-h-[80vh] flex items-center justify-center px-4 opacity-40 relative bg-[url(https://images.unsplash.com/photo-1485470733090-0aae1788d5af?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fHdhbGxwYXBlciUyMDRrfGVufDB8fDB8fHww)] text-white"
+      className="relative min-h-screen flex flex-col items-center justify-center px-6 sm:px-12 text-white text-center"
     >
-      <div className="background_linear bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] absolute w-full h-full z-10 opacity-90  "></div>
-      {/* <ParticleBackground /> */}
-      {/* 80deg, rgba(236, 7, 199, .8) 0%, rgba(19, 139, 255, .8) */}
-      <div className="max-w-2xl text-center space-y-6 z-50">
-        <motion.p
-          variants={containerVariants}
-          className="text-gray-200 text-2xl "
-        >
-          CodeSala - Your digital partner
-        </motion.p>
+      <div className="z-60">
+        <ParticleBackground />
+      </div>
+      {/* Gradient Overlay */}
+      <div className="background_linear bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] absolute w-full h-full z-10 opacity-70"></div>
+
+      <div className="absolute inset-0 hidden sm:block">
+        <img
+          src={codeImg}
+          alt="Code Background"
+          className="w-full h-full object-cover"
+        />
+      </div>
+
+      {/* Particles */}
+
+      {/* Text Content */}
+      <div className="relative z-10 max-w-2xl space-y-6">
         <motion.h1
           variants={containerVariants}
-          className="text-3xl sm:text-5xl font-bold leading-tight"
+          className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight"
         >
-          At CodeSala, we specialize <br /> in{" "}
-          <span className="text-3xl  lg:text-5xl font-bold bg-gradient-to-l from-[#00aeef] via-[#489ff7] via-[#7f8cf2] via-[#ae73df] via-[#d354bd] to-[#00aeef] bg-clip-text text-transparent  transition-all duration-1000 hover:bg-gradient-to-tl">
+          At CodeSala, we specialize in{" "}
+          <span className="text-cyan-400 bg-clip-text text-2xl sm:text-4xl lg:text-5xl font-bold transition-all duration-1000 hover:bg-gradient-to-tl">
             {currentService}
           </span>{" "}
           services
@@ -80,7 +88,7 @@ const Hero = () => {
         <motion.div variants={containerVariants}>
           <Link
             to="/contact"
-            className="inline-block z-50 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 py-3 rounded-[3rem] text-lg font-medium mt-2"
+            className="inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-lg font-medium mt-2"
           >
             Let&apos;s start a project!
           </Link>

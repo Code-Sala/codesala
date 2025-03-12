@@ -104,7 +104,7 @@ const FlippingCard = ({ service }) => {
       >
         {/* Front Side */}
         <div className="absolute w-full h-full flex flex-col items-center justify-center bg-dark-gold text-black rounded-lg shadow-lg backface-hidden">
-          <Icon className="w-14 h-14 mb-4 bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] text-white rounded-full p-3 mask mask-image" />
+          <Icon className="w-14 h-14 mb-4 bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] text-white rounded-full p-3 mask mask-image" />
 
           <h2 className="text-xl font-semibold  bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent">
             {service.title}

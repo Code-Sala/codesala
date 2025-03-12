@@ -1,4 +1,3 @@
-import React from "react";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
@@ -11,7 +10,7 @@ const HeroSection = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <motion.h1
-          className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl leading-tight"
+          className="text-white font-extrabold text-3xl  sm:text-4xl md:text-5xl leading-tight"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}

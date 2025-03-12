@@ -18,19 +18,19 @@ const TeamSection = () => {
       <div className="flex gap-4  mt-12">
         <button
           id="btn"
-          className={` hidden lg:inline-block text-bright-purple border-2 hover:border-white hover:bg-gray-800 hover:text-white px-4 py-2 rounded-md `}
+          className={` hidden lg:inline-block animated-gradient-btn px-4 py-2 rounded-[3rem] `}
           onClick={() => setActiveSection("team")}
         >
           Our Team
         </button>
         <button
-          className={` hidden lg:inline-block text-bright-purple border-2 hover:border-white hover:bg-gray-800 hover:text-white px-4 py-2 rounded-md `}
+          className={` hidden lg:inline-block animated-gradient-btn px-4 py-2 rounded-[3rem] `}
           onClick={() => setActiveSection("promoters")}
         >
           Our Promoters
         </button>
         <button
-          className={` hidden lg:inline-block text-bright-purple border-2 hover:border-white hover:bg-gray-800 hover:text-white px-4 py-2 rounded-md `}
+          className={` hidden lg:inline-block animated-gradient-btn hover:text-white px-4 py-2 rounded-[3rem] `}
           onClick={() => setActiveSection("advisory")}
         >
           Board Advisory
