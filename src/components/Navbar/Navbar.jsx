@@ -31,7 +31,7 @@ const Navbar = () => {
           <img src={logo} alt="logo1" className="w-[9rem] h-6" />
         </Link>
 
-        <div className="hidden lg:flex space-x-6">
+        <div className="hidden lg:flex space-x-6 text-xl">
           {[
             { to: "/", label: "Home" },
             { to: "/about", label: "About" },
@@ -52,7 +52,7 @@ const Navbar = () => {
 
         <Link
           to="/contact"
-          className="hidden lg:inline-block text-white px-4 py-2 animated-gradient-btn rounded-[3rem]"
+          className="hidden lg:inline-block text-white px-4 py-2 animated-gradient-btn rounded-[3rem] text-xl"
         >
           Contact Us
         </Link>

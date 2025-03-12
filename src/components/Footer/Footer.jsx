@@ -3,9 +3,10 @@ import logo1 from "../../assets/img/logo/logo1.png";
 
 function Footer() {
   return (
-    <footer className="footer py-12 bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc]">
-      <div className="container_lg p-10 flex flex-wrap justify-between gap-8 mx-auto text-center md:text-left">
+    <footer className="footer py-12 bg-gradient-to-tr from-[#138bffcc] to-[#ec07c7cc]">
+      <div className="container_lg p-10 flex flex-wrap justify-between gap-8 mx-auto text-center md:text-left ">
         {/* Logo and Intro */}
+
         <aside className="w-full md:w-1/3 lg:w-1/4">
           <Link to="/">
             <img
@@ -20,8 +21,8 @@ function Footer() {
         </aside>
 
         {/* Services Section */}
-        <nav className="w-full md:w-auto flex flex-col gap-2">
-          <h6 className="text-xl text-black uppercase">Services</h6>
+        <nav className="w-full md:w-auto flex flex-col gap-2 text-sm">
+          <h6 className="text-xl text-zinc-200 font-semibold  ">Services</h6>
           <Link to="/webcomponent" className="link link-hover">
             Web Development
           </Link>
@@ -38,7 +39,7 @@ function Footer() {
 
         {/* Company Section */}
         <nav className="w-full md:w-auto flex flex-col gap-2">
-          <h6 className="text-xl text-black uppercase">Company</h6>
+          <h6 className="text-xl text-zinc-200 font-semibold  ">Company</h6>
           <Link to="/about" className="link link-hover">
             About us
           </Link>
@@ -55,7 +56,7 @@ function Footer() {
 
         {/* Legal Section */}
         <nav className="w-full md:w-auto flex flex-col gap-2">
-          <h6 className="text-xl text-black uppercase">Legal</h6>
+          <h6 className="text-xl text-zinc-200 font-semibold  ">Legal</h6>
           <Link to="/terms" className="link link-hover">
             Terms of use
           </Link>

@@ -20,13 +20,15 @@
 
 /* root */
 * {
-  font-family: "proxima-nova", sans-serif;
+  /* font-family: "proxima-nova", sans-serif; */
+  font-family: "Poppins", sans-serif;
 }
 
 .container_lg {
   width: 90%;
   margin: 0 auto;
 }
+
 /* #tsparticles {
   width: 100%;
   height: 80vh;
@@ -120,4 +122,9 @@
     #489ff7,
     #00aeef
   );
+}
+
+.link {
+  font-size: medium;
+  color: gainsboro;
 }

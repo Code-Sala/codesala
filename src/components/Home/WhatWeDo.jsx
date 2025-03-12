@@ -58,7 +58,7 @@ const WhatWeDo = () => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
-      className="container min-h-screen flex flex-col items-center justify-center px-4 mx-auto pb-4"
+      className="container min-h-screen flex flex-col items-center justify-center px-4 mx-auto pb-4 pt-12"
     >
       <h1 className="text-3xl sm:text-5xl font-bold text-center mb-2  bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] bg-clip-text text-transparent">
         What <span>We Offer</span>
@@ -67,7 +67,7 @@ const WhatWeDo = () => {
         We provide trusted solutions that stand the test of time.
       </p>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 w-full max-w-6xl px-4 lg:py-0 sm:py-4">
         {values.map((value, index) => {
           const Icon = value.icon;
           return (
@@ -100,7 +100,7 @@ const WhatWeDo = () => {
                       }
                     : { opacity: 0, height: 0, transition: { duration: 0.2 } }
                 }
-                className="text-gray-800 mt-2 overflow-hidden"
+                className="text-gray-500 mt-2 overflow-hidden text-sm"
               >
                 {value.description}
               </motion.p>
