@@ -3,10 +3,13 @@ import groupImg from "../../assets/img/home/Group.jpg";
 
 function AboutHero() {
   return (
-    <div className="bg-gradient-to-br  from-[#00AEEF]  via-[#892890] to-[#ED1D7E] min-h-[100vh] container pb-24 z-10  pt-[6.2rem] flex items-center justify-center px-4 sm:px-8">
-      <div className="absolute w-full h-full z-1 bg-cover opacity-30 overflow-hidden ">
-        <img src={groupImg} alt="group image" className=" object-cover " />
+    <div className="relative min-h-[100vh] flex items-center justify-center px-4 sm:px-8 pt-[6.2rem] pb-24 z-10 bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E]">
+      
+      {/* Background Image with Opacity */}
+      <div className="absolute top-0 left-0 w-full h-full z-1 opacity-30">
+        <img src={groupImg} alt="group image" className="w-full h-full object-cover" />
       </div>
+
       <motion.div
         className="max-w-8xl text-center container_lg z-40"
         initial={{ opacity: 0, y: 50 }}

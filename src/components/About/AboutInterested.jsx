@@ -10,8 +10,8 @@ function AboutInterested() {
     >
       <div className="aboutinterested container_lg p-10 flex flex-col items-center">
         <motion.h1
-          className="text-center text-[60px] text-white font-semibold"
-          initial={{ y: -50, opacity: 0 }}
+          className="text-center  text-white font-semibold leading-tight md:text-4xl lg:text-5xl text-3xl"
+            initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.8 }}
         >

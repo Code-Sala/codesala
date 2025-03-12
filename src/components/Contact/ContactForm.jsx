@@ -3,7 +3,7 @@ import ContactImg from "../../assets/img/contact/bg.avif"
 function ContactForm() {
   return (
     <>
-    <div className="contactform min-h-screen flex items-center justify-center p-6 pt-30">
+    <div className="contactform min-h-screen flex items-center justify-center p-6 lg:pt-25">
       <div className="relative w-full max-w-6xl flex flex-wrap container bg-gray-100  shadow-[0_-2px_5px_rgba(0,0,0,0.3)] rounded-lg overflow-hidden">
         {/* Image Section */}
         <div className="relative w-full md:w-1/2 h-96 md:h-auto">

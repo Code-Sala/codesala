@@ -1,5 +1,10 @@
 import { motion } from "framer-motion";
-import { Facebook, Linkedin, Mail, MapPin, Phone, } from "lucide-react";
+import {Mail, MapPin, Phone} from "lucide-react";
+import xlogo from "../../assets/svg/logo-black.svg"
+import Facebook from "../../assets/svg/facebook.svg"
+import Linkedin from "../../assets/svg/linkedin.svg"
+
+
 
 export default function Contact() {
   return (
@@ -106,14 +111,20 @@ export default function Contact() {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <Facebook className="text-[#ED1D7E] w-10 h-10 hover:scale-110 transition-transform" />
+              {/* <Facebook className="text-[#ED1D7E] w-10 h-10 hover:scale-110 transition-transform" /> */}
+              <img src={Facebook} alt=""  className="h-9"/>
+
+
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
-              <Linkedin className="text-[#ED1D7E] w-10 h-10 hover:scale-110 transition-transform" />
+              {/* <Linkedin className="text-[#ED1D7E] w-10 h-10 hover:scale-110 transition-transform" /> */}
+              <img src={Linkedin} alt=""  className="h-10 "/>
+
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer">
               {/* <X className="text-[#ED1D7E] w-10 h-10 hover:scale-110 transition-transform" /> */}
-              <i className="fa-brands fa-x-twitter"></i>
+              <img src={xlogo} alt=""  className="h-9"/>
+              {/* <i className="fa-brands fa-x-twitter"></i> */}
             </a>
           </motion.div>
         </div>
