@@ -11,16 +11,10 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup the event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -38,47 +32,24 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden lg:flex space-x-6">
-          <Link
-            to="/"
-            className={` hover:text-vibrant-pink ${
-              location.pathname === "/" ? "text-vibrant-pink" : "text-gray-700"
-            }`}
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            className={` hover:text-vibrant-pink ${
-              location.pathname === "/about"
-                ? "text-vibrant-pink"
-                : "text-gray-700"
-            }`}
-          >
-            About
-          </Link>
-          <Link
-            to="/services"
-            className={` hover:text-vibrant-pink ${
-              location.pathname === "/services"
-                ? "text-vibrant-pink"
-                : "text-gray-700"
-            }`}
-          >
-            Services
-          </Link>
-          <Link
-            to="/blog"
-            className={` hover:text-vibrant-pink ${
-              location.pathname === "/blog"
-                ? "text-vibrant-pink"
-                : "text-gray-700"
-            }`}
-          >
-            Blogs
-          </Link>
+          {[
+            { to: "/", label: "Home" },
+            { to: "/about", label: "About" },
+            { to: "/services", label: "Services" },
+            { to: "/blog", label: "Blogs" },
+          ].map(({ to, label }) => (
+            <Link
+              key={to}
+              to={to}
+              className={`hover:text-vibrant-pink ${
+                location.pathname === to ? "text-vibrant-pink" : "text-gray-700"
+              }`}
+            >
+              {label}
+            </Link>
+          ))}
         </div>
 
-        {/* Contact Button */}
         <Link
           to="/contact"
           className="hidden lg:inline-block text-white px-4 py-2 animated-gradient-btn rounded-[3rem]"
@@ -86,7 +57,6 @@ const Navbar = () => {
           Contact Us
         </Link>
 
-        {/* Mobile Menu Toggle */}
         <button
           className="lg:hidden text-gray-700"
           onClick={() => setIsOpen(!isOpen)}
@@ -96,47 +66,45 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Menu */}
+      <div
+        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-50 p-6 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <button
+          className="absolute top-4 right-4 text-gray-700"
+          onClick={() => setIsOpen(false)}
+        >
+          <X size={24} />
+        </button>
+        <nav className="mt-12 flex flex-col space-y-4">
+          {[
+            { to: "/", label: "Home" },
+            { to: "/about", label: "About" },
+            { to: "/services", label: "Services" },
+            { to: "/blog", label: "Blogs" },
+            { to: "/contact", label: "Contact" },
+          ].map(({ to, label }) => (
+            <Link
+              key={to}
+              to={to}
+              className={`block px-4 py-2 rounded-lg text-center text-gray-700 hover:bg-gray-200 ${
+                location.pathname === to ? "bg-vibrant-pink text-white" : ""
+              }`}
+              onClick={() => setIsOpen(false)}
+            >
+              {label}
+            </Link>
+          ))}
+        </nav>
+      </div>
+
+      {/* Overlay */}
       {isOpen && (
-        <div className="lg:hidden bg-white shadow-md absolute top-16 left-0 w-full p-4 z-50">
-          <Link
-            to="/"
-            className={` hover:text-vibrant-pink ${
-              location.pathname === "/" ? "text-vibrant-pink" : "text-gray-700"
-            }`}
-            onClick={() => setIsOpen(false)}
-          >
-            Home
-          </Link>
-          <Link
-            to="/about"
-            className={` hover:text-vibrant-pink ${
-              location.pathname === "/about"
-                ? "text-vibrant-pink"
-                : "text-gray-700"
-            }`}
-            onClick={() => setIsOpen(false)}
-          >
-            About
-          </Link>
-          <Link
-            to="/services"
-            className={` hover:text-vibrant-pink ${
-              location.pathname === "/services"
-                ? "text-vibrant-pink"
-                : "text-gray-700"
-            }`}
-            onClick={() => setIsOpen(false)}
-          >
-            Services
-          </Link>
-          <Link
-            to="/contact"
-            className="block text-white bg-vibrant-pink py-2 text-center rounded-[3rem] hover:bg-deep-purple mt-2"
-            onClick={() => setIsOpen(false)}
-          >
-            Contact
-          </Link>
-        </div>
+        <div
+          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          onClick={() => setIsOpen(false)}
+        ></div>
       )}
     </nav>
   );
