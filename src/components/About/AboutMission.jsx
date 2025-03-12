@@ -49,7 +49,7 @@ function AboutMission() {
             <li className="flex gap-3"><span><Check className="text-vibrant-pink"/></span><p>Integrity </p></li>
             </div>
           </div><br />
-          <p>We dream of a future where businesses, big or small, have the tools they need to scale effortlessly. Our goal is to be a global leader in digital solutions, helping millions transform their dreams into reality.</p>
+          <p className="text-loose">We dream of a future where businesses, big or small, have the tools they need to scale effortlessly. Our goal is to be a global leader in digital solutions, helping millions transform their dreams into reality.</p>
         </motion.div>
       </div>
     </div>
