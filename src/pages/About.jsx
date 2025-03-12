@@ -3,10 +3,10 @@ import AboutHero from "../components/About/AboutHero";
 import AboutStory from "../components/About/AboutStory";
 import AboutMission from "../components/About/AboutMission";
 import AboutPartnering from "../components/About/AboutPartnering";
-import AboutOurGoals from "../components/About/AboutOurGoals";
 import AboutInterested from "../components/About/AboutInterested";
 import Contact from "../components/About/Contact";
 import AboutOurValues from "../components/About/AboutOurValues";
+import AboutOurVision from "../components/About/AboutOurVision";
 
 function About() {
   return (
@@ -15,9 +15,9 @@ function About() {
   <AboutHero/> 
   <AboutStory/>
   <AboutMission/>
+  <AboutOurVision/>
   <AboutOurValues/>
   <AboutPartnering/>
-  <AboutOurGoals/>
   <AboutInterested/>
   <Contact/>
   </>
