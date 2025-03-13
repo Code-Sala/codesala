@@ -80,7 +80,7 @@ const Hero = () => {
           className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight"
         >
           At CodeSala, we specialize in{" "}
-          <span className=" capitalize bg-gradient-to-br from-[#110bac] via-[#7f0375] to-[#0a1a98] bg-clip-text text-transparent text-2xl sm:text-4xl lg:text-5xl font-bold transition-all duration-1000 hover:bg-gradient-to-tl">
+          <span className=" capitalize bg-gradient-to-br from-[#ffffff] via-[#82b1e4] to-[#fdfdff] bg-clip-text text-transparent text-2xl sm:text-4xl lg:text-5xl font-bold transition-all duration-1000 hover:bg-gradient-to-tl">
             {currentService}
           </span>{" "}
           services

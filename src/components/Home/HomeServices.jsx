@@ -69,7 +69,7 @@ const HomeServices = () => {
 
           <Link
             to="/services"
-            className="absolute bottom-10 left-1/2 transform -translate-x-1/2 px-4 py-2 border-2 border-white text-white hover:text-gray-900 hover:border-white hover:bg-white z-20"
+            className="absolute bottom-10 left-1/2 transform -translate-x-1/2 px-4 py-2 border-2 rounded-[3rem] border-bright-purple text-white hover:text-gray-900 hover:border-white hover:bg-white z-20"
           >
             More Services
           </Link>
@@ -98,7 +98,7 @@ const FlippingCard = ({ service }) => {
       onMouseLeave={() => setFlipped(false)}
     >
       <motion.div
-        className="w-full h-full absolute transition-transform duration-500"
+        className="w-full h-full absolute transition-transform duration-400"
         animate={{ rotateY: flipped ? 180 : 0 }}
         style={{ transformStyle: "preserve-3d" }}
       >
@@ -116,7 +116,7 @@ const FlippingCard = ({ service }) => {
           <p className="text-center px-4">{service.description}</p>
           <Link
             to={service.link}
-            className="mt-4 px-4 py-2 bg-gold text-vibrant-pink rounded-md hover:underline"
+            className="mt-4 px-4 py-2 bg-gold text-bright-purple rounded-md hover:underline"
           >
             Read More
           </Link>

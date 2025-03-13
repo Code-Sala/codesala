@@ -1,6 +1,5 @@
-import { Brain, DollarSign, Users, Layers } from "lucide-react";
-import { motion, useInView } from "framer-motion";
-import { useState, useRef } from "react";
+import { Brain, DollarSign, Users, Layers, Ellipsis } from "lucide-react";
+import { useState } from "react";
 
 const values = [
   {
@@ -29,38 +28,12 @@ const values = [
   },
 ];
 
-// Container animation
-const containerVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
-};
-
-// Individual card animation
-const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: (index) => ({
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, delay: index * 0.2 },
-  }),
-};
-
 const WhatWeDo = () => {
-  const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: false, margin: "-100px" });
-
-  // Track which card is hovered
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   return (
-    <motion.div
-      ref={sectionRef}
-      initial="hidden"
-      animate={isInView ? "visible" : "hidden"}
-      variants={containerVariants}
-      className="container min-h-screen flex flex-col items-center justify-center px-4 mx-auto pb-4 pt-12"
-    >
-      <h1 className="text-3xl sm:text-5xl font-bold text-center mb-2  bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] bg-clip-text text-transparent">
+    <div className="container min-h-screen flex flex-col items-center justify-center px-4 mx-auto pb-4 pt-12">
+      <h1 className="text-3xl sm:text-5xl font-bold text-center mb-2 bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] bg-clip-text text-transparent">
         What <span>We Offer</span>
       </h1>
       <p className="text-lg text-center text-gray-600 mb-16">
@@ -71,44 +44,39 @@ const WhatWeDo = () => {
         {values.map((value, index) => {
           const Icon = value.icon;
           return (
-            <motion.div
+            <div
               key={index}
-              custom={index}
-              initial="hidden"
-              animate={isInView ? "visible" : "hidden"}
-              variants={cardVariants}
-              className="bg-transparent shadow-lg rounded-lg flex flex-col items-center text-center hover:shadow-xl px-6 py-8 transition-all duration-300"
+              className={`bg-transparent shadow-lg rounded-lg flex flex-col items-center text-center hover:shadow-xl px-6 py-8 transition-all duration-300 ${
+                hoveredIndex === index ? "shadow-2xl" : ""
+              }`}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
               <div className="p-4 bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] rounded-full">
                 <Icon className="h-16 w-16 text-white" />
               </div>
-              <h2 className="text-xl font-semibold text-gray-800 mt-4 px-4">
+              <h2 className="text-xl font-semibold text-bright-purple mt-4 px-4">
                 {value.title}
               </h2>
 
-              {/* Smooth Content Reveal */}
-              <motion.p
-                initial={{ opacity: 0, height: 0 }}
-                animate={
+              <div
+                className={`overflow-hidden transition-all duration-400 ${
                   hoveredIndex === index
-                    ? {
-                        opacity: 1,
-                        height: "auto",
-                        transition: { duration: 0.3 },
-                      }
-                    : { opacity: 0, height: 0, transition: { duration: 0.2 } }
-                }
-                className="text-gray-500 mt-2 overflow-hidden text-sm"
+                    ? "max-h-40 opacity-100 mt-2"
+                    : "max-h-0 opacity-0"
+                }`}
               >
-                {value.description}
-              </motion.p>
-            </motion.div>
+                <p className="text-gray-600 text-sm">{value.description}</p>
+              </div>
+
+              <span className="w-12 h-8 text-bright-purple px-4 pt-6">
+                <Ellipsis size={16} />
+              </span>
+            </div>
           );
         })}
       </div>
-    </motion.div>
+    </div>
   );
 };
 

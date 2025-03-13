@@ -26,7 +26,7 @@ export default function PeopleAndCulture() {
             boundaries. Whether you&apos;re a coding virtuoso, a design maestro,
             or a strategic guru, you&apos;ll find your tribe here.
           </p>
-          <button className="mt-6 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-lg font-medium hover:shadow-lg transition-all duration-300">
+          <button className="mt-6 e px-6 py-3 rounded-full text-lg font-medium hover:shadow-lg transition-all duration-300 animated-gradient-btn">
             Apply now
           </button>
         </div>
