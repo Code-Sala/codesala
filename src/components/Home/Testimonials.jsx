@@ -42,7 +42,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={index}>
               <figure>
-                <blockquote className="text-center text-xl/8 font-semibold text-gray-700 sm:text-2xl/9">
+                <blockquote className="text-center italic text-gray-700 sm:text-2xl/9">
                   <p>“{testimonial.text}”</p>
                 </blockquote>
                 <figcaption className="mt-10 flex flex-col items-center">

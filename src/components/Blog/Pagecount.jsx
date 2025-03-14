@@ -16,7 +16,7 @@ const Pagecount = ({
 
   return (
     <div>
-      <div className="join flex justify-center mb-10">
+      <div className="join flex justify-center mb-10 mt-10">
         <button
           className="join-item btn btn-square"
           onClick={() => handlePageChange(currentPage - 1)}

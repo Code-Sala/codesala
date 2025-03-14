@@ -4,6 +4,7 @@ import NavSection from "../components/Blog/NavSection";
 import Pagecount from "../components/Blog/Pagecount";
 // import SideBar from "../components/Blog/SideBar";
 import BlogData from "../Data/Blog.json";
+import SideSection from "../components/Blog/SideSection";
 
 function Blog() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -17,24 +18,19 @@ function Blog() {
   return (
     <div>
       <NavSection />
-
       <HeroSection posts={currentPosts} />
-
       {/* <div className="hidden lg:block">
           <SideBar />
         </div> */}
-
       <Pagecount
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         totalPosts={BlogData.length}
         postsPerPage={postsPerPage}
       />
-
-      {/* Move SideBar below Pagecount when screen width is less than 1180px */}
-      {/* <div className="block lg:hidden">
-        <SideBar />
-      </div> */}
+      <div className="block lg:hidden">
+        <SideSection />
+      </div>
     </div>
   );
 }

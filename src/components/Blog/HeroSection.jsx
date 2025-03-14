@@ -41,7 +41,9 @@ const HeroSection = ({ posts }) => {
             ))}
           </div>
         </div>
-        <div className="w-10 lg:w-1/3 flex justify-center lg:justify-start mb-auto mt-10">
+
+        {/* Hide Popular Posts on screens 1024px and below */}
+        <div className="hidden lg:block w-auto lg:w-auto justify-center lg:justify-start mb-auto mt-10">
           <div className="bg-white shadow-lg rounded-lg p-5 w-full sm:w-[90%] md:w-[85%] lg:w-full">
             <h3 className="text-xl font-semibold mb-4 text-pink-400">
               Popular Posts
