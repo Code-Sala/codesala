@@ -31,7 +31,7 @@ const Navbar = () => {
           <img src={logo} alt="logo1" className="w-[9rem] h-6" />
         </Link>
 
-        <div className="hidden lg:flex space-x-6 text-xl">
+        <div className="hidden lg:flex space-x-6 text-lg">
           {[
             { to: "/", label: "Home" },
             { to: "/about", label: "About" },
