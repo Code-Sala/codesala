@@ -15,14 +15,11 @@ function Footer() {
               className="max-w-36 mx-auto md:mx-0 mb-2"
             />
           </Link>
-          <p className="bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent">
-            Providing reliable tech since 2024
-          </p>
+          <p className="text-white italic">Providing tech since 2024</p>
 
-          <h2 className="py-4 italic leading-tight text-zinc-300 text-[16px]">
-            &quot; Technology Will Change Humanity Forever, Unlocking New
-            Possibilities and Shaping a Future Where Innovation Knows No Limits
-            &quot;
+          <h2 className="py-4  leading-tight text-zinc-100 text-[16px]">
+            Technology Will Change Humanity Forever, Unlocking New Possibilities
+            and Shaping a Future
           </h2>
         </aside>
 
