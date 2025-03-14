@@ -33,7 +33,7 @@ const ValueCard = ({ title, statement}) => {
             whileHover={{ scale: 1.05 }}
         >
             <div className="absolute inset-0 bg-neon-glow opacity-20 blur-lg"></div>
-            <h3 className="text-xl font-semibold border-l-4 border-neon pl-3 mb-2">{title}</h3>
+            <h3 className="text-xl font-semibold border-l-4 border-neon pl-3 mb-2 bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent ">{title}</h3>
             <p className="text-gray-700">{statement}</p>
         </motion.div>
     );
@@ -60,7 +60,7 @@ const OurValues = () => {
                 variants={containerVariants} 
                 className="max-w-4xl mx-auto text-center mb-10 relative z-10"
             >
-                <h2 className="text-4xl font-bold text-vibrant-pink">Our Values</h2>
+                <h2 className="text-4xl font-bold bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent">Our Values</h2>
                 <p className="text-gray-700">What drives us every day.</p>
             </motion.div>
             <motion.div 

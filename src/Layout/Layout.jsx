@@ -3,10 +3,11 @@ import { Outlet } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import OpenMusic from "../utils/OpenMusic";
+import GetInTouch from "../utils/GetInTouch";
 
 const Layout = () => {
   return (
-    <div className="sm:cursor-none md:cursor-none lg:cursor-auto">
+    <div className="sm:cursor-none md:cursor-none lg:cursor-auto relative">
       <Navbar />
       {/* <ParticleBackground /> */}
 
@@ -15,6 +16,7 @@ const Layout = () => {
       </div>
 
       <OpenMusic />
+      <GetInTouch />
       <Footer />
     </div>
   );

@@ -5,6 +5,7 @@ import "./music.css";
 
 import volumeoff from "../assets/svg/volumeoff.svg";
 import volumeon from "../assets/svg/volumeon.svg";
+import { Check, X } from "lucide-react";
 
 function OpenMusic() {
   const audioRef = useRef(null);
@@ -91,13 +92,13 @@ function OpenMusic() {
                   setIsPlaying(true);
                 }}
               >
-                Yes
+                <Check />
               </span>
               <span
                 className="text-vibrant-pink cursor-pointer hover:underline text-2xl p-4  rounded-full border-vibrant-pink border-2"
                 onClick={() => setShowModal(false)}
               >
-                No
+                <X />
               </span>
             </div>
           </div>

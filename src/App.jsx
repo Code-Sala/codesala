@@ -38,7 +38,7 @@ const App = () => {
           outerAlpha={0}
           hasBlendMode={true}
           innerStyle={{
-            backgroundColor: "purple",
+            backgroundColor: "purple ",
           }}
           outerStyle={{
             opacity: 0.45,
@@ -46,7 +46,7 @@ const App = () => {
           }}
         />
       )}
-
+  
       <Router>
         <Routes>
           <Route path="/" element={<Layout />}>

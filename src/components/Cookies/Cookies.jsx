@@ -3,7 +3,7 @@ function Cookies() {
    <>
    <div className="wrapper">
    <div className="bg-gradient-to-br from-[#00AEEF]  via-[#892890] to-[#ED1D7E] min-h-[80vh]container pb-24   pt-[8rem] flex items-center justify-center px-4 sm:px-8">
-    <h1 className="text-white font-extrabold text-4xl sm:text-4xl md:text-5xl leading-tight min-h-[30vh] pt-15">Our Policy</h1>
+    <h1 className="text-white font-extrabold text-4xl sm:text-4xl md:text-5xl leading-tight min-h-[30vh] pt-15">Our Cookies</h1>
    </div>
     <div className="cookies container_lg p-10 text-4xl max-w-[74%]">
       <div className="contents">

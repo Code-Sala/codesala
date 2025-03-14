@@ -15,9 +15,12 @@ function Footer() {
               className="max-w-36 mx-auto md:mx-0 mb-2"
             />
           </Link>
-          <p className="text-vibrant-pink">
-            Providing reliable tech since 2024
-          </p>
+          <p className="text-white italic">Providing tech since 2024</p>
+
+          <h2 className="py-4  leading-tight text-zinc-100 text-[16px]">
+            Technology Will Change Humanity Forever, Unlocking New Possibilities
+            and Shaping a Future
+          </h2>
         </aside>
 
         {/* Services Section */}
