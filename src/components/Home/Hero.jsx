@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import ParticleBackground from "../particles/ParticleBackground";
-import codeImg from "../../assets/img/home/code.jpeg";
+import codeImg from "../../assets/img/home/city.jpg";
 
 const services = [
   "ui/ux design",
@@ -61,7 +61,7 @@ const Hero = () => {
         <ParticleBackground />
       </div>
       {/* Gradient Overlay */}
-      <div className="background_linear bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] absolute w-full h-full z-10 opacity-70"></div>
+      <div className="background_linear bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] absolute w-full h-full z-10 opacity-60"></div>
 
       <div className="absolute inset-0 hidden sm:block">
         <img
@@ -80,7 +80,7 @@ const Hero = () => {
           className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight"
         >
           At CodeSala, we specialize in{" "}
-          <span className="text-cyan-400 bg-clip-text text-2xl sm:text-4xl lg:text-5xl font-bold transition-all duration-1000 hover:bg-gradient-to-tl">
+          <span className=" capitalize bg-gradient-to-br from-[#ffffff] via-[#82b1e4] to-[#fdfdff] bg-clip-text text-transparent text-2xl sm:text-4xl lg:text-5xl font-bold transition-all duration-1000 hover:bg-gradient-to-tl">
             {currentService}
           </span>{" "}
           services

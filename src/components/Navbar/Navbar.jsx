@@ -31,7 +31,7 @@ const Navbar = () => {
           <img src={logo} alt="logo1" className="w-[9rem] h-6" />
         </Link>
 
-        <div className="hidden lg:flex space-x-6 text-xl">
+        <div className="hidden lg:flex space-x-6 text-lg">
           {[
             { to: "/", label: "Home" },
             { to: "/about", label: "About" },
@@ -41,8 +41,10 @@ const Navbar = () => {
             <Link
               key={to}
               to={to}
-              className={`hover:text-vibrant-pink ${
-                location.pathname === to ? "text-vibrant-pink" : "text-gray-700"
+              className={`hover:text-bright-purple ${
+                location.pathname === to
+                  ? "text-bright-purple"
+                  : "text-gray-700"
               }`}
             >
               {label}
@@ -52,7 +54,7 @@ const Navbar = () => {
 
         <Link
           to="/contact"
-          className="hidden lg:inline-block text-white px-4 py-2 animated-gradient-btn rounded-[3rem] text-xl"
+          className="hidden lg:inline-block text-white px-4 py-2 animated-gradient-btn rounded-[3rem] "
         >
           Contact Us
         </Link>
@@ -89,7 +91,9 @@ const Navbar = () => {
               key={to}
               to={to}
               className={`block px-4 py-2 rounded-lg text-center text-gray-700 hover:bg-gray-200 ${
-                location.pathname === to ? "bg-vibrant-pink text-white" : ""
+                location.pathname === to
+                  ? "bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] text-white"
+                  : ""
               }`}
               onClick={() => setIsOpen(false)}
             >

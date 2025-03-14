@@ -14,23 +14,23 @@ const TeamSection = () => {
       <p className="text-lg text-center text-gray-600 mb-4">
         Together, we push boundaries and redefine possibilities.
       </p>
+
       {/* Navigation Buttons */}
-      <div className="flex gap-4  mt-12">
+      <div className="flex flex-col items-center gap-4 mt-8 lg:flex-row">
         <button
-          id="btn"
-          className={` hidden lg:inline-block animated-gradient-btn px-4 py-2 rounded-[3rem] `}
+          className="w-full max-w-xs lg:w-auto animated-gradient-btn px-4 py-2 rounded-[3rem]"
           onClick={() => setActiveSection("team")}
         >
           Our Team
         </button>
         <button
-          className={` hidden lg:inline-block animated-gradient-btn px-4 py-2 rounded-[3rem] `}
+          className="w-full max-w-xs lg:w-auto animated-gradient-btn px-4 py-2 rounded-[3rem]"
           onClick={() => setActiveSection("promoters")}
         >
           Our Promoters
         </button>
         <button
-          className={` hidden lg:inline-block animated-gradient-btn hover:text-white px-4 py-2 rounded-[3rem] `}
+          className="w-full max-w-xs lg:w-auto animated-gradient-btn px-4 py-2 rounded-[3rem]"
           onClick={() => setActiveSection("advisory")}
         >
           Board Advisory
@@ -38,7 +38,7 @@ const TeamSection = () => {
       </div>
 
       {/* Content Section */}
-      <div className=" p-6 bg-transparent container_lg">
+      <div className="p-6 bg-transparent container_lg">
         {activeSection === "team" && <OurTeam />}
         {activeSection === "promoters" && <OurPromoters />}
         {activeSection === "advisory" && <BoardAdvisory />}
