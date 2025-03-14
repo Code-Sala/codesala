@@ -184,6 +184,87 @@ function ContactForm() {
             <div className="icons p-5 pb-1 text-vibrant-pink no-underline text-center flex justify-center ">
               <Globe className="text-center" />
             </div>
+            <button type="submit" className="w-full animated-gradient-btn text-white py-2 rounded hover:bg-pink-700">
+              Submit
+            </button>
+          </form>   
+        </div>
+      </div>
+
+    </div>
+
+
+<div className="contact min-h-[40vh] max-w-7xl mx-auto text-center wrape pt-4 flex flex-wrap gap-4 mt-15 mb-15">
+<div className="card flex flex-col md:flex-row gap-4 w-full">
+  <div className="cards w-full md:w-1/3 bg-white h-64 flex flex-col justify-center items-center rounded-lg">
+    <div className="icons p-5 font-extrabold pb-0 text-center flex justify-center ">
+    <svg width="40" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"   stroke="url(#gradientColors)">
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#00AEEF" /> 
+      <stop offset="50%" stopColor="#892890" /> 
+      <stop offset="100%" stopColor="#ED1D7E" />  
+      
+        </linearGradient>
+      </defs>
+      <Mail
+        width={24}
+        height={24}
+        stroke="url(#gradient)"  // Applying gradient to the icon
+      />
+    </svg>
+    </div>
+    <h1 className="text-center text-2xl pt-4 font-semibold">Email us:</h1>
+    <p className="paragraph text-center mt-4 mb-4">Email us for general queries, including marketing <br /> and partnership opportunities.</p>
+    <a href="#" className="link pt-2 text-vibrant-pink\ no-underline" style={{color:"gray"}}>info@codesala.com</a>
+  </div>
+  <div className="cards w-full md:w-1/3 bg-white h-64 flex flex-col justify-center items-center rounded-lg">
+    <div className="icons p-5 pb-1 text-vibrant-pink text-center flex justify-center ">
+    <svg width="40" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"   stroke="url(#gradientColors)">
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#00AEEF" /> 
+      <stop offset="50%" stopColor="#892890" /> 
+      <stop offset="100%" stopColor="#ED1D7E" />  
+      
+        </linearGradient>
+      </defs>
+      <Phone
+        width={24}
+        height={24}
+        stroke="url(#gradient)"  // Applying gradient to the icon
+      />
+    </svg>
+    </div>
+    <h1 className="text-center text-2xl pt-4 font-semibold">Call us:</h1>
+    <p className="paragraph text-center mt-4 mb-4">Call us to speak to a member of our team. We are always happy to help.</p>
+    <a href="#" className="link pt-2 text-vibrant-pink no-underline" style={{color:"gray"}}>+13323226043</a>
+  </div>
+  <div className="cards w-full md:w-1/3 bg-white h-64 flex flex-col justify-center items-center rounded-lg">
+    <div className="icons p-10 pb-1 text-vibrant-pink no-underline text-center flex justify-center ">
+    <svg width="40" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"   stroke="url(#gradientColors)">
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#00AEEF" /> 
+      <stop offset="50%" stopColor="#892890" /> 
+      <stop offset="100%" stopColor="#ED1D7E" />  
+      
+        </linearGradient>
+      </defs>
+      <Globe
+        width={24}
+        height={24}
+        stroke="url(#gradient)"  // Applying gradient to the icon
+      />
+    </svg>
+    </div>
+    <h1 className="text-center text-2xl pt-4 font-semibold">Support</h1>
+    <p className="paragraph text-center mt-4">Email us for general queries, including marketing <br /> and partnership opportunities.</p>
+    <a href="#" className="link pt-2 text-vibrant-pink no-underline  p-3 mt-4" style={{color:"gray"}}  >Support Center</a>
+  </div>
+</div>
+</div>
+</>
             <h1 className="text-center text-2xl pt-4 font-semibold">Support</h1>
             <p className="paragraph text-center mt-4 mb-4">
               Email us for general queries, including marketing <br /> and
