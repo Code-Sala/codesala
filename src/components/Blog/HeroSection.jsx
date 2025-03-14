@@ -1,5 +1,6 @@
 import React from "react";
 import popularPosts from "../../Data/popularPosts.json";
+import { Link } from "react-router-dom";
 
 const HeroSection = ({ posts }) => {
   return (
@@ -32,7 +33,7 @@ const HeroSection = ({ posts }) => {
                     </p>
                     <div className="flex justify-end">
                       <button className="btn bg-[#892890] text-white px-4 py-2 rounded-md hover:bg-[#6e1f6e] transition duration-300 text-sm sm:text-base">
-                        Read More!
+                        <Link to={blog.link}>Read More!</Link>
                       </button>
                     </div>
                   </div>
@@ -45,7 +46,7 @@ const HeroSection = ({ posts }) => {
         {/* Hide Popular Posts on screens 1024px and below */}
         <div className="hidden lg:block w-auto lg:w-auto justify-center lg:justify-start mb-auto mt-10">
           <div className="bg-white shadow-lg rounded-lg p-5 w-full sm:w-[90%] md:w-[85%] lg:w-full">
-            <h3 className="text-xl font-semibold mb-4 text-pink-400">
+            <h3 className="text-xl  mb-4 font-bold   bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent py-2 leading-tight">
               Popular Posts
             </h3>
             <div className="space-y-4">

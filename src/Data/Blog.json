@@ -4,7 +4,8 @@
     "image": "assets/img/blog/ninthimg.png",
     "time": "February 25, 2025",
     "title": "ChatGPT vs. DeepSeek: Understanding Two Distinct AI Systems",
-    "mainBlog": "In the world of artificial intelligence (AI), various systems are crafted to serve different purposes. Among them, ChatGPT and DeepSeek stand out, offering unique capabilities in their respective domains. While ChatGPT is celebrated for its conversational versatility, DeepSeek  is envisioned as a tool for deep and precise data exploration. "
+    "mainBlog": "In the world of artificial intelligence (AI), various systems are crafted to serve different purposes. Among them, ChatGPT and DeepSeek stand out, offering unique capabilities in their respective domains. While ChatGPT is celebrated for its conversational versatility, DeepSeek  is envisioned as a tool for deep and precise data exploration. ",
+    "link": "/ChatGPT"
   },
 
   {
@@ -13,7 +14,8 @@
 
     "time": "February 25, 2025",
     "title": "IoT in Software Development: New Opportunities and Challenges",
-    "mainBlog": "The Internet of Things (IoT) has revolutionized the way software is developed and integrated into everyday life. With the increasing number of connected devices, industries are leveraging IoT to enhance automation, efficiency, and user experiences. "
+    "mainBlog": "The Internet of Things (IoT) has revolutionized the way software is developed and integrated into everyday life. With the increasing number of connected devices, industries are leveraging IoT to enhance automation, efficiency, and user experiences. ",
+    "link": "/ComingSoon"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
 
     "time": "February 25, 2025",
     "title": "The Future of Software Development: Trends and Predictions",
-    "mainBlog": "The world of software development is evolving at an unprecedented pace, driven by advancements in artificial intelligence, cloud computing, and new programming paradigms. As technology progresses, developers and businesses must stay ahead of emerging trends to remain competitive."
+    "mainBlog": "The world of software development is evolving at an unprecedented pace, driven by advancements in artificial intelligence, cloud computing, and new programming paradigms. As technology progresses, developers and businesses must stay ahead of emerging trends to remain competitive.",
+    "link": "/ComingSoon"
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
 
     "time": "February 25, 2025",
     "title": "The Role of Data Science in Software Development",
-    "mainBlog": "One of the key contributions of data science to software development is its ability to improve decision-making. Through data analysis, developers can identify user behavior, optimize features, and predict potential issues before they arise. This data-driven approach ensures that software meets user expectations and delivers a seamless experience."
+    "mainBlog": "One of the key contributions of data science to software development is its ability to improve decision-making. Through data analysis, developers can identify user behavior, optimize features, and predict potential issues before they arise. This data-driven approach ensures that software meets user expectations and delivers a seamless experience.",
+    "link": "/ComingSoon"
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
 
     "time": "February 25, 2025",
     "title": "The Impact of Cloud Computing on Software Development",
-    "mainBlog": "Cloud computing has revolutionized the software development landscape, providing scalable, cost-effective, and flexible solutions for businesses and developers alike. With the adoption of cloud services, companies can streamline development processes, enhance collaboration, and deploy applications faster than ever before. "
+    "mainBlog": "Cloud computing has revolutionized the software development landscape, providing scalable, cost-effective, and flexible solutions for businesses and developers alike. With the adoption of cloud services, companies can streamline development processes, enhance collaboration, and deploy applications faster than ever before. ",
+    "link": "/ComingSoon"
   },
   {
     "id": 6,
@@ -45,21 +50,24 @@
 
     "time": "February 25, 2025",
     "title": "The Future of Technology: How AI is Shaping Tomorrow",
-    "mainBlog": "Introduction The relentless march of technology continues to transform our world, with artificial intelligence (AI) as its crown jewel. From streamlining industries to reinventing the way we live, AI holds the promise of a brighter, more innovative future."
+    "mainBlog": "Introduction The relentless march of technology continues to transform our world, with artificial intelligence (AI) as its crown jewel. From streamlining industries to reinventing the way we live, AI holds the promise of a brighter, more innovative future.",
+    "link": "/ComingSoon"
   },
   {
     "id": 7,
     "image": "assets/img/blog/seventhimg.png",
     "time": "February 25, 2025",
     "title": "The Role of AI in Cybersecurity: A Game-Changer for Digital Defense",
-    "mainBlog": "Introduction As our world becomes more interconnected through the digital realm, the importance of cybersecurity has skyrocketed. Protecting sensitive data, systems, and networks from cyber threats is now more critical than ever. Enter Artificial Intelligence (AI)—a revolutionary force that's transforming the way we defend against cyberattacks."
+    "mainBlog": "Introduction As our world becomes more interconnected through the digital realm, the importance of cybersecurity has skyrocketed. Protecting sensitive data, systems, and networks from cyber threats is now more critical than ever. Enter Artificial Intelligence (AI)—a revolutionary force that's transforming the way we defend against cyberattacks.",
+    "link": "/ComingSoon"
   },
   {
     "id": 8,
     "image": "assets/img/blog/eighthimg.png",
     "time": "February 25, 2025",
     "title": "The Impact of AI on Software Development: Trends and Predictions",
-    "mainBlog": "Software development is undergoing a seismic shift, thanks to the rapid advancements in artificial intelligence (AI). As AI continues to permeate industries, the way developers design, build, and deploy software is evolving in unprecedented ways. Let's explore the current trends and the future predictions of AI's impact on software development."
+    "mainBlog": "Software development is undergoing a seismic shift, thanks to the rapid advancements in artificial intelligence (AI). As AI continues to permeate industries, the way developers design, build, and deploy software is evolving in unprecedented ways. Let's explore the current trends and the future predictions of AI's impact on software development.",
+    "link": "/ComingSoon"
   },
   {
     "id": 9,
@@ -67,6 +75,7 @@
 
     "time": "February 25, 2025",
     "title": "AI and ML in Custom Software Development",
-    "mainBlog": "Artificial Intelligence (AI) and Machine Learning (ML) are revolutionizing the way businesses approach software development. Custom software solutions, tailored to specific business needs, are now more powerful than ever with the integration of AI and ML. These technologies enable software to learn, adapt, and make intelligent decisions, enhancing user experience, efficiency, and automation."
+    "mainBlog": "Artificial Intelligence (AI) and Machine Learning (ML) are revolutionizing the way businesses approach software development. Custom software solutions, tailored to specific business needs, are now more powerful than ever with the integration of AI and ML. These technologies enable software to learn, adapt, and make intelligent decisions, enhancing user experience, efficiency, and automation.",
+    "link": "/ComingSoon"
   }
 ]
