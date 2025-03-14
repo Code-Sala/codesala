@@ -47,7 +47,7 @@ const SidebarNav = () => {
   return (
     <>
       {activeSectionName && (
-        <div className=" fixed top-1/2 -right-8 flex items-center justify-center mb-4 text-white text-sm  bg-bright-purple rotate-90 w-24 h-8 text-center py-1 px-1 rounded-b-xl z-90 tracking-wider">
+        <div className=" fixed top-1/2 -right-8 flex items-center justify-center mb-4 text-white text-sm   bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] rotate-90 w-24 h-8 text-center py-1 px-1 rounded-b-xl z-90 tracking-wider">
           {activeSectionName}
         </div>
       )}
@@ -59,12 +59,11 @@ const SidebarNav = () => {
             href={`#${section.id}`}
             className="relative group"
           >
-            {/* Dot */}
             <span
-              className={`block w-2 h-2 rounded-full transition-all ${
+              className={`hidden md:block lg:block w-2 h-2 rounded-full transition-all ${
                 activeSection === section.id
-                  ? "bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] w-4 h-4"
-                  : "bg-bright-purple"
+                  ? "bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] w-4 h-4 border-gray-200 border-2 "
+                  : " bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc]"
               }`}
             ></span>
 
