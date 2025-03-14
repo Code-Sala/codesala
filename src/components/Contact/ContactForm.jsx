@@ -1,27 +1,49 @@
 import { Mail, Phone, Globe } from "lucide-react";
 import ContactImg from "../../assets/img/contact/bg.avif";
 import { useState } from "react";
+import AlertBox from "../../utils/AlertBox";
+
 function ContactForm() {
   const [status, setStatus] = useState("Submit");
+  const [message, setMessage] = useState("");
+  const [formData, setFormData] = useState({
+    firstname: "",
+    lastname: "",
+    email: "",
+    phone: "",
+    requirements: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     setStatus("Sending...");
-    const { name, email, message } = e.target.elements;
-    let details = {
-      name: name.value,
-      email: email.value,
-      message: message.value,
-    };
+
     let response = await fetch("http://localhost:5000/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
-      body: JSON.stringify(details),
+      body: JSON.stringify(formData),
     });
-    setStatus("Submit");
+
     let result = await response.json();
-    alert(result.status);
+    setMessage(result.status);
+    setStatus("Submit");
+
+    setFormData({
+      firstname: "",
+      lastname: "",
+      email: "",
+      phone: "",
+      requirements: "",
+    });
+
+    setTimeout(() => setMessage(""), 3000);
   };
   return (
     <>
@@ -44,99 +66,83 @@ function ContactForm() {
             </h1>
             <p className="text-gray-600 text-center mt-2">
               &quot;Have questions or need assistance? Feel free to reach out to
-              us - we’re here to help!&quot;
+              us - we&apos;re here to help!&quot;
             </p>
             <form className="space-y-4 mt-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label
-                    className="block text-gray-700 font-medium"
-                    htmlFor="firstname"
-                  >
+                  <label className="block text-gray-700 font-medium">
                     First Name
                   </label>
                   <input
                     type="text"
+                    name="firstname"
+                    value={formData.firstname}
+                    onChange={handleChange}
                     className="w-full border p-2 rounded"
                     required
-                    id="firstname"
                   />
                 </div>
                 <div>
-                  <label
-                    className="block text-gray-700 font-medium"
-                    htmlFor="lastname"
-                  >
+                  <label className="block text-gray-700 font-medium">
                     Last Name
                   </label>
                   <input
                     type="text"
+                    name="lastname"
+                    value={formData.lastname}
+                    onChange={handleChange}
                     className="w-full border p-2 rounded"
-                    id="lastname"
                   />
                 </div>
               </div>
               <div>
-                <label
-                  className="block text-gray-700 font-medium"
-                  htmlFor="email"
-                >
-                  Email
-                </label>
+                <label className="block text-gray-700 font-medium">Email</label>
                 <input
                   type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
                   className="w-full border p-2 rounded"
-                  id="email"
                 />
               </div>
               <div>
-                <label
-                  className="block text-gray-700 font-medium"
-                  htmlFor="phone"
-                >
-                  Phone
-                </label>
+                <label className="block text-gray-700 font-medium">Phone</label>
                 <input
                   type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
                   className="w-full border p-2 rounded"
-                  id="phone"
                 />
               </div>
               <div>
-                <label
-                  className="block text-gray-700 font-medium"
-                  htmlFor="requirements"
-                >
+                <label className="block text-gray-700 font-medium">
                   Requirements
                 </label>
                 <textarea
+                  name="requirements"
+                  value={formData.requirements}
+                  onChange={handleChange}
                   className="w-full border p-2 rounded"
                   rows="4"
-                  id="requirements"
+                  required
                 ></textarea>
               </div>
-              <div className="flex items-center">
-                <input type="checkbox" className="mr-2" />
-                {/* <label className="text-sm text-gray-700">
-                  By submitting, I confirm my acceptance of the
-                  <a href="#" className="text-pink-600">
-                    {" "}
-                    T&C{" "}
-                  </a>{" "}
-                  and
-                  <a href="#" className="text-pink-600">
-                    {" "}
-                    privacy policy
-                  </a>
-                  .
-                </label> */}
-              </div>
+
               <button
                 type="submit"
-                className="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700"
+                className="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition duration-300"
               >
                 {status}
               </button>
+
+              {/* Show Success Message */}
+              {message && (
+                <div className="mt-4">
+                  <AlertBox message={message} />
+                </div>
+              )}
             </form>
           </div>
         </div>
