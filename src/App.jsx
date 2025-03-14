@@ -16,6 +16,8 @@ import SkillComponent from "./components/Services/SkillComponent";
 import Cookies from "./components/Cookies/Cookies";
 import Policy from "./pages/Policy";
 import Terms from "./pages/Terms";
+import FirstLandingPage from "./components/Blog/Blogs/FirstLandingPage";
+import Chatgpt from "./components/Blog/Blogs/Chatgpt";
 const App = () => {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
@@ -62,6 +64,8 @@ const App = () => {
             <Route path="/cookies" element={<Cookies />} />
             <Route path="/privacy" element={<Policy />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/ComingSoon" element={<FirstLandingPage />} />
+            <Route path="/ChatGPT" element={<Chatgpt />} />
           </Route>
         </Routes>
       </Router>
