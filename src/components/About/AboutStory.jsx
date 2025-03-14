@@ -6,7 +6,7 @@ function AboutStory() {
     <div className="container mx-auto px-4 sm:px-8 md:px-12 lg:px-16 pt-20">
       {/* Heading */}
       <motion.h1
-        className="text-[#ED1D7E] text-3xl sm:text-4xl font-bold text-center"
+        className="bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent   text-3xl sm:text-4xl font-bold text-center"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}

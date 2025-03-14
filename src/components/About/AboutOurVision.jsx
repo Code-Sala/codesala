@@ -1,33 +1,73 @@
 import { motion } from "framer-motion";
-import AboutVisionImg from  "../../assets/img/ourvission.png"
-const AboutOurVision = () => {
+import { FaGlobe, FaUsers, FaLightbulb } from "react-icons/fa";
+import { Link } from "react-router-dom";
+export default function OurVision() {
   return (
-    <motion.div
-      className="container mx-auto px-4 sm:px-12 lg:px-20 pt-20 pb-24 "
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
-      {/* Heading */}
-      <motion.h1
-        className="text-3xl sm:text-4xl md:text-5xl font-bold text-center text-[#ED1D7E] pb-0"
-        initial={{ opacity: 0, y: -20 }}
+    <div className="relative flex flex-col items-center justify-center min-h-screen  text-white px-6 py-10 overflow-hidden">
+      {/* Animated Background Gradient */}
+      <div className="absolute inset-0  opacity-50 z-0" />
+      <motion.div 
+        initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+        transition={{ duration: 1 }}
+        className="relative z-10 max-w-4xl text-center"
       >
-        Our Vision
-      </motion.h1>
-      <p className="text-center pt-2 pb-10 text-gray-700">&quot;Focused on delivering results that make a meaningful impact.&quot;</p>
-      <div className="wrap flex gap-20">
-      <div className="right w-400 px-5  text-[16px] text-gray-700 pt-15">
-        <p className="leading-loose">To be a global leader in digital innovation, empowering businesses of all sizes with simple, scalable, and secure solutions that drive growth and success in the ever-evolving digital landscape. We envision a future where technology seamlessly enhances lives and businesses, enabling them to reach their full potential.</p>
-       </div>
-       <div className="left bg-amber-300 h-30 w-200 ">
-         <img src= {AboutVisionImg} alt="" className="rounded-md w-full max-w-md mx-auto"/>
-       </div>
-      </div>     
-    </motion.div>
-  );
-};
+        <h1 className="bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent text-3xl sm:text-4xl font-bold text-center pb-6">
+          Our Vision
+        </h1>
+        <p className="text-lg md:text-xl text-gray-700 mb-10 leading-relaxed">
+          Our vision is to revolutionize the digital landscape by leveraging cutting-edge technology 
+          to solve real-world problems. We are committed to building innovative IT solutions that 
+          enhance connectivity, drive efficiency, and empower businesses and individuals globally.
+        </p>
+      </motion.div>
 
-export default AboutOurVision;
+      {/* Animated Vision Diagram */}
+      <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-10 text-center mt-10">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="bg-transparent p-8 rounded-2xl shadow-xl border border-pink-500"
+        >
+          <FaLightbulb className=" text-white-500 p-4 bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] rounded-full text-6xl mb-4 mx-auto animate-spin-slow" />
+          <h3 className="text-2xl font-semibold text-gray-700 pb-4">Innovation</h3>
+          <p className="text-gray-600">Developing next-generation IT solutions to shape the future of technology.</p>
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.4 }}
+          className="bg-transparent p-8 rounded-2xl shadow-xl border border-pink-500"
+        >
+          <FaUsers className="text-white-500 p-4 bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] rounded-full text-6xl mb-4 mx-auto " />
+          <h3 className="text-2xl font-semibold text-gray-700 pb-4">Community</h3>
+          <p className="text-gray-600">Creating a collaborative IT ecosystem where knowledge and growth thrive.</p>
+        </motion.div>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.6 }}
+          className="bg-transparent p-8 rounded-2xl shadow-xl border border-pink-500"
+        >
+          <FaGlobe className="text-white-500 p-4 bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] rounded-full text-6xl mb-4 mx-auto" />
+          <h3 className="text-2xl font-semibold text-gray-700 pb-4">Global Impact</h3>
+          <p className="text-gray-600">Harnessing technology to drive digital transformation worldwide.</p>
+        </motion.div>
+      </div>
+
+      <motion.div 
+        initial={{ scale: 0.8 }} 
+        animate={{ scale: 1 }} 
+        transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
+        className="relative z-10 mt-12"
+      >
+        <button className="px-8 py-3 text-lg font-semibold rounded-full animated-gradient-btn hover:bg-pink-600 transition shadow-lg">
+          <Link to="/services">Join the Movement</Link> 
+        </button>
+      </motion.div>
+    </div>
+  );
+}
