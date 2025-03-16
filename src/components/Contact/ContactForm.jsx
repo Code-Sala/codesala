@@ -22,12 +22,9 @@ function ContactForm() {
     e.preventDefault();
 
     setStatus("Sending...");
-
-    let response = await fetch("http://localhost:5000/contact", {
+    const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     });
 
@@ -45,6 +42,8 @@ function ContactForm() {
 
     setTimeout(() => setMessage(""), 3000);
   };
+  console.log(import.meta.env.VITE_API_URL);
+  console.log(import.meta.env);
 
   return (
     <>
@@ -66,8 +65,8 @@ function ContactForm() {
               Contact Us
             </h1>
             <p className="text-gray-600 text-center mt-2">
-              &quot;Have questions or need assistance? Feel free to reach out
-              to us - we&apos;re here to help!&quot;
+              &quot;Have questions or need assistance? Feel free to reach out to
+              us - we&apos;re here to help!&quot;
             </p>
             <form className="space-y-4 mt-6" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -164,16 +163,28 @@ function ContactForm() {
               <div className="icons p-5 text-center flex justify-center">
                 <svg width="40" height="40" viewBox="0 0 24 24">
                   <defs>
-                    <linearGradient id={`gradient-${index}`} x1="0%" y1="0%" x2="100%" y2="100%">
+                    <linearGradient
+                      id={`gradient-${index}`}
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
                       <stop offset="0%" stopColor="#00AEEF" />
                       <stop offset="50%" stopColor="#892890" />
                       <stop offset="100%" stopColor="#ED1D7E" />
                     </linearGradient>
                   </defs>
-                  <Icon width={24} height={24} stroke={`url(#gradient-${index})`} />
+                  <Icon
+                    width={24}
+                    height={24}
+                    stroke={`url(#gradient-${index})`}
+                  />
                 </svg>
               </div>
-              <h1 className="text-center text-2xl pt-4 font-semibold">{title}</h1>
+              <h1 className="text-center text-2xl pt-4 font-semibold">
+                {title}
+              </h1>
               <p className="paragraph text-center mt-4 mb-4">
                 {title === "Email us:"
                   ? "Email us for general queries, including marketing and partnership opportunities."
