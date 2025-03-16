@@ -3,7 +3,7 @@ import logo1 from "../../assets/img/logo/logo1.png";
 
 function Footer() {
   return (
-    <footer className="footer py-12 bg-gradient-to-tr from-[#138bffcc] to-[#ec07c7cc]">
+    <footer className="footer py-12 bg-gradient-to-tr from-[#138bffcc] to-[#ec07c7cc] rela">
       <div className="container_lg p-10 flex flex-wrap justify-between gap-8 mx-auto text-center md:text-left ">
         {/* Logo and Intro */}
 
