@@ -62,7 +62,6 @@ const Hero = () => {
       </div>
       {/* Gradient Overlay */}
       <div className="background_linear bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] absolute w-full h-full z-10 opacity-40"></div>
-
       <div className="absolute inset-0  sm:block">
         <img
           src={codeImg}
@@ -70,8 +69,6 @@ const Hero = () => {
           className="w-full h-full object-cover"
         />
       </div>
-
-      {/* Particles */}
 
       {/* Text Content */}
       <div className="relative z-10 max-w-2xl space-y-6">
