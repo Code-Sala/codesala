@@ -1,11 +1,11 @@
 import React from "react";
 // import BlogData from "../Data/Blog.json";
-import imag from "../../../../public/assets/img/blog/ninthimg.png";
+import img1 from "../../../../public/assets/img/blog/ninthimg.png";
 
 const Chatgpt = () => {
   return (
     <div className="max-w-3xl mx-auto px-4 flex flex-col my-20">
-      <img className="max-w-full h-120 mx-auto my-4" src={imag} alt="" />
+      <img className="max-w-full h-100 mx-auto my-4" src={img1} alt="" />
 
       <h1 className="font-bold text-3xl sm:text-4xl ">
         ChatGPT vs. DeepSeek: Understanding Two Distinct AI Systems
@@ -28,7 +28,7 @@ const Chatgpt = () => {
         ChatGPT excels as an interactive conversational model, designed to
         simulate human-like dialogue. Its strength lies in its adaptability and
         versatility. It can:
-        <ul>
+        <ul className="mt-2 text-base sm:text-lg text-gray-500 list-disc ml-10 ">
           <li className="mt-2 text-base sm:text-lg text-gray-500 list-disc">
             Assist in drafting content, such as articles, emails, or stories.
           </li>
@@ -54,7 +54,7 @@ const Chatgpt = () => {
         DeepSeek, on the other hand, carves its niche in data-intensive tasks.
         It is designed to sift through vast datasets, identifying patterns,
         relationships, and trends. Key applications include:
-        <ul>
+        <ul className="mt-2 text-base sm:text-lg text-gray-500 list-disc ml-10 ">
           <li className="mt-2 text-base sm:text-lg text-gray-500 list-disc">
             Advanced data analytics for businesses or research purposes.
           </li>
