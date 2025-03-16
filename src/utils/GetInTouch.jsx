@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 function GetInTouch() {
   return (
     <div className="fixed right-5 bottom-25 z-90">
-      <div className="bg-white rounded-full hover:scale-110">
+      <div className="bg-white rounded-full hover:scale-90">
         <a
           href="https://wa.me/9841255592"
           className="p-2 flex items-center justify-center"
