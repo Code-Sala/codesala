@@ -67,7 +67,7 @@ function OpenMusic() {
       {/* Music Control Button */}
       <div
         onClick={toggleAudio}
-        className={`audio-control fixed bottom-6 right-6 z-50 bg-white text-white p-3 rounded-full shadow-md transition-all duration-300 hover:scale-110`}
+        className={`audio-control fixed bottom-6 right-6 z-150 bg-white text-white p-3 rounded-full shadow-md transition-all duration-300 hover:scale-110`}
       >
         {isPlaying ? (
           <img src={volumeon} alt="img1" />
@@ -78,7 +78,7 @@ function OpenMusic() {
 
       {/* Minimal Modal */}
       {showModal && (
-        <div className="fixed inset-0 z-90 flex items-center justify-center bg-gray-900/99">
+        <div className="fixed inset-0 z-150 flex items-center justify-center bg-gray-900/99">
           <div className=" text-center   ">
             {/* <Music size={32} className="text-gray-800 text-center mb-3" /> */}
             <h2 className="text-[2rem] text-gray-200 font-medium">
