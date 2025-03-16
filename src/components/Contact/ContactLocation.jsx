@@ -2,7 +2,7 @@ import { House, Phone, Mail } from "lucide-react";
 
 const ContactLocation = () => {
   return (
-    <div className="container mx-auto pb-16 pt-12 px-4">
+    <div className="container mx-auto pb-16 pt-12 px-4 container_lg">
       <div className="flex flex-col md:flex-row gap-12">
         {/* Location 1 - Sheridan */}
         <div className="w-full max-w-3xl text-start mb-12 shadow-md px-8 py-8">

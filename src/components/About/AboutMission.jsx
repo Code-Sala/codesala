@@ -15,23 +15,23 @@ function AboutMission() {
       </motion.h1>
    
       {/* Mission Content - Responsive Layout */}
-      <div className="flex flex-col-reverse sm:flex-row items-center sm:items-start gap-12 pt-12 pb-12">
+      <div className="flex flex-col md:flex-col lg:flex-row md:items-center md:justify-center sm:items-start gap-12 pt-12 pb-12">
         {/* Left Section - Image (Hidden on Small Screens) */}
         <motion.div
-          className="hidden sm:block w-full sm:w-1/2"
+          className="hidden sm:block w-full md:w-full lg:w-2/3"
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
           <img
             src= {AboutMissionImg}
-            className="rounded-md w-full max-w-md mx-auto"
+            className="rounded-md h-[40vh] md:w-full"
           />
         </motion.div>
 
         {/* Right Section - Text (Centered on Small Screens) */}
         <motion.div
-          className="w-full sm:w-1/2 text-center sm:text-left"
+          className="w-full sm:w-1/2 md:w-full text-center sm:text-left"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}

@@ -179,7 +179,7 @@ function ContactForm() {
                   ? "Email us for general queries, including marketing and partnership opportunities."
                   : "Call us to speak to a member of our team. We are always happy to help."}
               </p>
-              <a href="#" className="link pt-2 text-gray-700 no-underline">
+              <a href="#" className="pt-2 text-gray-700 no-underline">
                 {text}
               </a>
             </div>
