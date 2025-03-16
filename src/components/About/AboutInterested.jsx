@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 function AboutInterested() {
   return (
     <motion.div
@@ -26,12 +26,12 @@ function AboutInterested() {
           Look no further. Your challenge, our expertise. <br />Schedule a call to share your idea!
         </motion.p>
         <motion.button
-          className="p-[8px] pr-[14px] pl-[14px] mt-8 rounded-lg  cursor-pointer mb-6  bg-vibrant-pink  hover:bg-deep-purple text-white"
+          className="p-[12px] pr-[14px] pl-[14px] mt-8 rounded-3xl cursor-pointer mb-6  bg-vibrant-pink  hover:bg-deep-purple text-white"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           transition={{ duration: 0.2 }}
         >
-          GET IN TOUCH
+          <Link to="/Contact">GET IN TOUCH</Link> 
         </motion.button>
       </div>
     </motion.div>

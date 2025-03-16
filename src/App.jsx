@@ -16,6 +16,16 @@ import SkillComponent from "./components/Services/SkillComponent";
 import Cookies from "./components/Cookies/Cookies";
 import Policy from "./pages/Policy";
 import Terms from "./pages/Terms";
+import FirstLandingPage from "./components/Blog/Blogs/FirstLandingPage";
+import Chatgpt from "./components/Blog/Blogs/Chatgpt";
+import Lot from "./components/Blog/Blogs/Lot";
+import SoftwareDevelopment from "./components/Blog/Blogs/SoftwareDevelopment";
+import DataScience from "./components/Blog/Blogs/DataScience";
+import CloudComputing from "./components/Blog/Blogs/CloudComputing";
+import Future from "./components/Blog/Blogs/Future";
+import RoleOfAi from "./components/Blog/Blogs/RoleOfAi";
+import ImpactOfAi from "./components/Blog/Blogs/ImpactOfAi";
+import AIAndML from "./components/Blog/Blogs/AIAndML";
 const App = () => {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
@@ -44,7 +54,7 @@ const App = () => {
           }}
         />
       )}
-  
+
       <Router>
         <Routes>
           <Route path="/" element={<Layout />}>
@@ -62,6 +72,19 @@ const App = () => {
             <Route path="/cookies" element={<Cookies />} />
             <Route path="/privacy" element={<Policy />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/ComingSoon" element={<FirstLandingPage />} />
+            <Route path="/ChatGPT" element={<Chatgpt />} />
+            <Route path="/IoT" element={<Lot />} />
+            <Route
+              path="/SoftwareDevelopment"
+              element={<SoftwareDevelopment />}
+            />
+            <Route path="/DataScience" element={<DataScience />} />
+            <Route path="/CloudComputing" element={<CloudComputing />} />
+            <Route path="/Future" element={<Future />} />
+            <Route path="/RoleOfAi" element={<RoleOfAi />} />
+            <Route path="/ImpactOfAi" element={<ImpactOfAi />} />
+            <Route path="/AIAndML" element={<AIAndML />} />
           </Route>
         </Routes>
       </Router>
