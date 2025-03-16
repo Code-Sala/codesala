@@ -57,7 +57,7 @@ const Hero = () => {
       variants={containerVariants}
       className="relative min-h-screen flex flex-col items-center justify-center px-6 sm:px-12 text-white text-center"
     >
-      <div className="z-80">
+      <div className="z-10">
         <ParticleBackground />
       </div>
       {/* Gradient Overlay */}
@@ -88,7 +88,7 @@ const Hero = () => {
         <motion.div variants={containerVariants}>
           <Link
             to="/contact"
-            className="inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-lg font-medium mt-2"
+            className="inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-lg font-medium mt-2 z-90"
           >
             Let&apos;s start a project!
           </Link>
