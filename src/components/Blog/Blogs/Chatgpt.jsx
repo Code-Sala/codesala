@@ -1,14 +1,11 @@
 import React from "react";
 // import BlogData from "../Data/Blog.json";
+import imag from "../../../../public/assets/img/blog/ninthimg.png";
 
 const Chatgpt = () => {
   return (
     <div className="max-w-3xl mx-auto px-4 flex flex-col my-20">
-      <img
-        className="max-w-full h-120 mx-auto my-4"
-        src="public/assets/img/blog/ninthimg.png"
-        alt=""
-      />
+      <img className="max-w-full h-120 mx-auto my-4" src={imag} alt="" />
 
       <h1 className="font-bold text-3xl sm:text-4xl ">
         ChatGPT vs. DeepSeek: Understanding Two Distinct AI Systems
