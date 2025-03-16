@@ -11,14 +11,14 @@ const services = [
     description:
       "We build responsive and scalable websites to enhance your online presence.",
     icon: Code,
-    link: "/services/web-development",
+    link: "/webcomponent",
   },
   {
     title: "App Development",
     description:
       "Custom mobile and web applications tailored to your business needs.",
     icon: Smartphone,
-    link: "/services/app-development",
+    link: "/mobilecomponent",
   },
 
   {
@@ -26,14 +26,14 @@ const services = [
     description:
       "Hire expert professionals on-demand for your short-term or long-term projects.",
     icon: Users,
-    link: "/services/skill-rental",
+    link: "/skillrentcomponent",
   },
   {
     title: "Software Integration",
     description:
       "Seamlessly connect your software with third-party applications for better efficiency.",
     icon: Plug,
-    link: "/services/software-integration",
+    link: "/softwarecomponent",
   },
 ];
 
