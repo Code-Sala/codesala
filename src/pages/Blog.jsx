@@ -17,13 +17,14 @@ function Blog() {
   const currentPosts = BlogData.slice(firstPostIndex, lastPostIndex);
 
   return (
-    <div>
-      <NavSection />
+    <div className="bg-white">
+      <NavSection className="bg-white" />
       <HeroSection posts={currentPosts} />
       {/* <div className="hidden lg:block">
           <SideBar />
         </div> */}
       <Pagecount
+        className="bg-white"
         currentPage={currentPage}
         setCurrentPage={setCurrentPage}
         totalPosts={BlogData.length}
