@@ -63,7 +63,7 @@ function ContactForm() {
 
   return (
     <>
-      <div className="contactform min-h-screen flex items-center justify-center p-6 lg:pt-25">
+      <div className="contactform min-h-screen flex items-center justify-center p-6 lg:pt-25 text-black">
         <div className="relative w-full max-w-6xl flex flex-wrap container bg-gray-100 shadow-[0_-2px_5px_rgba(0,0,0,0.3)] rounded-lg overflow-hidden">
           {/* Image Section */}
           <div className="relative w-full md:w-1/2 h-96 md:h-auto">
@@ -165,7 +165,7 @@ function ContactForm() {
       </div>
 
       {/* Contact Cards Section */}
-      <div className="contact min-h-[40vh] max-w-7xl mx-auto text-center flex flex-wrap gap-4 mt-15 mb-15">
+      <div className="contact min-h-[40vh] max-w-7xl mx-auto text-center flex flex-wrap gap-4 mt-15 mb-15 text-black">
         <div className="card flex flex-col md:flex-row gap-4 w-full">
           {[
             { Icon: Mail, title: "Email us:", text: "info@codesala.com" },
