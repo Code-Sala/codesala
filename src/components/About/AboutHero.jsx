@@ -4,21 +4,31 @@ import { Link } from "react-router-dom";
 
 function AboutHero() {
   return (
-    <div className="relative min-h-[100vh] flex items-center justify-center px-4 sm:px-8 pt-[6.2rem] pb-24 z-10 bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E]">
-      
-      {/* Background Image with Opacity */}
-      <div className="absolute top-0 left-0 w-full h-full z-1 opacity-30">
-        <img src={groupImg} alt="group image" className="w-full h-full object-cover" />
-      </div>
+    <div className="relative min-h-screen flex flex-col items-center justify-start px-4 sm:px-8 pt-[6.2rem] pb-24 bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E]">
 
+      {/* Fixed Background Image */}
+      <div
+        className="absolute top-0 left-0 w-full h-full z-1"
+        style={{
+          backgroundImage: `url(${groupImg})`,
+          backgroundAttachment: "fixed", // Keeps background fixed during scrolling
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+
+      {/* Gradient Overlay */}
+      <div className="absolute top-0 left-0 w-full h-full z-2 bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] opacity-60"></div>
+
+      {/* Content Section */}
       <motion.div
-        className="max-w-8xl text-center container_lg z-40"
+        className="relative z-40 max-w-8xl text-center container_lg"
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <motion.h1
-          className="text-white font-extrabold text-3xl sm:text-4xl md:text-5xl leading-tight"
+          className="text-white font-extrabold text-3xl pt-25 sm:text-4xl md:text-5xl leading-tight"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.6 }}
@@ -49,7 +59,7 @@ function AboutHero() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
           >
-           <Link to="/Contact">Book A Call</Link> 
+            <Link to="/Contact">Book A Call</Link>
           </motion.button>
         </motion.div>
       </motion.div>

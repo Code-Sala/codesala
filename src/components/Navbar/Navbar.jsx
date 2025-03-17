@@ -1,30 +1,29 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import logo from "../../assets/img/logo/logo1.png";
+import { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
 
   const location = useLocation();
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setIsScrolled(window.scrollY > 50);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   window.addEventListener("scroll", handleScroll);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <nav
-      className={`shadow-md w-full py-2 fixed top-0 left-0 right-0 z-50 transition-all ${
-        isScrolled ? "bg-white shadow-lg" : "bg-transparent"
-      }`}
+      className={`shadow-md w-full py-2 fixed top-0 left-0 right-0 z-150 transition-all bg-white`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 container_lg">
         <Link to="/" className="text-xl font-bold text-gray-200">
@@ -54,7 +53,7 @@ const Navbar = () => {
 
         <Link
           to="/contact"
-          className="hidden lg:inline-block text-white px-4 py-2 animated-gradient-btn rounded-[3rem] "
+          className="hidden lg:inline-block text-white px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-[3rem] "
         >
           Contact Us
         </Link>
