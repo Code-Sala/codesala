@@ -43,6 +43,9 @@ function ContactForm() {
     <>
       <div className="contactform min-h-screen flex items-center justify-center p-6 lg:pt-25">
         <div className="relative w-full max-w-6xl flex flex-wrap container bg-gray-100 shadow-lg rounded-lg overflow-hidden">
+      <div className="contactform min-h-screen flex items-center justify-center p-6 lg:pt-25 text-black">
+        <div className="relative w-full max-w-6xl flex flex-wrap container bg-gray-100 shadow-[0_-2px_5px_rgba(0,0,0,0.3)] rounded-lg overflow-hidden">
+          {/* Image Section */}
           <div className="relative w-full md:w-1/2 h-96 md:h-auto">
             <img src={ContactImg} alt="Contact Background" className="absolute inset-0 w-full h-full object-cover" />
             <div className="absolute inset-0 bg-black opacity-40"></div>
@@ -81,7 +84,12 @@ function ContactForm() {
         </div>
       </div>
 
+
       <div className="contact min-h-[40vh] max-w-7xl mx-auto text-center flex flex-wrap gap-4 mt-15 mb-15">
+
+      {/* Contact Cards Section */}
+      <div className="contact min-h-[40vh] max-w-7xl mx-auto text-center flex flex-wrap gap-4 mt-15 mb-15 text-black">
+
         <div className="card flex flex-col md:flex-row gap-4 w-full">
           <ContactCard Icon={Mail} title="Email us:" text="info@codesala.com" description="Email us for general queries, including marketing and partnership opportunities." link="mailto:info@codesala.com" />
           <ContactCard Icon={Phone} title="Call us:" text="+13323226043" description="Call us to speak to a member of our team. We are always happy to help." link="tel:13323226043"/>

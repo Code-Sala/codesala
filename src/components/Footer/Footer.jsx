@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import logo1 from "../../assets/img/logo/logo1.png";
+import SocialMediaCard from "./SocialMediaCard";
 
 function Footer() {
   return (
-    <footer className="footer py-12 bg-gradient-to-tr from-[#138bffcc] to-[#ec07c7cc] relative">
+    <footer className="footer py-12 bg-gradient-to-tr from-[#138bffcc] to-[#ec07c7cc] text-center">
       <div className="container_lg p-10 flex flex-wrap justify-between gap-8 mx-auto text-center md:text-left ">
-        {/* Logo and Intro */}
-
         <aside className="w-full md:w-1/3 lg:w-1/4">
           <Link to="/">
             <img
@@ -17,10 +16,9 @@ function Footer() {
           </Link>
           <p className="text-white italic">Providing tech since 2024</p>
 
-          <h2 className="py-4  leading-tight text-zinc-100 text-[16px]">
-            Technology Will Change Humanity Forever, Unlocking New Possibilities
-            and Shaping a Future
-          </h2>
+          <div>
+            <SocialMediaCard />
+          </div>
         </aside>
 
         {/* Services Section */}
@@ -59,7 +57,7 @@ function Footer() {
 
         {/* Legal Section */}
         <nav className="w-full md:w-auto flex flex-col gap-2">
-          <h6 className="text-xl text-zinc-200 font-semibold  ">Legal</h6>
+          <h6 className="text-xl text-zinc-200 font-semibold">Legal</h6>
           <Link to="/terms" className="link link-hover">
             Terms of use
           </Link>
@@ -70,6 +68,9 @@ function Footer() {
             Cookie policy
           </Link>
         </nav>
+      </div>
+      <div className="flex items-center justify-center text-center w-full">
+        <p className=" text-white">Copyright @2024 All Right Reserved</p>
       </div>
     </footer>
   );
