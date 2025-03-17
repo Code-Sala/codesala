@@ -2,6 +2,8 @@
 @plugin "daisyui";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+
+
 @theme {
   /* color */
   --color-deep-purple: #482977;
@@ -23,6 +25,28 @@
   /* font-family: "proxima-nova", sans-serif; */
   font-family: "Poppins", sans-serif;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff7eb3, #ff758c);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff4b8b, #ff2e63);
+}
+
+
+/* Width and height of scrollbar */
+
+
+
 
 .container_lg {
   width: 90%;
@@ -147,3 +171,20 @@
 }
 
 /* scroll bar */
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 100px;
+}
+
+::-webkit-scrollbar-track {
+  background: yellow;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #ff7eb3, #ff758c);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #ff4b8b, #ff2e63);
+}

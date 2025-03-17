@@ -42,6 +42,43 @@ const ContactLocation = () => {
             </div>
             {/* Phone */}
             <div className="flex items-center text-lg mb-4">
+
+            <svg width="40" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"   stroke="url(#gradientColors)">
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#00AEEF" /> 
+      <stop offset="50%" stopColor="#892890" /> 
+      <stop offset="100%" stopColor="#ED1D7E" />  
+      
+        </linearGradient>
+      </defs>
+      <Phone
+        width={18}
+        height={24}
+        stroke="url(#gradient)"  // Applying gradient to the icon
+      />
+    </svg>
+              <span><a href="tel:+13323226043" className="hover:underline">+13323226043</a></span>
+            </div>
+            {/* Email */}
+            <div className="flex items-center text-lg mb-4">
+            <svg width="40" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"   stroke="url(#gradientColors)">
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#00AEEF" /> 
+      <stop offset="50%" stopColor="#892890" /> 
+      <stop offset="100%" stopColor="#ED1D7E" />  
+      
+        </linearGradient>
+      </defs>
+      <Mail
+        width={18}
+        height={24}
+        stroke="url(#gradient)"  // Applying gradient to the icon
+      />
+    </svg>  
+              <span><a href="mailto:wy@codesala.com" className="hover:underline">wy@codesala.com</a></span>
+
               <svg
                 width="40"
                 height="40"
@@ -99,6 +136,7 @@ const ContactLocation = () => {
                 />
               </svg>
               <span className="text-black">wy@codesala.com</span>
+
             </div>
           </div>
           <iframe
@@ -150,6 +188,44 @@ const ContactLocation = () => {
             </div>
             {/* Phone */}
             <div className="flex items-center text-lg mb-4">
+
+            <svg width="40" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"   stroke="url(#gradientColors)">
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#00AEEF" /> 
+      <stop offset="50%" stopColor="#892890" /> 
+      <stop offset="100%" stopColor="#ED1D7E" />  
+      
+        </linearGradient>
+      </defs>
+      <Phone
+        width={18}
+        height={24}
+        stroke="url(#gradient)"  // Applying gradient to the icon
+      />
+    </svg>
+                <span><a href="tel:+977-15924442" className="hover:underline">+977-15924442</a></span>
+            </div>
+            {/* Email */}
+            <div className="flex items-center text-lg mb-4">
+            <svg width="40" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"   stroke="url(#gradientColors)">
+      <defs>
+        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#00AEEF" /> 
+      <stop offset="50%" stopColor="#892890" /> 
+      <stop offset="100%" stopColor="#ED1D7E" />  
+      
+        </linearGradient>
+      </defs>
+      <Mail
+        width={18}
+        height={24}
+        stroke="url(#gradient)"  // Applying gradient to the icon
+      />
+    </svg>
+          
+              <span><a href="mailto:np@codesala.com" className="hover:underline">np@codesala.com</a></span>
+
               <svg
                 width="40"
                 height="40"
@@ -208,6 +284,7 @@ const ContactLocation = () => {
               </svg>
 
               <span>np@codesala.com</span>
+
             </div>
           </div>
           <iframe
