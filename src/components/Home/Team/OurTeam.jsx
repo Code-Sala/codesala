@@ -1,10 +1,12 @@
+// import img from "../../../assets/img/teams/Baibhav.jpg"
+// ./src\assets\img\teams\Baibhav.JPG
+
 function OurTeam() {
   const teamMembers = [
     {
       name: "Siddhant Pandey",
       role: "Backend Developer",
-      image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/bonnie-green.png",
+      image: "./src/assets/img/teams/Siddhant.jpg",
       social: {
         facebook: "#",
         twitter: "#",
@@ -15,8 +17,7 @@ function OurTeam() {
     {
       name: "Baibav Nepal",
       role: "Frontend Developer",
-      image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png",
+      image: "./src/assets/img/teams/Baibhav.JPG",
       social: {
         facebook: "#",
         twitter: "#",
@@ -27,8 +28,7 @@ function OurTeam() {
     {
       name: "Sadip Khatri",
       role: "FullStack Engineer",
-      image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png",
+      image: "./src/assets/img/teams/Sadip.jpg",
       social: {
         facebook: "#",
         twitter: "#",
@@ -64,9 +64,9 @@ function OurTeam() {
         </div>
         <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {teamMembers.map((member, index) => (
-            <div key={index} className="text-center text-gray-500 ">
+            <div key={index} className="text-center text-gray-500">
               <img
-                className="mx-auto mb-4 w-36 h-36 rounded-full"
+                className="mx-auto mb-4 w-36 h-36 rounded-full object-cover"
                 src={member.image}
                 alt={member.name}
               />
@@ -85,6 +85,7 @@ function OurTeam() {
                         aria-hidden="true"
                       >
                         {/* Icons can be dynamically rendered here based on platform */}
+                        <div>{}</div>
                       </svg>
                     </a>
                   </li>

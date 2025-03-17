@@ -11,10 +11,10 @@ function Footer() {
             <img
               src={logo1}
               alt="footer logo"
-              className="max-w-36 mx-auto md:mx-0 mb-2"
+              className="max-w-42 mx-auto md:mx-0 mb-2"
             />
           </Link>
-          <p className="text-white italic">Providing tech since 2024</p>
+          <p className="text-white text-[0.9rem]">Providing tech since 2025</p>
 
           <div>
             <SocialMediaCard />
@@ -70,7 +70,7 @@ function Footer() {
         </nav>
       </div>
       <div className="flex items-center justify-center text-center w-full">
-        <p className=" text-white">Copyright @2024 All Right Reserved</p>
+        <p className=" text-white">Copyright @2025 All Right Reserved</p>
       </div>
     </footer>
   );
