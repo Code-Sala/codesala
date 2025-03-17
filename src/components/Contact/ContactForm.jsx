@@ -100,7 +100,7 @@ function ContactCard({ Icon, title, text, description,link }) {
       </div>
       <h1 className="text-center text-2xl pt-4 font-semibold">{title}</h1>
       <p className="paragraph text-center mt-4 mb-4">{description}</p>
-      <a href={link} className="pt-2 text-gray-700 no-underline">{text}</a>
+      <a href={link} className="pt-2 text-gray-700 no-underline hover:underline">{text}</a>
     </div>
   );
 }

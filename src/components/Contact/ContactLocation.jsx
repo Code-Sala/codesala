@@ -44,7 +44,7 @@ const ContactLocation = () => {
         stroke="url(#gradient)"  // Applying gradient to the icon
       />
     </svg>
-              <span><a href="tel:+13323226043">+13323226043</a></span>
+              <span><a href="tel:+13323226043" className="hover:underline">+13323226043</a></span>
             </div>
             {/* Email */}
             <div className="flex items-center text-lg mb-4">
@@ -63,7 +63,7 @@ const ContactLocation = () => {
         stroke="url(#gradient)"  // Applying gradient to the icon
       />
     </svg>  
-              <span><a href="mailto:wy@codesala.com">wy@codesala.com</a></span>
+              <span><a href="mailto:wy@codesala.com" className="hover:underline">wy@codesala.com</a></span>
             </div>
           </div>
           <iframe
@@ -116,7 +116,7 @@ const ContactLocation = () => {
         stroke="url(#gradient)"  // Applying gradient to the icon
       />
     </svg>
-                <span><a href="tel:+977-15924442">+977-15924442</a></span>
+                <span><a href="tel:+977-15924442" className="hover:underline">+977-15924442</a></span>
             </div>
             {/* Email */}
             <div className="flex items-center text-lg mb-4">
@@ -136,7 +136,7 @@ const ContactLocation = () => {
       />
     </svg>
           
-              <span><a href="mailto:np@codesala.com">np@codesala.com</a></span>
+              <span><a href="mailto:np@codesala.com" className="hover:underline">np@codesala.com</a></span>
             </div>
           </div>
           <iframe

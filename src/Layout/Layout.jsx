@@ -7,7 +7,7 @@ import GetInTouch from "../utils/GetInTouch";
 
 const Layout = () => {
   return (
-    <div className="sm:cursor-none md:cursor-none lg:cursor-auto relative">
+    <div className="sm:cursor-none md:cursor-none lg:cursor-auto relative ">
       <Navbar />
       {/* <ParticleBackground /> */}
 
