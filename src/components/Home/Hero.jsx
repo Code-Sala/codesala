@@ -45,7 +45,6 @@ const Hero = () => {
     };
 
     typeLetter();
-
     return () => clearTimeout(timeoutRef.current);
   }, []);
 
@@ -55,19 +54,19 @@ const Hero = () => {
       initial="hidden"
       animate={isInView ? "visible" : "hidden"}
       variants={containerVariants}
-      className="relative min-h-screen flex flex-col items-center justify-center px-6 sm:px-12 text-white text-center"
+      className="relative min-h-screen flex flex-col items-center justify-center px-6 sm:px-12 text-white text-center overflow-hidden -pt-[25rem]"
     >
-      <div className="z-10">
-        <ParticleBackground />
-      </div>
+      {/* Fixed Background Image */}
+      <div
+        className="absolute inset-0 w-full h-full bg-cover bg-center"
+        style={{ backgroundImage: `url(${codeImg})`, backgroundAttachment: "fixed" }}
+      />
+      
       {/* Gradient Overlay */}
-      <div className="background_linear bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] absolute w-full h-full z-10 opacity-40"></div>
-      <div className="absolute inset-0  sm:block">
-        <img
-          src={codeImg}
-          alt="Code Background"
-          className="w-full h-full object-cover"
-        />
+      <div className="absolute w-full h-full bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] opacity-40"></div>
+
+      <div className="relative z-10">
+        <ParticleBackground />
       </div>
 
       {/* Text Content */}
@@ -77,7 +76,7 @@ const Hero = () => {
           className="text-2xl sm:text-4xl md:text-5xl font-bold leading-tight"
         >
           At CodeSala, we specialize in{" "}
-          <span className=" capitalize bg-gradient-to-br from-[#ffffff] via-[#82b1e4] to-[#fdfdff] bg-clip-text text-transparent text-2xl sm:text-4xl lg:text-5xl font-bold transition-all duration-1000 hover:bg-gradient-to-tl">
+          <span className="capitalize bg-gradient-to-br from-[#ffffff] via-[#82b1e4] to-[#fdfdff] bg-clip-text text-transparent text-2xl sm:text-4xl lg:text-5xl font-bold transition-all duration-1000 hover:bg-gradient-to-tl">
             {currentService}
           </span>{" "}
           services
@@ -85,7 +84,7 @@ const Hero = () => {
         <motion.div variants={containerVariants}>
           <Link
             to="/contact"
-            className="inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-lg font-medium mt-2 z-90"
+            className="inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-lg font-medium mt-2"
           >
             Let&apos;s start a project!
           </Link>

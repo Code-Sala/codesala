@@ -155,7 +155,7 @@ export default function Contact() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/codesala" target="_blank" rel="noopener noreferrer">
               {/* <Facebook className="text-[#ED1D7E] w-10 h-10 hover:scale-110 transition-transform" /> */}
               {/* <img src={Facebook} alt=""  className="h-9" /> */}
               <svg
@@ -189,7 +189,7 @@ export default function Contact() {
 
 
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/company/codesalaofficial?_l=en_US" target="_blank" rel="noopener noreferrer">
               {/* <Linkedin className="text-[#ED1D7E] w-10 h-10 hover:scale-110 transition-transform" /> */}
               {/* <img src={Linkedin} alt=""  className="h-10 "/>  */}
               <svg
@@ -218,7 +218,7 @@ export default function Contact() {
 
 
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://x.com/code_sala  " target="_blank" rel="noopener noreferrer">
               {/* <X className="text-[#ED1D7E] w-10 h-10 hover:scale-110 transition-transform" /> */}
               {/* <img src={xlogo} alt=""  className="h-9"/> */}
               {/* <i className="fa-brands fa-x-twitter"></i> */}
