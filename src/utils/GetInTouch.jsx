@@ -6,6 +6,7 @@ function GetInTouch() {
       <div className="bg-white rounded-full hover:scale-90">
         <a
           href="https://wa.me/9841255592"
+          target="_blank"
           className="p-2 flex items-center justify-center"
         >
           <svg width="40" height="40" viewBox="0 0 16 16">

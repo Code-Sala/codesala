@@ -16,7 +16,7 @@ const SidebarNav = () => {
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 0.6, // 60% visibility
+      threshold: 0.3,
     };
 
     const observerCallback = (entries) => {

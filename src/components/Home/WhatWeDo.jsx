@@ -46,7 +46,7 @@ const WhatWeDo = () => {
           return (
             <div
               key={index}
-              className={`bg-transparent shadow-lg rounded-lg flex flex-col items-center text-center hover:shadow-xl px-6 py-8 transition-all duration-300 ${
+              className={`bg-transparent  rounded-lg flex flex-col items-center text-center hover:shadow-xl px-6 py-8 transition-all duration-300 ${
                 hoveredIndex === index ? "shadow-2xl" : ""
               }`}
               onMouseEnter={() => setHoveredIndex(index)}
