@@ -5,7 +5,7 @@ import SocialMediaCard from "./SocialMediaCard";
 function Footer() {
   return (
     <footer className="footer py-12 bg-gradient-to-tr from-[#138bffcc] to-[#ec07c7cc] text-center">
-      <div className="container_lg p-10 flex flex-wrap justify-between gap-8 mx-auto text-center md:text-left ">
+      <div className="container_lg p-10 flex flex-wrap justify-between items-center gap-8 mx-auto text-center md:text-left ">
         <aside className="w-full md:w-1/3 lg:w-1/4">
           <Link to="/">
             <img
@@ -16,7 +16,7 @@ function Footer() {
           </Link>
           <p className="text-white text-[0.9rem]">Providing tech since 2025</p>
 
-          <div>
+          <div className="flex justify-center md:justify-start">
             <SocialMediaCard />
           </div>
         </aside>
