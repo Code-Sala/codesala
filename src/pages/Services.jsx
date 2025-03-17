@@ -3,7 +3,7 @@ import OfferingSection from "../components/Services/OfferingSection";
 
 function Services() {
   return (
-    <div>
+    <div className="bg-white">
       <HeroSection />
       <OfferingSection />
     </div>

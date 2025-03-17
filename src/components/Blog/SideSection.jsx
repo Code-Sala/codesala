@@ -1,5 +1,6 @@
 import React from "react";
 import popularPosts from "../../Data/popularPosts.json";
+import { Link } from "react-router-dom";
 
 const SideSection = () => {
   return (
@@ -14,9 +15,16 @@ const SideSection = () => {
               <div key={index} className="border-b pb-3">
                 <p className="text-gray-500 text-sm">{post.date}</p>
                 <h4 className="text-lg font-medium mt-1">
-                  <a href={post.link} className="text-blue-600 hover:underline">
-                    {post.title}
-                  </a>
+                  {post.link ? (
+                    <Link
+                      to={post.link}
+                      className="text-blue-600 hover:underline"
+                    >
+                      {post.title}
+                    </Link>
+                  ) : (
+                    <span className="text-gray-400">{post.title}</span>
+                  )}
                 </h4>
               </div>
             ))}

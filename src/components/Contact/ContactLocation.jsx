@@ -6,29 +6,43 @@ const ContactLocation = () => {
       <div className="flex flex-col md:flex-row gap-12">
         {/* Location 1 - Sheridan */}
         <div className="w-full max-w-3xl text-start mb-12 shadow-md px-8 py-8">
-          <h2 className="text-3xl font-semibold mb-6">30 N Gould St Ste R, <br /> Sheridan, WY 82801</h2>
+          <h2 className="text-3xl font-semibold mb-6 text-black">
+            30 N Gould St Ste R, <br /> Sheridan, WY 82801
+          </h2>
           <div className="flex flex-col items-start mb-8">
             {/* Address */}
             <div className="flex items-center text-lg mb-4">
-            <svg width="40" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"   stroke="url(#gradientColors)">
-      <defs>
-        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#00AEEF" /> 
-      <stop offset="50%" stopColor="#892890" /> 
-      <stop offset="100%" stopColor="#ED1D7E" />  
-      
-        </linearGradient>
-      </defs>
-      <House
-        width={18}
-        height={24}
-        stroke="url(#gradient)"  // Applying gradient to the icon
-      />
-    </svg>
-              <span>30 N Gould St Ste R, Sheridan</span>
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="url(#gradientColors)"
+              >
+                <defs>
+                  <linearGradient
+                    id="gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stopColor="#00AEEF" />
+                    <stop offset="50%" stopColor="#892890" />
+                    <stop offset="100%" stopColor="#ED1D7E" />
+                  </linearGradient>
+                </defs>
+                <House
+                  width={18}
+                  height={24}
+                  stroke="url(#gradient)" // Applying gradient to the icon
+                />
+              </svg>
+              <span className="text-black">30 N Gould St Ste R, Sheridan</span>
             </div>
             {/* Phone */}
             <div className="flex items-center text-lg mb-4">
+
             <svg width="40" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"   stroke="url(#gradientColors)">
       <defs>
         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -64,6 +78,65 @@ const ContactLocation = () => {
       />
     </svg>  
               <span><a href="mailto:wy@codesala.com" className="hover:underline">wy@codesala.com</a></span>
+
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="url(#gradientColors)"
+              >
+                <defs>
+                  <linearGradient
+                    id="gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stopColor="#00AEEF" />
+                    <stop offset="50%" stopColor="#892890" />
+                    <stop offset="100%" stopColor="#ED1D7E" />
+                  </linearGradient>
+                </defs>
+                <Phone
+                  width={18}
+                  height={24}
+                  stroke="url(#gradient)" // Applying gradient to the icon
+                />
+              </svg>
+              <span className="text-black">+13323226043</span>
+            </div>
+            {/* Email */}
+            <div className="flex items-center text-lg mb-4">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="url(#gradientColors)"
+              >
+                <defs>
+                  <linearGradient
+                    id="gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stopColor="#00AEEF" />
+                    <stop offset="50%" stopColor="#892890" />
+                    <stop offset="100%" stopColor="#ED1D7E" />
+                  </linearGradient>
+                </defs>
+                <Mail
+                  width={18}
+                  height={24}
+                  stroke="url(#gradient)" // Applying gradient to the icon
+                />
+              </svg>
+              <span className="text-black">wy@codesala.com</span>
+
             </div>
           </div>
           <iframe
@@ -78,29 +151,44 @@ const ContactLocation = () => {
 
         {/* Location 2 - Kathmandu */}
         <div className="w-full max-w-3xl text-start shadow-md px-8 py-8 mb-12">
-          <h2 className="text-3xl font-semibold mb-6">Swayambhu,<br/> Kathmandu, Nepal</h2>
-          <div className="flex flex-col items-start mb-8">
+          <h2 className="text-3xl font-semibold mb-6 text-black">
+            Swayambhu,
+            <br /> Kathmandu, Nepal
+          </h2>
+          <div className="flex flex-col items-start mb-8 text-black">
             {/* Address */}
             <div className="flex items-center text-lg mb-4">
-            <svg width="40" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"   stroke="url(#gradientColors)">
-      <defs>
-        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#00AEEF" /> 
-      <stop offset="50%" stopColor="#892890" /> 
-      <stop offset="100%" stopColor="#ED1D7E" />  
-      
-        </linearGradient>
-      </defs>
-      <House
-        width={18}
-        height={24}
-        stroke="url(#gradient)"  // Applying gradient to the icon
-      />
-    </svg>
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="url(#gradientColors)"
+              >
+                <defs>
+                  <linearGradient
+                    id="gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stopColor="#00AEEF" />
+                    <stop offset="50%" stopColor="#892890" />
+                    <stop offset="100%" stopColor="#ED1D7E" />
+                  </linearGradient>
+                </defs>
+                <House
+                  width={18}
+                  height={24}
+                  stroke="url(#gradient)" // Applying gradient to the icon
+                />
+              </svg>
               <span>BhagwanPau Swyambhu, Nepal</span>
             </div>
             {/* Phone */}
             <div className="flex items-center text-lg mb-4">
+
             <svg width="40" height="40" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"   stroke="url(#gradientColors)">
       <defs>
         <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -137,6 +225,66 @@ const ContactLocation = () => {
     </svg>
           
               <span><a href="mailto:np@codesala.com" className="hover:underline">np@codesala.com</a></span>
+
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="url(#gradientColors)"
+              >
+                <defs>
+                  <linearGradient
+                    id="gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stopColor="#00AEEF" />
+                    <stop offset="50%" stopColor="#892890" />
+                    <stop offset="100%" stopColor="#ED1D7E" />
+                  </linearGradient>
+                </defs>
+                <Phone
+                  width={18}
+                  height={24}
+                  stroke="url(#gradient)" // Applying gradient to the icon
+                />
+              </svg>
+              <span>+977-15924442</span>
+            </div>
+            {/* Email */}
+            <div className="flex items-center text-lg mb-4">
+              <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="url(#gradientColors)"
+              >
+                <defs>
+                  <linearGradient
+                    id="gradient"
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stopColor="#00AEEF" />
+                    <stop offset="50%" stopColor="#892890" />
+                    <stop offset="100%" stopColor="#ED1D7E" />
+                  </linearGradient>
+                </defs>
+                <Mail
+                  width={18}
+                  height={24}
+                  stroke="url(#gradient)" // Applying gradient to the icon
+                />
+              </svg>
+
+              <span>np@codesala.com</span>
+
             </div>
           </div>
           <iframe
