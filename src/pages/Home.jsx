@@ -8,7 +8,7 @@ import SidebarNav from "../utils/Sidebar";
 
 const Home = () => {
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen bg-white">
       <SidebarNav />
 
       <div className="relative z-10">

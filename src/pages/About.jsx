@@ -10,18 +10,17 @@ import AboutOurVision from "../components/About/AboutOurVision";
 
 function About() {
   return (
-
-   <>
-  <AboutHero/> 
-  <AboutStory/>
-  <AboutMission/>
-  <AboutOurVision/>
-  <AboutOurValues/>
-  <AboutPartnering/>
-  <AboutInterested/>
-  <Contact/>
-  </>
-  )
-   }
+    <div className="bg-white">
+      <AboutHero />
+      <AboutStory />
+      <AboutMission />
+      <AboutOurVision />
+      <AboutOurValues />
+      <AboutPartnering />
+      <AboutInterested />
+      <Contact />
+    </div>
+  );
+}
 
 export default About;

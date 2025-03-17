@@ -8,7 +8,7 @@ const TeamSection = () => {
 
   return (
     <div className="flex flex-col items-center p-6 pt-16 mt-12 bg-white">
-      <h1 className="text-3xl lg:text-5xl font-bold text-center bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent dark:text-white mb-2 leading-tight">
+      <h1 className="text-3xl sm:text-5xl font-bold text-center  bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] bg-clip-text text-transparent py-2 leading-tight">
         Together We Innovate
       </h1>
       <p className="text-lg text-center text-gray-600 mb-4">

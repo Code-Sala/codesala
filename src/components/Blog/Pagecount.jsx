@@ -15,10 +15,10 @@ const Pagecount = ({
   };
 
   return (
-    <div>
-      <div className="join flex justify-center mb-10 mt-10">
+    <div className="bg-white">
+      <div className="join flex justify-center pb-10 pt-10 ">
         <button
-          className="join-item btn btn-square"
+          className="join-item btn btn-square bg-white text-black "
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
@@ -27,7 +27,7 @@ const Pagecount = ({
         {Array.from({ length: totalPages }, (_, index) => (
           <button
             key={index}
-            className={`join-item btn btn-square ${
+            className={`join-item btn btn-square  bg-white text-black ${
               currentPage === index + 1 ? "btn-active" : ""
             }`}
             onClick={() => handlePageChange(index + 1)}
@@ -37,7 +37,7 @@ const Pagecount = ({
           </button>
         ))}
         <button
-          className="join-item btn btn-square"
+          className="join-item btn btn-square  bg-white text-black "
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >
