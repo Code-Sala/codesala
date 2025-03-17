@@ -44,7 +44,7 @@ const ContactLocation = () => {
         stroke="url(#gradient)"  // Applying gradient to the icon
       />
     </svg>
-              <span>+13323226043</span>
+              <span><a href="tel:+13323226043">+13323226043</a></span>
             </div>
             {/* Email */}
             <div className="flex items-center text-lg mb-4">
@@ -62,8 +62,8 @@ const ContactLocation = () => {
         height={24}
         stroke="url(#gradient)"  // Applying gradient to the icon
       />
-    </svg>
-              <span>wy@codesala.com</span>
+    </svg>  
+              <span><a href="mailto:wy@codesala.com">wy@codesala.com</a></span>
             </div>
           </div>
           <iframe
@@ -116,7 +116,7 @@ const ContactLocation = () => {
         stroke="url(#gradient)"  // Applying gradient to the icon
       />
     </svg>
-                <span>+977-15924442</span>
+                <span><a href="tel:+977-15924442">+977-15924442</a></span>
             </div>
             {/* Email */}
             <div className="flex items-center text-lg mb-4">
@@ -136,7 +136,7 @@ const ContactLocation = () => {
       />
     </svg>
           
-              <span>np@codesala.com</span>
+              <span><a href="mailto:np@codesala.com">np@codesala.com</a></span>
             </div>
           </div>
           <iframe
