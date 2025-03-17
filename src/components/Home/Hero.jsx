@@ -57,12 +57,11 @@ const Hero = () => {
       variants={containerVariants}
       className="relative min-h-screen flex flex-col items-center justify-center px-6 sm:px-12 text-white text-center"
     >
-      <div className="z-80">
+      <div className="z-10">
         <ParticleBackground />
       </div>
       {/* Gradient Overlay */}
       <div className="background_linear bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] absolute w-full h-full z-10 opacity-40"></div>
-
       <div className="absolute inset-0  sm:block">
         <img
           src={codeImg}
@@ -70,8 +69,6 @@ const Hero = () => {
           className="w-full h-full object-cover"
         />
       </div>
-
-      {/* Particles */}
 
       {/* Text Content */}
       <div className="relative z-10 max-w-2xl space-y-6">
@@ -88,7 +85,7 @@ const Hero = () => {
         <motion.div variants={containerVariants}>
           <Link
             to="/contact"
-            className="inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-lg font-medium mt-2"
+            className="inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-lg font-medium mt-2 z-90"
           >
             Let&apos;s start a project!
           </Link>

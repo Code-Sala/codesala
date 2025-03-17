@@ -18,10 +18,10 @@ function ContactForm() {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
+<<<<<<< HEAD
     const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -33,6 +33,48 @@ function ContactForm() {
     setFormData({ firstname: "", lastname: "", email: "", phone: "", requirements: "" });
     setTimeout(() => setMessage(""), 3000);
   };
+=======
+
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(
+          result.message || "Something went wrong. Please try again."
+        );
+      }
+
+      setMessage({
+        text: "Your message has been sent successfully!",
+        type: "success",
+      });
+
+      // Clear the form
+      setFormData({
+        firstname: "",
+        lastname: "",
+        email: "",
+        phone: "",
+        requirements: "",
+      });
+    } catch (error) {
+      setMessage({ text: error.message, type: "error" });
+    }
+
+    setStatus("Submit");
+
+    setTimeout(() => setMessage(""), 3000);
+  };
+
+  console.log(import.meta.env.VITE_API_URL);
+  console.log(import.meta.env);
+>>>>>>> origin
 
   return (
     <>
