@@ -17,6 +17,9 @@ app.use(
     methods: ["GET", "POST"],
   })
 );
+
+app.options("*", cors());
+
 app.use(express.json());
 app.use("/", router);
 
