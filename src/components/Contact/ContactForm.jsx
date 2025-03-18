@@ -202,7 +202,51 @@ function ContactForm() {
           </div>
         </div>
       </div>
+      {/* Contact Cards Section */}
+      <div className="contact min-h-[40vh] max-w-9xl mx-auto text-center flex flex-col gap-12 mt-10 mb-10 text-black  py-10">
+        <div className="card flex flex-col md:flex-row flex-wrap justify-center gap-6 w-full p-4">
+          <ContactCard
+            Icon={Mail}
+            title="Email us:"
+            text="info@codesala.com"
+            description="Email us for general queries, including marketing and partnership opportunities."
+            link="mailto:info@codesala.com"
+          />
+
+          <ContactCard
+            Icon={Phone}
+            title="Call us:"
+            text="+13323226043"
+            description="Call us to speak to a member of our team. We are always happy to help."
+            link="tel:13323226043"
+          />
+
+          <ContactCard
+            Icon={Globe}
+            title="Support"
+            text="Support Center"
+            description="Visit our support center for help with any issues you might be facing."
+            link="https://support.codesala.com"
+          />
+        </div>
+      </div>
     </>
+  );
+}
+function ContactCard({ Icon, title, text, description, link }) {
+  return (
+    <div className="w-full sm:w-3/4 md:w-1/3 max-w-sm bg-white flex flex-col items-center text-center rounded-lg shadow-md p-8">
+      <div className="mb-3 flex justify-center">
+        <Icon width={48} height={48} className="text-pink-600" />
+      </div>
+      <h1 className="text-xl md:text-2xl font-semibold">{title}</h1>
+      <p className="text-gray-700 mt-2">{description}</p>
+      {link && (
+        <a href={link} className="mt-4 text-blue-600 hover:underline">
+          {text}
+        </a>
+      )}
+    </div>
   );
 }
 
