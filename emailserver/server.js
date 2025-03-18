@@ -11,7 +11,12 @@ const app = express();
 //   origin: ["https://codesalaofficial.vercel.app", "http://localhost:5173"],
 // };
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://codesala.vercel.app",
+    methods: ["GET", "POST"],
+  })
+);
 app.use(express.json());
 app.use("/", router);
 
