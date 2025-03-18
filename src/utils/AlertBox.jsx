@@ -1,5 +1,8 @@
 /* eslint-disable react/prop-types */
+// eslint-disable-next-line react/prop-types
 function AlertBox({ message }) {
+  if (!message) return null;
+
   return (
     <div
       role="alert"
