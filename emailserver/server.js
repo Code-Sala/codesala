@@ -7,11 +7,11 @@ const nodemailer = require("nodemailer");
 
 const app = express();
 
-const corsOptions = {
-  origin: "https://codesalaofficial.vercel.app",
-};
+// const corsOptions = {
+//   origin: ["https://codesalaofficial.vercel.app", "http://localhost:5173"],
+// };
 
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json());
 app.use("/", router);
 
