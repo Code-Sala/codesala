@@ -62,7 +62,11 @@ const ContactLocation = () => {
                     <stop offset="100%" stopColor="#ED1D7E" />
                   </linearGradient>
                 </defs>
-                <Phone width={18} height={24} stroke="url(#gradient)" />
+                <Phone
+                  width={18}
+                  height={24}
+                  stroke="url(#gradient)" // Applying gradient to the icon
+                />
               </svg>
               <span>
                 <a href="tel:+13323226043" className="hover:underline">
@@ -70,7 +74,6 @@ const ContactLocation = () => {
                 </a>
               </span>
             </div>
-
             {/* Email */}
             <div className="flex items-center text-lg mb-4">
               <svg
@@ -93,10 +96,19 @@ const ContactLocation = () => {
                     <stop offset="100%" stopColor="#ED1D7E" />
                   </linearGradient>
                 </defs>
-                <Mail width={18} height={24} stroke="url(#gradient)" />
+                <Mail
+                  width={18}
+                  height={24}
+                  stroke="url(#gradient)" // Applying gradient to the icon
+                />
               </svg>
-              <span className="text-black">wy@codesala.com</span>
+              <span>
+                <a href="mailto:wy@codesala.com" className="hover:underline">
+                  wy@codesala.com
+                </a>
+              </span>
             </div>
+            {/* Email */}
           </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2882.777627707921!2d-106.95747832370346!3d44.79776887107084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5335fabc2a6d206b%3A0x1887ab0668b2495c!2s30%20N%20Gould%20St%20Suite%20R%2C%20Sheridan%2C%20WY%2082801%2C%20USA!5e1!3m2!1sen!2snp!4v1741259448010!5m2!1sen!2snp"
@@ -179,7 +191,6 @@ const ContactLocation = () => {
                 </a>
               </span>
             </div>
-
             {/* Email */}
             <div className="flex items-center text-lg mb-4">
               <svg
@@ -209,8 +220,13 @@ const ContactLocation = () => {
                 />
               </svg>
 
-              <span>np@codesala.com</span>
+              <span>
+                <a href="mailto:np@codesala.com" className="hover:underline">
+                  np@codesala.com
+                </a>
+              </span>
             </div>
+            {/* Email */}
           </div>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3596.4824973222508!2d85.29079377554079!3d27.71434237617856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb18f2cecf6b75%3A0xd538ce31d215ac5c!2sBhagawan%20Pau!5e1!3m2!1sen!2snp!4v1741258034865!5m2!1sen!2snp"
