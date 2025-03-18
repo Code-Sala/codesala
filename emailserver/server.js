@@ -13,7 +13,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://codesala.vercel.app",
+    origin: "*",
     methods: ["GET", "POST"],
   })
 );
