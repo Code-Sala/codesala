@@ -18,15 +18,19 @@ function ContactForm() {
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus("Sending...");
 
     const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(formData),
     });
+
     let result = await response.json();
     setMessage(result.status);
     setStatus("Submit");
@@ -37,6 +41,7 @@ function ContactForm() {
       phone: "",
       requirements: "",
     });
+
     setTimeout(() => setMessage(""), 3000);
   };
 
