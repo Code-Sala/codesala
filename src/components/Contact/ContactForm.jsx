@@ -23,26 +23,36 @@ function ContactForm() {
     e.preventDefault();
     setStatus("Sending...");
 
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-    let result = await response.json();
-    setMessage(result.status);
-    setStatus("Submit");
-    setFormData({
-      firstname: "",
-      lastname: "",
-      email: "",
-      phone: "",
-      requirements: "",
-    });
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
 
-    setTimeout(() => setMessage(""), 3000);
+      const result = await response
+        .json()
+        .catch(() => ({ status: "ERROR", message: "Invalid JSON response" }));
+
+      setMessage(result.status);
+    } catch (error) {
+      console.error("Fetch Error:", error);
+      setMessage("Error sending message");
+    } finally {
+      setStatus("Submit");
+      setFormData({
+        firstname: "",
+        lastname: "",
+        email: "",
+        phone: "",
+        requirements: "",
+      });
+      setTimeout(() => setMessage(""), 3000);
+    }
   };
 
   console.log(import.meta.env.VITE_API_URL);
