@@ -51,6 +51,11 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
     setStatus("Sending...");
 
     try {
@@ -88,7 +93,7 @@ function ContactForm() {
       setMessage({ type: "error", text: "Error sending message" });
     } finally {
       setStatus("Submit");
-      setTimeout(() => setMessage(null), 3000); // Reset message after 3 seconds
+      setTimeout(() => setMessage(null), 3000);
     }
   };
 
