@@ -39,8 +39,7 @@ function OurTeam() {
     {
       name: "Simant Pandey",
       role: "Graphic Designer",
-      image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/sofia-mcguire.png",
+      image: "./src/assets/img/teams/Simant.png",
       social: {
         facebook: "#",
         twitter: "#",
