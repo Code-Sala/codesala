@@ -5,18 +5,18 @@ import SocialMediaCard from "./SocialMediaCard";
 function Footer() {
   return (
     <footer className="footer py-12 bg-gradient-to-tr from-[#138bffcc] to-[#ec07c7cc] text-center">
-      <div className="container_lg p-10 flex flex-wrap justify-between gap-8 mx-auto text-center md:text-left ">
+      <div className="container_lg p-10 flex flex-wrap justify-between items-center gap-8 mx-auto text-center md:text-left ">
         <aside className="w-full md:w-1/3 lg:w-1/4">
           <Link to="/">
             <img
               src={logo1}
               alt="footer logo"
-              className="max-w-36 mx-auto md:mx-0 mb-2"
+              className="max-w-42 mx-auto md:mx-0 mb-2"
             />
           </Link>
-          <p className="text-white italic">Providing tech since 2024</p>
+          <p className="text-white text-[0.9rem]">Providing tech since 2025</p>
 
-          <div>
+          <div className="flex justify-center md:justify-start">
             <SocialMediaCard />
           </div>
         </aside>
@@ -70,7 +70,7 @@ function Footer() {
         </nav>
       </div>
       <div className="flex items-center justify-center text-center w-full">
-        <p className=" text-white">Copyright @2024 All Right Reserved</p>
+        <p className=" text-white">Copyright @2025 All Right Reserved</p>
       </div>
     </footer>
   );

@@ -63,7 +63,7 @@ export default function Contact() {
       <MapPin
         width={18}
         height={24}
-        stroke="url(#gradient)"  // Applying gradient to the icon
+        stroke="url(#gradient)"  
       />
     </svg>
       {/* <MapPin className="w-8 h-8 flex-shrink-0" /> */}
