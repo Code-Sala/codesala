@@ -1,54 +1,58 @@
 // import img from "../../../assets/img/teams/Baibhav.jpg"
 // ./src\assets\img\teams\Baibhav.JPG
+//
+import SiddhantImage from "../../../assets/img/teams/Siddhant.jpg";
+import BaibhavImage from "../../../assets/img/teams/Baibhav.png";
+import SadipImage from "../../../assets/img/teams/Sadip.jpg";
+import SimantImage from "../../../assets/img/teams/Simant.png";
 
+const teamMembers = [
+  {
+    name: "Siddhant Pandey",
+    role: "Backend Developer",
+    image: SiddhantImage,
+    social: {
+      facebook: "#",
+      twitter: "#",
+      github: "#",
+      dribbble: "#",
+    },
+  },
+  {
+    name: "Baibhav Nepal",
+    role: "Frontend Developer",
+    image: BaibhavImage,
+    social: {
+      facebook: "#",
+      twitter: "#",
+      github: "#",
+      dribbble: "#",
+    },
+  },
+  {
+    name: "Sadip Khatri",
+    role: "FullStack Engineer",
+    image: SadipImage,
+    social: {
+      facebook: "#",
+      twitter: "#",
+      github: "#",
+      dribbble: "#",
+    },
+  },
+  {
+    name: "Simant Pandey",
+    role: "Graphic Designer",
+    image: SimantImage,
+    social: {
+      facebook: "#",
+      twitter: "#",
+      github: "#",
+      dribbble: "#",
+    },
+  },
+];
 function OurTeam() {
-  const teamMembers = [
-    {
-      name: "Siddhant Pandey",
-      role: "Backend Developer",
-      image: "./src/assets/img/teams/Siddhant.jpg",
-      social: {
-        facebook: "#",
-        twitter: "#",
-        github: "#",
-        dribbble: "#",
-      },
-    },
-    {
-      name: "Baibav Nepal",
-      role: "Frontend Developer",
-      image: "./src/assets/img/teams/Baibhav.JPG",
-      social: {
-        facebook: "#",
-        twitter: "#",
-        github: "#",
-        dribbble: "#",
-      },
-    },
-    {
-      name: "Sadip Khatri",
-      role: "FullStack Engineer",
-      image: "./src/assets/img/teams/Sadip.jpg",
-      social: {
-        facebook: "#",
-        twitter: "#",
-        github: "#",
-        dribbble: "#",
-      },
-    },
-    {
-      name: "Simant Pandey",
-      role: "Graphic Designer",
-      image: "./src/assets/img/teams/Simant.png",
-      social: {
-        facebook: "#",
-        twitter: "#",
-        github: "#",
-        dribbble: "#",
-      },
-    },
-  ];
-
   return (
     <section className="bg-transparent ">
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-6 lg:px-6">
