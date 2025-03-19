@@ -92,7 +92,7 @@ function ContactForm() {
       console.error("Fetch Error:", error);
       setMessage({
         type: "error",
-        text: "Error sending message, contact us through whatsapp!",
+        text: "Error sending message,Please!, Contact us through whatsapp!",
       });
     } finally {
       setStatus("Submit");
