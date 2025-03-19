@@ -16,7 +16,7 @@ function SocialMediaCard() {
       </div>
       <div>
         <a
-          href="https://www.linkedin.com/company/codesala404/"
+          href="https://x.com/codesala404/"
           className="socialContainer containerTwo"
         >
           <svg

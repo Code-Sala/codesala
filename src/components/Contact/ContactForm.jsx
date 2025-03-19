@@ -7,6 +7,7 @@ import AlertBox from "../../utils/AlertBox";
 function ContactForm() {
   const [status, setStatus] = useState("Submit");
   const [message, setMessage] = useState("");
+  const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
@@ -15,38 +16,91 @@ function ContactForm() {
     requirements: "",
   });
 
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const validateForm = () => {
+    let newErrors = {};
+
+    if (!formData.firstname.trim()) {
+      newErrors.firstname = "First name is required";
+    }
+
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      newErrors.email = "Invalid email format";
+    }
+
+    if (formData.phone.trim() && !/^\d{10}$/.test(formData.phone)) {
+      newErrors.phone = "Phone number must be 10 digits";
+    }
+
+    if (!formData.requirements.trim()) {
+      newErrors.requirements = "Please enter your message";
+    }
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+
+    if (errors[e.target.name]) {
+      setErrors((prevErrors) => ({ ...prevErrors, [e.target.name]: "" }));
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) {
+      return;
+    }
+
     setStatus("Sending...");
 
-    const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData),
-    });
-    let result = await response.json();
-    setMessage(result.status);
-    setStatus("Submit");
-    setFormData({
-      firstname: "",
-      lastname: "",
-      email: "",
-      phone: "",
-      requirements: "",
-    });
-    setTimeout(() => setMessage(""), 3000);
-  };
+    try {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      });
 
-  console.log(import.meta.env.VITE_API_URL);
-  console.log(import.meta.env);
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+
+      const result = await response.json().catch(() => ({
+        status: "ERROR",
+        message: "Invalid JSON response",
+      }));
+
+      setMessage({
+        type: result.status === "Message Sent" ? "success" : "error",
+        text: result.status || "Something went wrong!",
+      });
+
+      if (result.status === "Message Sent") {
+        setFormData({
+          firstname: "",
+          lastname: "",
+          email: "",
+          phone: "",
+          requirements: "",
+        });
+      }
+    } catch (error) {
+      console.error("Fetch Error:", error);
+      setMessage({ type: "error", text: "Error sending message" });
+    } finally {
+      setStatus("Submit");
+      setTimeout(() => setMessage(null), 3000);
+    }
+  };
 
   return (
     <>
       <div className="contactform min-h-screen flex items-center justify-center p-6 lg:pt-25 text-black">
-        <div className="relative w-full max-w-6xl flex flex-wrap container bg-gray-100 shadow-[0_-2px_5px_rgba(0,0,0,0.3)] rounded-lg overflow-hidden">
+        <div className="relative w-full max-w-6xl flex flex-wrap container bg-gray-100 shadow-lg rounded-lg overflow-hidden">
           {/* Image Section */}
           <div className="relative w-full md:w-1/2 h-96 md:h-auto">
             <img
@@ -77,8 +131,10 @@ function ContactForm() {
                     value={formData.firstname}
                     onChange={handleChange}
                     className="w-full border p-2 rounded"
-                    required
                   />
+                  {errors.firstname && (
+                    <p className="text-red-500 text-sm">{errors.firstname}</p>
+                  )}
                 </div>
                 <div>
                   <label className="block text-gray-700 font-medium">
@@ -102,9 +158,14 @@ function ContactForm() {
                   onChange={handleChange}
                   className="w-full border p-2 rounded"
                 />
+                {errors.email && (
+                  <p className="text-red-500 text-sm">{errors.email}</p>
+                )}
               </div>
               <div>
-                <label className="block text-gray-700 font-medium">Phone</label>
+                <label className="block text-gray-700 font-medium">
+                  Phone (optional)
+                </label>
                 <input
                   type="tel"
                   name="phone"
@@ -112,6 +173,9 @@ function ContactForm() {
                   onChange={handleChange}
                   className="w-full border p-2 rounded"
                 />
+                {errors.phone && (
+                  <p className="text-red-500 text-sm">{errors.phone}</p>
+                )}
               </div>
               <div>
                 <label className="block text-gray-700 font-medium">
@@ -123,8 +187,10 @@ function ContactForm() {
                   onChange={handleChange}
                   className="w-full border p-2 rounded"
                   rows="4"
-                  required
                 ></textarea>
+                {errors.requirements && (
+                  <p className="text-red-500 text-sm">{errors.requirements}</p>
+                )}
               </div>
               <button
                 type="submit"
@@ -141,10 +207,9 @@ function ContactForm() {
           </div>
         </div>
       </div>
-
       {/* Contact Cards Section */}
-      <div className="contact min-h-[40vh] max-w-7xl mx-auto text-center flex flex-wrap gap-4 mt-15 mb-15 text-black">
-        <div className="card flex flex-col md:flex-row gap-4 w-full">
+      <div className="contact min-h-[40vh] max-w-9xl mx-auto text-center flex flex-col gap-12 mt-10 mb-10 text-black  py-10">
+        <div className="card flex flex-col md:flex-row flex-wrap justify-center gap-6 w-full p-4">
           <ContactCard
             Icon={Mail}
             title="Email us:"
@@ -152,6 +217,7 @@ function ContactForm() {
             description="Email us for general queries, including marketing and partnership opportunities."
             link="mailto:info@codesala.com"
           />
+
           <ContactCard
             Icon={Phone}
             title="Call us:"
@@ -159,32 +225,32 @@ function ContactForm() {
             description="Call us to speak to a member of our team. We are always happy to help."
             link="tel:13323226043"
           />
+
           <ContactCard
             Icon={Globe}
             title="Support"
             text="Support Center"
             description="Visit our support center for help with any issues you might be facing."
+            link="https://support.codesala.com"
           />
         </div>
       </div>
     </>
   );
 }
-
 function ContactCard({ Icon, title, text, description, link }) {
   return (
-    <div className="cards w-full md:w-1/3 bg-white h-64 flex flex-col justify-center items-center rounded-lg shadow-md">
-      <div className="icons p-5 text-center flex justify-center">
-        <Icon width={40} height={40} className="text-pink-600" />
+    <div className="w-full sm:w-3/4 md:w-1/3 max-w-sm bg-white flex flex-col items-center text-center rounded-lg shadow-md p-8">
+      <div className="mb-3 flex justify-center">
+        <Icon width={48} height={48} className="text-pink-600" />
       </div>
-      <h1 className="text-center text-2xl pt-4 font-semibold">{title}</h1>
-      <p className="paragraph text-center mt-4 mb-4">{description}</p>
-      <a
-        href={link}
-        className="pt-2 text-gray-700 no-underline hover:underline"
-      >
-        {text}
-      </a>
+      <h1 className="text-xl md:text-2xl font-semibold">{title}</h1>
+      <p className="text-gray-700 mt-2">{description}</p>
+      {link && (
+        <a href={link} className="mt-4 text-blue-600 hover:underline">
+          {text}
+        </a>
+      )}
     </div>
   );
 }
