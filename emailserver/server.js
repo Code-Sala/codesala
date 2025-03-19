@@ -10,13 +10,15 @@ const app = express();
 // const corsOptions = {
 //   origin: ["https://codesalaofficial.vercel.app", "http://localhost:5173"],
 // };
+const corsOptions = {
+  origin: ["https://codesala.vercel.app", "http://localhost:5173"], // Explicitly define allowed origins
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"],
+};
 
-app.use(
-  cors({
-    origin: "*",
-    methods: ["GET", "POST"],
-  })
-);
+app.use(cors(corsOptions));
+
+app.options("*", cors(corsOptions));
 
 app.use(express.json());
 app.use("/", router);
