@@ -4,7 +4,7 @@
 import SiddhantImage from "../../../assets/img/teams/Siddhant.jpg";
 import BaibhavImage from "../../../assets/img/teams/Baibhav.png";
 import SadipImage from "../../../assets/img/teams/Sadip.jpg";
-// import SimantImage from "../../../assets/img/teams/Simant.png";
+import SimantImage from "../../../assets/img/teams/Simant.png";
 
 const teamMembers = [
   {
@@ -40,17 +40,17 @@ const teamMembers = [
       dribbble: "#",
     },
   },
-  // {
-  //   name: "Simant Pandey",
-  //   role: "Graphic Designer",
-  //   image: SimantImage,
-  //   social: {
-  //     facebook: "#",
-  //     twitter: "#",
-  //     github: "#",
-  //     dribbble: "#",
-  //   },
-  // },
+  {
+    name: "Simant Pandey",
+    role: "Graphic Designer",
+    image: SimantImage,
+    social: {
+      facebook: "#",
+      twitter: "#",
+      github: "#",
+      dribbble: "#",
+    },
+  },
 ];
 function OurTeam() {
   return (
@@ -65,7 +65,7 @@ function OurTeam() {
             dedicated to innovation, collaboration, and excellence.
           </p>
         </div>
-        <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
+        <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
           {teamMembers.map((member, index) => (
             <div key={index} className="text-center text-gray-500">
               <img
