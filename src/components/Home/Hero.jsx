@@ -61,7 +61,7 @@ const Hero = () => {
         className="absolute inset-0 w-full h-full bg-cover bg-center"
         style={{
           backgroundImage: `url(${codeImg})`,
-          backgroundAttachment: "fixed",
+          // backgroundAttachment: "fixed",
         }}
       />
 
