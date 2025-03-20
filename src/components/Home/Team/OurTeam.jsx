@@ -77,7 +77,7 @@ function OurTeam() {
                 <a href="#">{member.name}</a>
               </h3>
               <p>{member.role}</p>
-              <ul className="flex justify-center mt-4 space-x-4">
+              <ul className="flex justify-center mt-4 space-x-4 ">
                 {Object.entries(member.social).map(([platform, link]) => (
                   <li key={platform}>
                     <a href={link} className="hover:text-gray-900 ">
