@@ -58,7 +58,7 @@ const ParticleBackground = memo(() => {
         },
         number: {
           density: { enable: false },
-          value: 60,
+          value: 40,
         },
         opacity: { value: 0.5 },
         shape: { type: "circle" },
