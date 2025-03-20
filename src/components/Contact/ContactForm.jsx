@@ -90,10 +90,13 @@ function ContactForm() {
       }
     } catch (error) {
       console.error("Fetch Error:", error);
-      setMessage({ type: "error", text: "Error sending message" });
+      setMessage({
+        type: "error",
+        text: "Error sending message,Please!, Contact us through whatsapp!",
+      });
     } finally {
       setStatus("Submit");
-      setTimeout(() => setMessage(null), 3000);
+      setTimeout(() => setMessage(null), 5000);
     }
   };
 

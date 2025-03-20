@@ -59,9 +59,12 @@ const Hero = () => {
       {/* Fixed Background Image */}
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center"
-        style={{ backgroundImage: `url(${codeImg})`, backgroundAttachment: "fixed" }}
+        style={{
+          backgroundImage: `url(${codeImg})`,
+          // backgroundAttachment: "fixed",
+        }}
       />
-      
+
       {/* Gradient Overlay */}
       <div className="absolute w-full h-full bg-gradient-to-br from-[#ec07c7cc] to-[#138bffcc] opacity-40"></div>
 
@@ -84,7 +87,7 @@ const Hero = () => {
         <motion.div variants={containerVariants}>
           <Link
             to="/contact"
-            className="inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-lg font-medium mt-2"
+            className="inline-block bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white px-6 py-3 rounded-full text-lg font-medium mt-2 hover:scale-95"
           >
             Let&apos;s start a project!
           </Link>

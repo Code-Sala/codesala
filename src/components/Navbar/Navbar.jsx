@@ -53,7 +53,7 @@ const Navbar = () => {
 
         <Link
           to="/contact"
-          className="hidden lg:inline-block text-white px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-[3rem] "
+          className="hidden lg:inline-block text-white px-4 py-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-[3rem] hover:scale-95 "
         >
           Contact Us
         </Link>
