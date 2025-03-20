@@ -4,7 +4,7 @@
 import SiddhantImage from "../../../assets/img/teams/Siddhant.jpg";
 import BaibhavImage from "../../../assets/img/teams/Baibhav.png";
 import SadipImage from "../../../assets/img/teams/Sadip.jpg";
-import SimantImage from "../../../assets/img/teams/Simant.png";
+// import SimantImage from "../../../assets/img/teams/Simant.png";
 
 const teamMembers = [
   {
@@ -40,17 +40,17 @@ const teamMembers = [
       dribbble: "#",
     },
   },
-  {
-    name: "Simant Pandey",
-    role: "Graphic Designer",
-    image: SimantImage,
-    social: {
-      facebook: "#",
-      twitter: "#",
-      github: "#",
-      dribbble: "#",
-    },
-  },
+  // {
+  //   name: "Simant Pandey",
+  //   role: "Graphic Designer",
+  //   image: SimantImage,
+  //   social: {
+  //     facebook: "#",
+  //     twitter: "#",
+  //     github: "#",
+  //     dribbble: "#",
+  //   },
+  // },
 ];
 function OurTeam() {
   return (
@@ -65,7 +65,7 @@ function OurTeam() {
             dedicated to innovation, collaboration, and excellence.
           </p>
         </div>
-        <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div className="grid gap-8 lg:gap-16 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
           {teamMembers.map((member, index) => (
             <div key={index} className="text-center text-gray-500">
               <img
@@ -77,7 +77,7 @@ function OurTeam() {
                 <a href="#">{member.name}</a>
               </h3>
               <p>{member.role}</p>
-              <ul className="flex justify-center mt-4 space-x-4">
+              <ul className="flex justify-center mt-4 space-x-4 ">
                 {Object.entries(member.social).map(([platform, link]) => (
                   <li key={platform}>
                     <a href={link} className="hover:text-gray-900 ">
