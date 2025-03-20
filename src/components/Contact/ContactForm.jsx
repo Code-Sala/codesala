@@ -197,8 +197,8 @@ function ContactForm() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-pink-600 text-white py-2 rounded hover:bg-pink-700 transition duration-300"
-              >
+                className="w-full h-12 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-[1rem] hover:scale-95  transition duration-300 text-white"
+              > 
                 {status}
               </button>
               {message && (
@@ -245,7 +245,33 @@ function ContactCard({ Icon, title, text, description, link }) {
   return (
     <div className="w-full sm:w-3/4 md:w-1/3 max-w-sm bg-white flex flex-col items-center text-center rounded-lg shadow-md p-8">
       <div className="mb-3 flex justify-center">
-        <Icon width={48} height={48} className="text-pink-600" />
+      <svg
+                width="40"
+                height="40"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="url(#gradientColors)"
+              >
+                <defs>
+                  <linearGradient
+                    id="gradient"
+                    x1="0%"
+                    y1="0%" 
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stopColor="#00AEEF" />
+                    <stop offset="50%" stopColor="#892890" />
+                    <stop offset="100%" stopColor="#ED1D7E" />
+                  </linearGradient>
+                </defs>
+                <Icon
+                  width={18}
+                  height={24}
+                  stroke="url(#gradient)" // Applying gradient to the icon
+                />
+              </svg>
+        {/* <Icon width={48} height={48} className="text-pink-600" /> */}
       </div>
       <h1 className="text-xl md:text-2xl font-semibold">{title}</h1>
       <p className="text-gray-700 mt-2">{description}</p>
