@@ -3,6 +3,7 @@ import { Mail, Phone, Globe } from "lucide-react";
 import ContactImg from "../../assets/img/contact/bg.avif";
 import { useState } from "react";
 import AlertBox from "../../utils/AlertBox";
+import emailjs from "@emailjs/browser";
 
 function ContactForm() {
   const [status, setStatus] = useState("Submit");
@@ -52,52 +53,55 @@ function ContactForm() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!validateForm()) {
-      return;
-    }
+    if (!validateForm()) return;
 
     setStatus("Sending...");
 
-    try {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/contact`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+    const templateParams = {
+      firstname: formData.firstname,
+      lastname: formData.lastname,
+      email: formData.email,
+      phone: formData.phone,
+      requirements: formData.requirements,
+    };
 
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
+    emailjs
+      .send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        templateParams,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+      )
+      .then(
+        () => {
+          setMessage({
+            type: "success",
+            text: "Message Sent Successfully!",
+          });
 
-      const result = await response.json().catch(() => ({
-        status: "ERROR",
-        message: "Invalid JSON response",
-      }));
+          setFormData({
+            firstname: "",
+            lastname: "",
+            email: "",
+            phone: "",
+            requirements: "",
+          });
 
-      setMessage({
-        type: result.status === "Message Sent" ? "success" : "error",
-        text: result.status || "Something went wrong!",
-      });
+          setStatus("Submit");
+          console.log(formData);
 
-      if (result.status === "Message Sent") {
-        setFormData({
-          firstname: "",
-          lastname: "",
-          email: "",
-          phone: "",
-          requirements: "",
-        });
-      }
-    } catch (error) {
-      console.error("Fetch Error:", error);
-      setMessage({
-        type: "error",
-        text: "Error sending message,Please!, Contact us through whatsapp!",
-      });
-    } finally {
-      setStatus("Submit");
-      setTimeout(() => setMessage(null), 5000);
-    }
+          setTimeout(() => setMessage(null), 5000);
+        },
+        (error) => {
+          console.error("EmailJS Error:", error);
+          setMessage({
+            type: "error",
+            text: "Failed to send message. Please contact us via WhatsApp!",
+          });
+          setStatus("Submit");
+          setTimeout(() => setMessage(null), 5000);
+        }
+      );
   };
 
   return (
