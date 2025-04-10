@@ -9,7 +9,7 @@ function AlertBox({ message }) {
       className={`alert p-4 rounded ${
         message.type === "error"
           ? "bg-red-500 text-white"
-          : "bg-deep-purple text-white"
+          : "bg-bright-purple text-white"
       }`}
     >
       <svg
