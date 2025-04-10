@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; // Added import
 import imageMobile from "../../../src/assets/img/services/mobile.png"; // Added image import
+import MobileCard from "./MobileCard";
 
 const MobileComponent = () => {
   return (
@@ -97,6 +98,7 @@ const MobileComponent = () => {
           </motion.button>
         </motion.div>
       </section>
+      <MobileCard />
     </div>
   );
 };

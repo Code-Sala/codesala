@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import imageUI from "../../assets/img/services/uiux1.png";
+import Uxcard from "./Uxcard";
 
 const UiuxSection = () => {
   return (
@@ -94,6 +95,7 @@ const UiuxSection = () => {
           </motion.button>
         </motion.div>
       </section>
+      <Uxcard />
     </div>
   );
 };
