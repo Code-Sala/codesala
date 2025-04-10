@@ -35,7 +35,7 @@ const ContactLocation = () => {
                 <House
                   width={18}
                   height={24}
-                  stroke="url(#gradient)" // Applying gradient to the icon
+                  stroke="url(#gradient)" 
                 />
               </svg>
               <span className="text-black">30 N Gould St Ste R, Sheridan</span>
@@ -65,10 +65,10 @@ const ContactLocation = () => {
                 <Phone
                   width={18}
                   height={24}
-                  stroke="url(#gradient)" // Applying gradient to the icon
+                  stroke="url(#gradient)" 
                 />
               </svg>
-              <span>
+              <span className="text-black">
                 <a href="tel:+13323226043" className="hover:underline">
                   +13323226043
                 </a>
@@ -99,10 +99,10 @@ const ContactLocation = () => {
                 <Mail
                   width={18}
                   height={24}
-                  stroke="url(#gradient)" // Applying gradient to the icon
+                  stroke="url(#gradient)" 
                 />
               </svg>
-              <span>
+              <span className="text-black">
                 <a href="mailto:wy@codesala.com" className="hover:underline">
                   wy@codesala.com
                 </a>
@@ -152,7 +152,7 @@ const ContactLocation = () => {
                 <House
                   width={18}
                   height={24}
-                  stroke="url(#gradient)" // Applying gradient to the icon
+                  stroke="url(#gradient)"
                 />
               </svg>
               <span>BhagwanPau Swyambhu, Nepal</span>
@@ -182,7 +182,7 @@ const ContactLocation = () => {
                 <Phone
                   width={18}
                   height={24}
-                  stroke="url(#gradient)" // Applying gradient to the icon
+                  stroke="url(#gradient)" 
                 />
               </svg>
               <span>
@@ -216,7 +216,7 @@ const ContactLocation = () => {
                 <Mail
                   width={18}
                   height={24}
-                  stroke="url(#gradient)" // Applying gradient to the icon
+                  stroke="url(#gradient)"
                 />
               </svg>
 
