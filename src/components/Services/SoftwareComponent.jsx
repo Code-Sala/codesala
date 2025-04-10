@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; // Added import
 import imageSoftware from "../../assets/img/services/software1.png";
+import DomainCard from "./DomainCard";
 
 const SoftwareComponent = () => {
   return (
@@ -94,6 +95,7 @@ const SoftwareComponent = () => {
           </motion.div>
         </section>
       </div>
+      <DomainCard />
     </div>
   );
 };

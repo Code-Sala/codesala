@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import imageDomain from "../../../src/assets/img/services/domain1.png";
+import DomainCard from "./DomainCard";
+import SoftwareCard from "./SoftwareCard";
 
 const Domainsection = () => {
   return (
@@ -90,6 +92,8 @@ const Domainsection = () => {
           </motion.button>
         </motion.div>
       </section>
+
+      <SoftwareCard />
     </div>
   );
 };
