@@ -79,7 +79,7 @@ Strictly Necessary Cookies
             <li className="text-lg pb-4 text-gray-600">We use the following Functionality Cookies: </li> 
             <li className="text-lg pb-1 font-semibold">Name of Cookie :</li>  
             <li className="text-lg pb-1 font-semibold">Functionality Cookies</li>    
-            <p className="text-lg pb-4">these are used to recognise you when you return to our website. This enables us to personalise our content for you, greet you by name and remember your preferences (for example, your choice of language or region)</p>   
+            <p className="text-lg pb-4 text-gray-600">These are used to recognise you when you return to our website. This enables us to personalise our content for you, greet you by name and remember your preferences (for example, your choice of language or region)</p>   
 
             </ol>
 
@@ -94,3 +94,4 @@ Strictly Necessary Cookies
 }
 
 export default Cookies
+
