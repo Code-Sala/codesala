@@ -9,7 +9,7 @@ import SimantImage from "../../../assets/img/teams/Simant.png";
 const teamMembers = [
   {
     name: "Siddhant Pandey",
-    role: "Backend Developer",
+    role: "Fullstack Developer",
     image: SiddhantImage,
     social: {
       facebook: "#",
@@ -31,7 +31,7 @@ const teamMembers = [
   },
   {
     name: "Sadip Khatri",
-    role: "FullStack Engineer",
+    role: "Frontend Developer",
     image: SadipImage,
     social: {
       facebook: "#",
