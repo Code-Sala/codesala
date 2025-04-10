@@ -51,38 +51,11 @@ function Cookies() {
 
             <p className="text-3xl  mb-2 pt-10 font-bold">Changes To This Policy</p>
             <ol  className="pl-2 pt-2">
-            <li className="text-lg pb-4 text-gray-600">CodeSala Ltd resewes the right to change this Cookie Policy as we may deem necessaiY from time to time or as may be required by law. Any changes wfll be immediately posted on the Website and you are deemed to have accepted the terms of the Cookie Policy on your first use of the Website following the alterations.  </li>         
+            <li className="text-lg pb-4 text-gray-600 mb-4">CodeSala Ltd resewes the right to change this Cookie Policy as we may deem necessaiy from time to time or as may be required by law. Any changes wfll be immediately posted on the Website and you are deemed to have accepted the terms of the Cookie Policy on your first use of the Website following the alterations.  </li>         
             </ol>
 
-            <p className="text-3xl  mb-2 pt-10 font-bold">COOKIE SCHEDULE</p>
-            <ol className="pl-2 pt-2">
-            <li className="text-lg pb-1 text-gray-600">Below is a list of the cookies that we use- We have tried to ensure this is complete and up to date, but if you think that we have missed a cookie or there is any discrepancy, please let us know. <br /> <br /> <br />
-
-
-
-Strictly Necessary Cookies
-
- </li>         
-            </ol>
-
-            <p className="text-3xl  mb-2 pt-10 font-bold">Strictly Necessary Cookies</p>
-            <ol className="pl-2 pt-2">
-            <li className="text-lg pb-4 text-gray-600">We use the following Strictly Necessary Cookies: </li> 
-            <li className="text-lg pb-1 font-semibold">Name of Cookie :</li>  
-            <li className="text-lg pb-1 font-semibold">Strictly Necessary Cookies</li>    
-            <p className="text-lg pb-4 text-gray-600">These are cookies that are required for the operation of our website. They include, oor example, cookies that enable you to log into secure areas of our website, use a shopping cart or make use of e-billing services.</p>   
-
-            </ol>
-             
-            <p className="text-3xl mb-2 pt-10 pb-6 font-bold">Functionality Cookies</p>
-            <ol className="pl-2 pt-2">
-            <li className="text-lg pb-4 text-gray-600">We use the following Functionality Cookies: </li> 
-            <li className="text-lg pb-1 font-semibold">Name of Cookie :</li>  
-            <li className="text-lg pb-1 font-semibold">Functionality Cookies</li>    
-            <p className="text-lg pb-4 text-gray-600">These are used to recognise you when you return to our website. This enables us to personalise our content for you, greet you by name and remember your preferences (for example, your choice of language or region)</p>   
-
-            </ol>
-
+           
+            
               
 
             
