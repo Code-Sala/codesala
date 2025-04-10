@@ -1,10 +1,11 @@
+import ProfileImage from "../../../assets/img/teams/profileimage.png";
 function BoardAdvisory() {
   const advisors = [
     {
-      name: "John Doe",
+      name: "Anil Dangi",
       role: "Strategic Advisor",
       image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/thomas-lean.png",
+      ProfileImage,
       social: {
         linkedin: "#",
         twitter: "#",
@@ -14,7 +15,7 @@ function BoardAdvisory() {
       name: "Niraj Gautam",
       role: "Financial Advisor",
       image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/lana-byrd.png",
+      ProfileImage,
       social: {
         linkedin: "#",
         twitter: "#",
@@ -24,7 +25,7 @@ function BoardAdvisory() {
       name: "Pulav Raj Giri",
       role: "Technology Consultant",
       image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/steve-job.png",
+      ProfileImage,
       social: {
         linkedin: "#",
         twitter: "#",
