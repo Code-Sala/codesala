@@ -36,6 +36,13 @@ function OpenMusic() {
   }, []);
 
   useEffect(() => {
+    const hasSeenModal = localStorage.getItem("hasSeenMusicModal");
+    if (hasSeenModal) {
+      setShowModal(false);
+    }
+  }, []);
+
+  useEffect(() => {
     if (showModal) return;
 
     if (isPlaying) {
@@ -136,6 +143,7 @@ function OpenMusic() {
               <span
                 className="text-white cursor-pointer hover:underline text-2xl p-4 rounded-full bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] hover:animate-gradient hover:shadow hover:shadow-deep-purple hover:scale-105"
                 onClick={() => {
+                  localStorage.setItem("hasSeenMusicModal", "true");
                   setShowModal(false);
                   setIsPlaying(true);
                 }}
@@ -144,7 +152,10 @@ function OpenMusic() {
               </span>
               <span
                 className="text-white cursor-pointer hover:underline text-2xl p-4  rounded-full bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E] hover:animate-gradient hover:shadow hover:shadow-deep-purple hover:scale-105"
-                onClick={() => setShowModal(false)}
+                onClick={() => {
+                  localStorage.setItem("hasSeenMusicModal", "true");
+                  setShowModal(false);
+                }}
               >
                 <X />
               </span>

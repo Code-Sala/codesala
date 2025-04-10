@@ -1,10 +1,11 @@
+import ProfileImage from "../../../assets/img/teams/profileimage.png";
 function BoardAdvisory() {
   const advisors = [
     {
-      name: "John Doe",
+      name: "Anil Dangi",
       role: "Strategic Advisor",
       image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/thomas-lean.png",
+      ProfileImage,
       social: {
         linkedin: "#",
         twitter: "#",
@@ -14,7 +15,7 @@ function BoardAdvisory() {
       name: "Niraj Gautam",
       role: "Financial Advisor",
       image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/lana-byrd.png",
+      ProfileImage,
       social: {
         linkedin: "#",
         twitter: "#",
@@ -24,7 +25,7 @@ function BoardAdvisory() {
       name: "Pulav Raj Giri",
       role: "Technology Consultant",
       image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/steve-job.png",
+      ProfileImage,
       social: {
         linkedin: "#",
         twitter: "#",
@@ -33,13 +34,13 @@ function BoardAdvisory() {
   ];
 
   return (
-    <section className="bg-transparent dark:bg-gray-900">
+    <section className="bg-transparent">
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-6 lg:px-6">
         <div className="mx-auto mb-8 max-w-screen-sm lg:mb-16">
-          <h1 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-gray-800 dark:text-white">
+          <h1 className="text-3xl lg:text-4xl font-bold text-center mb-12 text-gray-800 ">
             Board Advisory
           </h1>
-          <p className="font-light text-gray-700 sm:text-xl dark:text-gray-400">
+          <p className="font-light text-gray-700 sm:text-xl ">
             Our advisors bring expertise to drive innovation and strategy.
           </p>
         </div>
@@ -47,14 +48,14 @@ function BoardAdvisory() {
           {advisors.map((advisor, index) => (
             <div
               key={index}
-              className="text-center text-gray-500 dark:text-gray-400"
+              className="text-center text-gray-500 "
             >
               <img
                 className="mx-auto mb-4 w-36 h-36 rounded-full"
                 src={advisor.image}
                 alt={advisor.name}
               />
-              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              <h3 className="mb-1 text-2xl font-bold tracking-tight text-gray-900 ">
                 {advisor.name}
               </h3>
               <p>{advisor.role}</p>
@@ -63,7 +64,7 @@ function BoardAdvisory() {
                   <li key={platform}>
                     <a
                       href={link}
-                      className="hover:text-gray-900 dark:hover:text-white"
+                      className="hover:text-gray-900 "
                     >
                       <svg className="w-6 h-6" fill="currentColor">
                         {/* Add icons dynamically */}

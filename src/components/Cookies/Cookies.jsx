@@ -10,7 +10,7 @@ function Cookies() {
             <p className="text-3xl mt-16 mb-2 font-bold">Scope of this policy</p>
             <ol style={{listStyleType:"decimal"}} className="pl-8 pt-2 text-gray-600">
             <li className="text-lg pb-4">Codesala Ltd (we or us or our)uses cookies when you visit our website, Website (the Website) to help customise the Website and improve your experience using the Website</li>
-            <li className="text-lg pb-4">This Policy applies between you, the user of this Website, and us, CodeSala Ltd, the ovmer and provider of this Website.</li>
+            <li className="text-lg pb-4">This Policy applies between you, the user of this Website, and us, CodeSala Ltd, the owner and provider of this Website.</li>
             <li className="text-lg pb-4">Tyou visit the Website, and before your Website places cookies on your computer, you be presented with a message bar requesting your consent to set those cookies. By giving your consent to the placing of cookies, you are enabling us to provide a better experience and service. You may, if you wish, deny consent to the placing of these cookies; however, certain features of the Website may not function fully or as intended</li>
             <li className="text-lg pb-4">This Cookie Policy should be read alongside, and in addition to, our Privacy Policy, which can be found at:Website</li>
             </ol>
@@ -79,18 +79,13 @@ Strictly Necessary Cookies
             <li className="text-lg pb-4 text-gray-600">We use the following Functionality Cookies: </li> 
             <li className="text-lg pb-1 font-semibold">Name of Cookie :</li>  
             <li className="text-lg pb-1 font-semibold">Functionality Cookies</li>    
-            <p className="text-lg pb-4">these are used to recognise you when you return to our website. This enables us to personalise our content for you, greet you by name and remember your preferences (for example, your choice of language or region)_</p>   
+            <p className="text-lg pb-4 text-gray-600">These are used to recognise you when you return to our website. This enables us to personalise our content for you, greet you by name and remember your preferences (for example, your choice of language or region)</p>   
 
             </ol>
 
-            <p className="text-3xl mb-2 pt-10 pb-6 font-bold">Targeting Cookies</p>
-            <ol className="pl-2 pt-2">
-            <li className="text-lg pb-4 text-gray-600">We use the following Targeting Cookies: </li> 
-            <li className="text-lg pb-1 font-semibold">Name of Cookie :</li>  
-            <li className="text-lg pb-1 font-semibold">Targeting Cookies</li>    
-            <p className="text-lg pb-30 text-gray-600">ese cookies record your visit to our website, the pages you have visited and the s you have followed. We use this information to make our website and the vertising displayed on it more relevant to your interests.</p>   
+              
 
-            </ol>
+            
       </div>
     </div>
    </div>
@@ -99,3 +94,4 @@ Strictly Necessary Cookies
 }
 
 export default Cookies
+

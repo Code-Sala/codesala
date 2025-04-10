@@ -68,7 +68,7 @@ const HomeServices = () => {
           </div>
 
           <Link
-            to="/services"
+            to="/services#serviceHome"
             className="absolute bottom-10 left-1/2 transform -translate-x-1/2 px-4 py-2 border-2 rounded-[3rem] border-bright-purple text-white hover:text-gray-900 hover:border-white hover:bg-white z-20"
           >
             More Services

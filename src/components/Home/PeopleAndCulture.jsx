@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./home.css";
 
 export default function PeopleAndCulture() {
@@ -17,7 +18,7 @@ export default function PeopleAndCulture() {
             <br /> With Us
           </h2>
           <p
-            className="text-gray-600 text-base sm:text-lg md:text-xl animate-fadeInUp max-w-lg mx-auto md:mx-0 leading-relaxed"
+            className="text-gray-600 text-base sm:text-lg md:text-xl animate-fadeInUp max-w-lg mx-auto md:mx-0 leading-relaxed mb-6"
             style={{ animationDelay: "1s" }}
           >
             We believe that our greatest asset is our people. Diverse in
@@ -26,9 +27,9 @@ export default function PeopleAndCulture() {
             boundaries. Whether you&apos;re a coding virtuoso, a design maestro,
             or a strategic guru, you&apos;ll find your tribe here.
           </p>
-          <button className="mt-6 e px-6 py-3 rounded-full text-lg font-medium hover:shadow-lg transition-all duration-300 animated-gradient-btn">
+          <Link className="mt-6 px-6 py-3 rounded-full text-lg font-medium hover:shadow-lg transition-all duration-300 animated-gradient-btn" to='/contact'>
             Apply now
-          </button>
+          </Link>
         </div>
 
         {/* Image Section */}
