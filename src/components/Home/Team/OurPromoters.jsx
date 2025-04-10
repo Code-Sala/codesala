@@ -1,10 +1,13 @@
+import ProfileImage from "../../../assets/img/teams/profileimage.png";
+
+
 function OurPromoters() {
   const promoters = [
     {
       name: "Baburam Dangi",
       role: "Founder & CEO",
       image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gough.png",
+      ProfileImage,
       social: {
         linkedin: "#",
         twitter: "#",
@@ -15,7 +18,7 @@ function OurPromoters() {
       name: "Suresh Ghimire",
       role: "Co-Founder",
       image:
-        "https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/roberta-casas.png",
+      ProfileImage,
       social: {
         linkedin: "#",
         twitter: "#",
