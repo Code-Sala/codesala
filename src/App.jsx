@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
 import './App.css'
 import './index.css'
 import AnimatedCursor from "react-animated-cursor";
@@ -28,6 +28,8 @@ import Future from "./components/Blog/Blogs/Future";
 import RoleOfAi from "./components/Blog/Blogs/RoleOfAi";
 import ImpactOfAi from "./components/Blog/Blogs/ImpactOfAi";
 import AIAndML from "./components/Blog/Blogs/AIAndML";
+import ScrollToTop from "./components/ScrollComps/ScrolltoTop";
+// import ScrollToTop from "./components/ScrollComps/ScrolltoTop";
 const App = () => {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
 
@@ -38,7 +40,7 @@ const App = () => {
 
   return (
     <>
-      {/* Render AnimatedCursor only if not on a touch device */}
+     
       {!isTouchDevice && (
         <AnimatedCursor
           innerSize={14}
@@ -56,8 +58,8 @@ const App = () => {
           }}
         />
       )}
-
-      <Router>
+  <ScrollToTop />
+      
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route path="/" element={<Home />} />
@@ -89,7 +91,7 @@ const App = () => {
             <Route path="/AIAndML" element={<AIAndML />} />
           </Route>
         </Routes>
-      </Router>
+      
     </>
   );
 };
