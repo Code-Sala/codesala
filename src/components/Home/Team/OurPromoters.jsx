@@ -1,4 +1,7 @@
-import ProfileImage from "../../../assets/img/teams/profileimage.png";
+// import ProfileImage from "../../../assets/img/teams/profileimage.png";
+import SureshGhimire from "../../../assets/img/teams/SureshGhimire.png";
+import baburamdangi from "../../../assets/img/teams/baburamdangi.png";
+
 
 
 function OurPromoters() {
@@ -7,7 +10,7 @@ function OurPromoters() {
       name: "Baburam Dangi",
       role: "Founder & CEO",
       image:
-      ProfileImage,
+      baburamdangi,
       social: {
         linkedin: "#",
         twitter: "#",
@@ -18,7 +21,7 @@ function OurPromoters() {
       name: "Suresh Ghimire",
       role: "Co-Founder",
       image:
-      ProfileImage,
+      SureshGhimire,
       social: {
         linkedin: "#",
         twitter: "#",
@@ -45,7 +48,7 @@ function OurPromoters() {
               className="text-center text-gray-500 "
             >
               <img
-                className="mx-auto mb-4 w-36 h-36 rounded-full"
+                className="mx-auto mb-4 w-36 h-36 rounded-full object-contain "
                 src={promoter.image}
                 alt={promoter.name}
               />

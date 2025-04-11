@@ -3,7 +3,8 @@ import "swiper/css";
 import "swiper/css/autoplay";
 import { Autoplay } from "swiper/modules";
 import { MoveRight } from "lucide-react";
-import profileImage from "../../assets/img/teams/profileimage.png";
+import dipeshImage from "../../assets/img/testimonials/dipesh.jpg";
+import bikkyImage from "../../assets/img/testimonials/bikky.jpg";
 
 
 const testimonials = [
@@ -11,13 +12,13 @@ const testimonials = [
     text: "Joining this company has been a game-changer for my career. The collaborative environment, cutting-edge projects, and focus on continuous learning make it an ideal workplace for tech enthusiasts.",
     author: "Dipesh Khatiwada",
     position: "Founder at RadhaKrishna Synthetic",
-    image: profileImage,
+    image: dipeshImage,
   },
   {
     text: "Innovation is at the heart of everything we do. The leadership empowers employees to take ownership of their work, and the company culture fosters creativity and problem-solving.",
     author: "Bikki Shah",
     position: "Chairman at Bhuikhel F.C",
-    image: profileImage,
+    image: bikkyImage,
   },
   // {
   //   text: "A fantastic place to work with a strong emphasis on work-life balance. The team is highly supportive, and the opportunities for growth are endless.",
@@ -49,7 +50,7 @@ export default function Testimonials() {
                 </blockquote>
                 <figcaption className="mt-10 flex flex-col items-center">
                   <img
-                    className="size-10 rounded-full"
+                    className="size-10 rounded-full object-cover"
                     src={testimonial.image}
                     alt={testimonial.author}
                   />
