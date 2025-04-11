@@ -1,7 +1,7 @@
 // import img from "../../../assets/img/teams/Baibhav.jpg"
 // ./src\assets\img\teams\Baibhav.JPG
 //
-import SiddhantImage from "../../../assets/img/teams/Siddhant.jpg";
+import SiddhantImage from "../../../assets/img/teams/Siddhnt.jpg";
 import BaibhavImage from "../../../assets/img/teams/Baibhav.png";
 import SadipImage from "../../../assets/img/teams/Sadip.jpg";
 import SimantImage from "../../../assets/img/teams/Simant.png";
@@ -69,7 +69,7 @@ function OurTeam() {
           {teamMembers.map((member, index) => (
             <div key={index} className="text-center text-gray-500">
               <img
-                className="mx-auto mb-4 w-36 h-36 rounded-full object-cover"
+                className="mx-auto mb-4 w-36 h-36 rounded-full "
                 src={member.image}
                 alt={member.name}
               />
