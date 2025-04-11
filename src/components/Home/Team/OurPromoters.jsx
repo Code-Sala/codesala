@@ -1,6 +1,6 @@
 // import ProfileImage from "../../../assets/img/teams/profileimage.png";
 import SureshGhimire from "../../../assets/img/teams/SureshGhimire.png";
-import baburamdangi from "../../../assets/img/teams/baburamdangiceo.png";
+import baburamdangi from "../../../assets/img/teams/baburamdangi.png";
 
 
 
@@ -48,7 +48,7 @@ function OurPromoters() {
               className="text-center text-gray-500 "
             >
               <img
-                className="mx-auto mb-4 w-36 h-36 rounded-full object-cover "
+                className="mx-auto mb-4 w-36 h-36 rounded-full object-contain "
                 src={promoter.image}
                 alt={promoter.name}
               />
