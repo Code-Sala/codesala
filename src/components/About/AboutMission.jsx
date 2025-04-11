@@ -31,7 +31,7 @@ function AboutMission() {
 
         {/* Right Section - Text (Centered on Small Screens) */}
         <motion.div
-          className="w-full sm:w-1/2 md:w-full text-center sm:text-left"
+          className="w-full sm:w-1/2 md:w-full text-left sm:text-left"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
