@@ -53,11 +53,6 @@ function Cookies() {
             <ol  className="pl-2 pt-2">
             <li className="text-lg pb-4 text-gray-600 mb-4">CodeSala Ltd resewes the right to change this Cookie Policy as we may deem necessaiy from time to time or as may be required by law. Any changes wfll be immediately posted on the Website and you are deemed to have accepted the terms of the Cookie Policy on your first use of the Website following the alterations.  </li>         
             </ol>
-
-           
-            
-              
-
             
       </div>
     </div>
