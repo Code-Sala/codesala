@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 function AboutHero() {
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-start px-4 sm:px-8 pt-[6.2rem] pb-24 bg-gradient-to-br from-[#00AEEF] via-[#892890] to-[#ED1D7E]">
-
       {/* Fixed Background Image */}
       <div
         className="absolute top-0 left-0 w-full h-full z-1"

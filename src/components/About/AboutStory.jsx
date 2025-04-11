@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import AboutStoryImg from "../../assets/img/AboutStory.webp" 
+import AboutStoryImg from "../../assets/img/AboutStory.webp";
 
 function AboutStory() {
   return (
@@ -16,15 +16,15 @@ function AboutStory() {
 
       {/* Story Content - Responsive Layout */}
       <div className="flex flex-col md:flex-col-reverse  lg:flex-row md:items-center md:justify-center sm:items-start gap-12 pt-12 pb-12">
-  {/* Left Section - Text (Full Width on md, Half on lg) */}
-  <motion.div
-    className="w-full md:w-full lg:w-1/2 text-center sm:text-left"
-    initial={{ opacity: 0, x: -50 }}
-    animate={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.8 }}
-  >
-    <p className="text-gray-700 text-md pt-0 leading-loose">
-    Welcome to <strong>CODESALA</strong>, where innovation meets
+        {/* Left Section - Text (Full Width on md, Half on lg) */}
+        <motion.div
+          className="w-full md:w-full lg:w-1/2   sm:text-left"
+          initial={{ opacity: 0, x: -50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <p className="text-gray-700 text-md pt-0 leading-loose">
+            Welcome to <strong>CODESALA</strong>, where innovation meets
             practicality. We are a dynamic digital solutions company dedicated
             to helping businesses thrive in the ever-evolving digital world.
             With expertise in UI/UX design, web development, domain and hosting,
@@ -48,24 +48,23 @@ function AboutStory() {
             <br />
             <strong>Partner with CODESALA</strong> and let&apos;s take your
             business to the next level!
-    </p>
-  </motion.div>
+          </p>
+        </motion.div>
 
-  {/* Right Section - Image (Full Width on md, Half on lg) */}
-  <motion.div
-    className="hidden sm:block w-full md:w-full lg:w-1/2"
-    initial={{ opacity: 0, x: 50 }}
-    animate={{ opacity: 1, x: 0 }}
-    transition={{ duration: 0.8 }}
-  >
-    <img
-      src={AboutStoryImg}
-      alt="Our Story"
-      className="rounded-md h-[60vh] w-full"
-    />
-  </motion.div>
-</div>
-
+        {/* Right Section - Image (Full Width on md, Half on lg) */}
+        <motion.div
+          className="hidden sm:block w-full md:w-full lg:w-1/2"
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <img
+            src={AboutStoryImg}
+            alt="Our Story"
+            className="rounded-md h-[60vh] w-full"
+          />
+        </motion.div>
+      </div>
     </div>
   );
 }
