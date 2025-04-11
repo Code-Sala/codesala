@@ -1,11 +1,13 @@
-import ProfileImage from "../../../assets/img/teams/profileimage.png";
+import niraj from "../../../assets/img/teams/niraj.png";
+import prabal from "../../../assets/img/teams/prabal.png";
+import pulav from "../../../assets/img/teams/pulove.jpg";
 function BoardAdvisory() {
   const advisors = [
     {
-      name: "Anil Dangi",
+      name: "Prabal Bajagain",
       role: "Strategic Advisor",
       image:
-      ProfileImage,
+      prabal,
       social: {
         linkedin: "#",
         twitter: "#",
@@ -15,7 +17,7 @@ function BoardAdvisory() {
       name: "Niraj Gautam",
       role: "Financial Advisor",
       image:
-      ProfileImage,
+      niraj,
       social: {
         linkedin: "#",
         twitter: "#",
@@ -25,7 +27,7 @@ function BoardAdvisory() {
       name: "Pulav Raj Giri",
       role: "Technology Consultant",
       image:
-      ProfileImage,
+      pulav,
       social: {
         linkedin: "#",
         twitter: "#",
@@ -51,7 +53,7 @@ function BoardAdvisory() {
               className="text-center text-gray-500 "
             >
               <img
-                className="mx-auto mb-4 w-36 h-36 rounded-full"
+                className="mx-auto mb-4 w-36 h-36 rounded-full object-cover"
                 src={advisor.image}
                 alt={advisor.name}
               />

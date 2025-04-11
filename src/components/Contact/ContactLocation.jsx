@@ -23,7 +23,7 @@ const ContactLocation = () => {
                   <linearGradient
                     id="gradient"
                     x1="0%"
-                    y1="0%" 
+                    y1="0%"
                     x2="100%"
                     y2="100%"
                   >
@@ -32,11 +32,7 @@ const ContactLocation = () => {
                     <stop offset="100%" stopColor="#ED1D7E" />
                   </linearGradient>
                 </defs>
-                <House
-                  width={18}
-                  height={24}
-                  stroke="url(#gradient)" 
-                />
+                <House width={18} height={24} stroke="url(#gradient)" />
               </svg>
               <span className="text-black">30 N Gould St Ste R, Sheridan</span>
             </div>
@@ -62,11 +58,7 @@ const ContactLocation = () => {
                     <stop offset="100%" stopColor="#ED1D7E" />
                   </linearGradient>
                 </defs>
-                <Phone
-                  width={18}
-                  height={24}
-                  stroke="url(#gradient)" 
-                />
+                <Phone width={18} height={24} stroke="url(#gradient)" />
               </svg>
               <span className="text-black">
                 <a href="tel:+13323226043" className="hover:underline">
@@ -96,11 +88,7 @@ const ContactLocation = () => {
                     <stop offset="100%" stopColor="#ED1D7E" />
                   </linearGradient>
                 </defs>
-                <Mail
-                  width={18}
-                  height={24}
-                  stroke="url(#gradient)" 
-                />
+                <Mail width={18} height={24} stroke="url(#gradient)" />
               </svg>
               <span className="text-black">
                 <a href="mailto:wy@codesala.com" className="hover:underline">
@@ -149,11 +137,7 @@ const ContactLocation = () => {
                     <stop offset="100%" stopColor="#ED1D7E" />
                   </linearGradient>
                 </defs>
-                <House
-                  width={18}
-                  height={24}
-                  stroke="url(#gradient)"
-                />
+                <House width={18} height={24} stroke="url(#gradient)" />
               </svg>
               <span>BhagwanPau Swyambhu, Nepal</span>
             </div>
@@ -179,11 +163,7 @@ const ContactLocation = () => {
                     <stop offset="100%" stopColor="#ED1D7E" />
                   </linearGradient>
                 </defs>
-                <Phone
-                  width={18}
-                  height={24}
-                  stroke="url(#gradient)" 
-                />
+                <Phone width={18} height={24} stroke="url(#gradient)" />
               </svg>
               <span>
                 <a href="tel:+977-15924442" className="hover:underline">
@@ -213,11 +193,7 @@ const ContactLocation = () => {
                     <stop offset="100%" stopColor="#ED1D7E" />
                   </linearGradient>
                 </defs>
-                <Mail
-                  width={18}
-                  height={24}
-                  stroke="url(#gradient)"
-                />
+                <Mail width={18} height={24} stroke="url(#gradient)" />
               </svg>
 
               <span>
