@@ -166,7 +166,7 @@ const ContactLocation = () => {
                 <Phone width={18} height={24} stroke="url(#gradient)" />
               </svg>
               <span>
-                <a href="tel:+977-15924442" className="hover:underline">
+                <a href="tel:97715924442" className="hover:underline">
                   +977-15924442
                 </a>
               </span>

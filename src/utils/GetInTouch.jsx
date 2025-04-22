@@ -5,7 +5,7 @@ function GetInTouch() {
     <div className="fixed right-5 bottom-25 z-90">
       <div className="bg-white rounded-full hover:scale-90">
         <a
-          href="https://wa.me/9841255592"
+          href="https://wa.me/+9779841255592"
           target="_blank"
           className="p-2 flex items-center justify-center"
         >
