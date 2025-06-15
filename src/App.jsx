@@ -29,6 +29,7 @@ import RoleOfAi from "./components/Blog/Blogs/RoleOfAi";
 import ImpactOfAi from "./components/Blog/Blogs/ImpactOfAi";
 import AIAndML from "./components/Blog/Blogs/AIAndML";
 import ScrollToTop from "./components/ScrollComps/ScrolltoTop";
+import Portfolio from "./pages/Portfolio";
 // import ScrollToTop from "./components/ScrollComps/ScrolltoTop";
 const App = () => {
   const [isTouchDevice, setIsTouchDevice] = useState(false);
@@ -79,6 +80,7 @@ const App = () => {
             <Route path="/ComingSoon" element={<FirstLandingPage />} />
             <Route path="/ChatGPT" element={<Chatgpt />} />
             <Route path="/IoT" element={<Lot />} />
+            <Route path="/portfolio" element={<Portfolio/>}/>
             <Route
               path="/SoftwareDevelopment"
               element={<SoftwareDevelopment />}

@@ -4,6 +4,7 @@ import PeopleAndCulture from "../components/Home/PeopleAndCulture";
 import TeamSection from "../components/Home/Team/TeamSection";
 import Testimonials from "../components/Home/Testimonials";
 import WhatWeDo from "../components/Home/WhatWeDo";
+import HomePortfolioSection from "../components/Portfolio/HomePortfolio";
 import SidebarNav from "../utils/Sidebar";
 
 const Home = () => {
@@ -20,6 +21,9 @@ const Home = () => {
         </section>
         <section id="homeservices">
           <HomeServices />
+        </section>
+        <section id="portfolio">
+          <HomePortfolioSection/>
         </section>
         <section id="team">
           <TeamSection />

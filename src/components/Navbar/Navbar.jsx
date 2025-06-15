@@ -35,6 +35,8 @@ const Navbar = () => {
             { to: "/", label: "Home" },
             { to: "/about", label: "About" },
             { to: "/services", label: "Services" },
+            { to: "/portfolio", label: "Portfolio" },
+
             { to: "/blog", label: "Blogs" },
           ].map(({ to, label }) => (
             <Link
@@ -83,6 +85,7 @@ const Navbar = () => {
             { to: "/", label: "Home" },
             { to: "/about", label: "About" },
             { to: "/services", label: "Services" },
+            { to: "/portfolio", label: "Portfolio" },
             { to: "/blog", label: "Blogs" },
             { to: "/contact", label: "Contact" },
           ].map(({ to, label }) => (
