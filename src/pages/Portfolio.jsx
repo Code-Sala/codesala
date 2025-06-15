@@ -53,7 +53,7 @@ const CleanAnimatedPortfolio = () => {
       
       <div className="p-6">
         <div className="mb-3">
-          <span className="text-purple-600 text-sm font-semibold bg-purple-50 px-2 py-1 rounded-lg">{item.client}</span>
+          {/* <span className="text-purple-600 text-sm font-semibold bg-purple-50 px-2 py-1 rounded-lg">{item.client}</span> */}
         </div>
         
         <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors duration-300">
